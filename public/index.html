@@ -57,10 +57,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
   <link rel="canonical" href="/" />
 
@@ -154,6 +154,30 @@
               
               title=""
               >Posts</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >categories</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >tags</a
             >
           </li>
 
@@ -292,18 +316,21 @@
     >
       
       <div class="post-title">
-        <h3><a href="/post/first/">First</a></h3>
+        <h3><a href="/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/">hugo基本操作以及自动化部署</a></h3>
       </div>
       <div class="post-content">
         <div class="p_part">
           <p>
             
-              Hello Hugo  aaa bbb ccc  
+              序 一直以来的博客(有关技术性的)都是放在CSDN上写，从来没有过自己搭建博客的想法。 近期刚好有空，然后就想着说把过往遇到的技术点还有生活的点滴放到个人博客中。 有了这个想法，于是乎就有了下面的过程。
+1.Hugo的安装以及基础使用 1.1 安装Hugo 直接去hugo的github仓库下载对应系统的二进制文件：
+https://github.com/gohugoio/hugo/releases
+然后把二进制文件放在环境变量中，由于之前配置过GOPATH的bin到环境变量中，所有这里我直接把二进制放在bin文件夹下面。
 
 
             
           </p>
-          </div>
+          <a href="/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/" class="read_more">Read more</a></div>
       </div>
 
       
@@ -319,6 +346,132 @@
               </span
             >
             
+              <span class="separator"><a class="category" href="/categories/blog/">blog</a></span>
+
+
+
+
+            
+
+            
+              <span class="separator"><a class="tag" href="/tags/hugo/">hugo</a><a class="tag" href="/tags/blog/">blog</a></span>
+
+
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div
+      class="post 
+        animated fadeInDown
+
+      "
+    >
+      
+      <div class="post-title">
+        <h3><a href="/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Docker学习笔记</a></h3>
+      </div>
+      <div class="post-content">
+        <div class="p_part">
+          <p>
+            
+              Docker安装 使用官方安装脚本自动安装 安装命令如下：
+curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使用国内 daocloud 一键安装命令：
+
+
+            
+          </p>
+          <a href="/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="read_more">Read more</a></div>
+      </div>
+
+      
+      <div class="post-footer">
+        <div class="meta">
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Mon, Dec 13, 2021
+
+
+              </span
+            >
+            
+              <span class="separator"><a class="category" href="/categories/docker/">docker</a></span>
+
+
+
+
+            
+
+            
+              <span class="separator"><a class="tag" href="/tags/docker/">docker</a><a class="tag" href="/tags/dockerfile/">Dockerfile</a><a class="tag" href="/tags/docker-compose/">docker-compose</a></span>
+
+
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div
+      class="post 
+        animated fadeInDown
+
+      "
+    >
+      
+      <div class="post-title">
+        <h3><a href="/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/">docker从零部署项目包括不间断线上更新</a></h3>
+      </div>
+      <div class="post-content">
+        <div class="p_part">
+          <p>
+            
+              序 记录自己用Docker从零搭建项目部署到服务器和使用红黑部署来保证程序不中断更新的心得和经验。
+ 对Docker还不熟悉的小伙伴可以看下这篇文章
+ 1. 编写项目微服务 这是前提工作，必须确保项目是可以运行的。
+2. 创建网络 这是容器通信的基础
+
+
+            
+          </p>
+          <a href="/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/" class="read_more">Read more</a></div>
+      </div>
+
+      
+      <div class="post-footer">
+        <div class="meta">
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Mon, Dec 13, 2021
+
+
+              </span
+            >
+            
+              <span class="separator"><a class="category" href="/categories/docker/">docker</a></span>
+
+
+
+
+            
+
+            
+              <span class="separator"><a class="tag" href="/tags/docker/">docker</a><a class="tag" href="/tags/docker-compose/">docker-compose</a><a class="tag" href="/tags/dockerfile/">Dockerfile</a></span>
+
+
+
 
             
           </div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Website of 4927525</title>
+    <link>https://example.com/categories/blog/</link>
+    <description>Recent content in blog on Website of 4927525</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Dec 2021 20:53:28 +0800</lastBuildDate><atom:link href="https://example.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo基本操作以及自动化部署</title>
+      <link>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
+      
+      <guid>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
+      
+        <description>序 一直以来的博客(有关技术性的)都是放在CSDN上写，从来没有过自己搭建博客的想法。 近期刚好有空，然后就想着说把过往遇到的技术点还有生活的点滴放到个人博客中。 有了这个想法，于是乎就有了下面的过程。
+1.Hugo的安装以及基础使用 1.1 安装Hugo 直接去hugo的github仓库下载对应系统的二进制文件：
+https://github.com/gohugoio/hugo/releases
+然后把二进制文件放在环境变量中，由于之前配置过GOPATH的bin到环境变量中，所有这里我直接把二进制放在bin文件夹下面。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

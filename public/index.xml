@@ -6,26 +6,57 @@
     <description>Recent content on Website of 4927525</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Dec 2021 11:25:02 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 20:53:28 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About</title>
-      <link>https://example.com/about/</link>
-      <pubDate>Mon, 13 Dec 2021 13:43:59 +0800</pubDate>
+      <title>hugo基本操作以及自动化部署</title>
+      <link>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
       
-        <description></description>
+        <description>序 一直以来的博客(有关技术性的)都是放在CSDN上写，从来没有过自己搭建博客的想法。 近期刚好有空，然后就想着说把过往遇到的技术点还有生活的点滴放到个人博客中。 有了这个想法，于是乎就有了下面的过程。
+1.Hugo的安装以及基础使用 1.1 安装Hugo 直接去hugo的github仓库下载对应系统的二进制文件：
+https://github.com/gohugoio/hugo/releases
+然后把二进制文件放在环境变量中，由于之前配置过GOPATH的bin到环境变量中，所有这里我直接把二进制放在bin文件夹下面。</description>
       
     </item>
     
     <item>
-      <title>First</title>
-      <link>https://example.com/post/first/</link>
-      <pubDate>Mon, 13 Dec 2021 11:25:02 +0800</pubDate>
+      <title>Docker学习笔记</title>
+      <link>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
       
-      <guid>https://example.com/post/first/</guid>
+      <guid>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       
-        <description>Hello Hugo  aaa bbb ccc  </description>
+        <description>Docker安装 使用官方安装脚本自动安装 安装命令如下：
+curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使用国内 daocloud 一键安装命令：</description>
+      
+    </item>
+    
+    <item>
+      <title>docker从零部署项目包括不间断线上更新</title>
+      <link>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Mon, 13 Dec 2021 14:15:56 +0800</pubDate>
+      
+      <guid>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</guid>
+      
+        <description>序 记录自己用Docker从零搭建项目部署到服务器和使用红黑部署来保证程序不中断更新的心得和经验。
+ 对Docker还不熟悉的小伙伴可以看下这篇文章
+ 1. 编写项目微服务 这是前提工作，必须确保项目是可以运行的。
+2. 创建网络 这是容器通信的基础</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://example.com/about/</link>
+      <pubDate>Mon, 13 Dec 2021 13:51:40 +0800</pubDate>
+      
+      <guid>https://example.com/about/</guid>
+      
+        <description>关于我 这里是 kevin 的 blog，AKA 4927525.
+未来方向：go后端开发
+type PersonalInformation struct { Name string Age int64 Address string Email string Description string } type Skills struct { Skill []string } func Me() (PersonalInformation, Skills) { information := PersonalInformation{ Name: &amp;#34;Kevin&amp;#34;, Age: 25, Address: &amp;#34;BeiJing&amp;#34;, Email: &amp;#34;hzbskak@gmail.</description>
       
     </item>
     

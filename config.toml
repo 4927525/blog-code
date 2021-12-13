@@ -121,7 +121,7 @@ tag = "tags"
 
 [params.utterances]
 enable = true
-repo = "4927525/492752.github.io"
+repo = "4927525/4927525.github.io"
 issueTerm = "title"
 theme = "github-dark"
 crossorigin = "anonymous"
