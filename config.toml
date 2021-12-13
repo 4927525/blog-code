@@ -1,0 +1,127 @@
+baseURL = "https://example.com"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Website of 4927525"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+[params]
+title = "HZBSKAK'S BLOG"
+author = "4927525"
+description = "Hi I'm Kevin, nice to meet you"
+profilePicture = "images/profile.jpg"
+displayMode = "dark"
+#disableThemeSwitcher = true # Theme switcher is enabled by default
+#doNotLoadAnimations = true # Animations are loaded by default
+singleDateFormat = "Mon, Jan 2, 2006"
+indexDateFormat = "Mon, Jan 2, 2006"
+listDateFormat = "Jan 2"
+contentratio = 0.7 # Changing the sidebar/content ratio
+readMore = true
+#mainSections = [] # Have a static page as a home page
+#fullPostContent = true # Show full post content on the home page
+disqusShortname = "4927525" # Comments powered by Disqus
+googleFonts = [
+    "Indie+Flower",
+    "Roboto:ital,wght@0,100;0,400;0,700;1,400"
+]
+mainSections = ["post", "docs"] # Configurable pagination section
+favicon = "/images/favicons/"
+
+## Math settings
+[params.math]
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+
+# Syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+customCss = ["css/syntax.css"]
+
+[[params.socialIcons]]
+icon = "fab fa-github fa-2x"
+title = "github"
+url = "https://github.com/4927525"
+[[params.socialIcons]]
+icon = "fab fa-qq fa-2x"
+title = "qq"
+url = "https://sighttp.qq.com/msgrd?v=1&uin=2536366291"
+[[params.socialIcons]]
+icon = "fab fa-telegram fa-2x"
+title = "telegram"
+url = "https://t.me/hzbskak"
+[[params.socialIcons]]
+icon = "fas fa-envelope fa-2x"
+title = "email"
+url = "mailto:2536366291@qq.com"
+
+[languages]
+# 在语言下拉菜单中更改语言名称
+[en]
+LanguageName = "EN"
+
+
+[menu]
+
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[menu.main]]
+name = "Posts"
+weight = 200
+identifier = "posts"
+url = "/post/"
+
+[[menu.main]]
+name = "categories"
+weight = 400
+identifier = "categories"
+url = "/categories/"
+
+[[menu.main]]
+name = "tags"
+weight = 500
+identifier = "tags"
+url = "/tags/"
+
+[[menu.main]]
+name = "About"
+weight = 600
+identifier = "about"
+url = "/about/"
+
+# Enable Disqus
+#disqusShortname = ""
+
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe=true
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+
+[params.utterances]
+enable = true
+repo = "4927525/492752.github.io"
+issueTerm = "title"
+theme = "github-dark"
+crossorigin = "anonymous"
