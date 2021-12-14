@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme="dark"
+><head>
+  <title>
+    4927525
+      |
+      Dockerfile文件docker build制作镜像时,出现pecl not found
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.89.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      Hi I&#39;m Kevin, nice to meet you
+
+
+    "
+  />
+  
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.178fc6b951ed3ac66aba54b598decc2eec223629ab4ebf66e3fc0cffe75afe0a.css"
+    integrity="sha256-F4/GuVHtOsZqulS1mN7MLuwiNimrTr9m4/wM/&#43;da/go="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.058b31f17db60602cc415fd63b0427e7932fbf35c70d8e341a4c39385f5f6f3e.css"
+    integrity="sha256-BYsx8X22BgLMQV/WOwQn55MvvzXHDY40Gkw5OF9fbz4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
+    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dockerfile文件docker build制作镜像时,出现pecl not found"/>
+<meta name="twitter:description" content="问题复现： 官方给出的扩展安装地址https://github.com/hyperf/hyperf-docker
+RUN apk add --no-cache librdkafka-dev \ &amp;&amp; pecl install rdkafka \ &amp;&amp; echo &#34;extension=rdkafka."/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Dockerfile文件docker build制作镜像时,出现pecl not found",
+        "headline": "Dockerfile文件docker build制作镜像时,出现pecl not found",
+        "alternativeHeadline": "",
+        "description": "
+      
+        问题复现： 官方给出的扩展安装地址https:\/\/github.com\/hyperf\/hyperf-docker\nRUN apk add --no-cache librdkafka-dev \\ \u0026amp;\u0026amp; pecl install rdkafka \\ \u0026amp;\u0026amp; echo \u0026#34;extension=rdkafka.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/post\/docker\/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "4927525"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "4927525"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "4927525"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "4927525"
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-12-14T09:49:43.00Z",
+        "datePublished": "2021-12-14T09:49:43.00Z",
+        "dateModified": "2021-12-14T09:49:43.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "4927525",
+            "url": "https://example.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/example.com\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/example.com\/post\/docker\/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found\/",
+        "wordCount" : "210",
+        "genre" : [ 
+      
+      "docker"
+
+    ],
+        "keywords" : [ 
+      
+      "docker"
+
+    
+      
+        ,
+
+      
+      "Dockerfile"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >categories</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >tags</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+      </div>
+      <ul>
+        
+        
+          <li>
+            <a class="theme-switch" title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+
+        
+      </ul>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/profile.jpg" alt="profile picture" />
+        <h3 title=""><a href="/">HZBSKAK&#39;S BLOG</a></h3>
+        <div class="description">
+          <p>Hi I'm Kevin, nice to meet you</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://github.com/4927525" rel="me" aria-label="github" title="github">
+            <i class="fab fa-github fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://sighttp.qq.com/msgrd?v=1&amp;uin=2536366291" rel="me" aria-label="qq" title="qq">
+            <i class="fab fa-qq fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://t.me/hzbskak" rel="me" aria-label="telegram" title="telegram">
+            <i class="fab fa-telegram fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:2536366291@qq.com" rel="me" aria-label="email" title="email">
+            <i class="fas fa-envelope fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          4927525
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>Dockerfile文件docker build制作镜像时,出现pecl not found</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Tue, Dec 14, 2021
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">One-minute read</span>
+          </div>
+
+        
+      </div><p>问题复现：
+官方给出的扩展安装地址https://github.com/hyperf/hyperf-docker</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">RUN apk add --no-cache librdkafka-dev <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#f92672">&amp;&amp;</span> pecl install rdkafka <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;extension=rdkafka.so&#34;</span> &gt; /etc/php7/conf.d/rdkafka.ini
+</code></pre></div><p>以上代码加入到Dockerfile中，重新build会报错</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/sh: pecl: not found
+</code></pre></div><p>解决方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">在https://github.com/codecasts/php-alpine/tree/master/scripts/v3.12/php-7.4找到对应的扩展，直接
+将目录名加入到Dockerfile中解决
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">RUN set -ex <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> apk add php7-mongodb
+</code></pre></div><p><img src="https://img-blog.csdnimg.cn/87c16c4900cb49cfa50f0050cf66281b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBANDkyNzUyNQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Default Dockerfile</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># @link     https://www.hyperf.io</span>
+<span style="color:#75715e"># @document https://hyperf.wiki</span>
+<span style="color:#75715e"># @contact  group@hyperf.io</span>
+<span style="color:#75715e"># @license  https://github.com/hyperf/hyperf/blob/master/LICENSE</span>
+
+FROM hyperf/hyperf:7.4-alpine-v3.11-swoole
+LABEL maintainer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf Developers &lt;group@hyperf.io&gt;&#34;</span> version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> license<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MIT&#34;</span> app.name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf&#34;</span>
+
+<span style="color:#75715e">##</span>
+<span style="color:#75715e"># ---------- env settings ----------</span>
+<span style="color:#75715e">##</span>
+<span style="color:#75715e"># --build-arg timezone=Asia/Shanghai</span>
+ARG timezone
+
+ENV TIMEZONE<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>timezone<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;Asia/Shanghai&#34;</span><span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    APP_ENV<span style="color:#f92672">=</span>prod <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    SCAN_CACHEABLE<span style="color:#f92672">=(</span>true<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># update</span>
+RUN set -ex <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># show php version and extensions</span>
+    <span style="color:#f92672">&amp;&amp;</span> php -v <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php -m <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php --ri swoole <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#75715e">#  ---------- some config ----------</span>
+    <span style="color:#f92672">&amp;&amp;</span> cd /etc/php7 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config PHP</span>
+    <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">{</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;upload_max_filesize=128M&#34;</span>; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;post_max_size=128M&#34;</span>; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;memory_limit=1G&#34;</span>; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;date.timezone=</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">}</span> | tee conf.d/99_overrides.ini <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config timezone</span>
+    <span style="color:#f92672">&amp;&amp;</span> ln -sf /usr/share/zoneinfo/<span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span> /etc/localtime <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /etc/timezone <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># ---------- clear works ----------</span>
+    <span style="color:#f92672">&amp;&amp;</span> rm -rf /var/cache/apk/* /tmp/* /usr/share/man <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo -e <span style="color:#e6db74">&#34;\033[42;37m Build Completed :).\033[0m\n&#34;</span>
+
+RUN set -ex <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> apk add php7-mongodb
+
+WORKDIR /opt/www
+
+<span style="color:#75715e"># Composer Cache</span>
+<span style="color:#75715e"># COPY ./composer.* /opt/www/</span>
+<span style="color:#75715e"># RUN composer install --no-dev --no-scripts</span>
+
+COPY . /opt/www
+RUN composer install --no-dev -o <span style="color:#f92672">&amp;&amp;</span> php bin/hyperf.php
+
+EXPOSE <span style="color:#ae81ff">9401</span>
+
+ENTRYPOINT <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;php&#34;</span>, <span style="color:#e6db74">&#34;/opt/www/bin/hyperf.php&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">]</span>
+
+</code></pre></div></div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/docker/">docker</a></span>
+
+
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/docker/">docker</a><a class="tag" href="/tags/dockerfile/">Dockerfile</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          4927525
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

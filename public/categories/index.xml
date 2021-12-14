@@ -6,24 +6,24 @@
     <description>Recent content in Categories on Website of 4927525</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Dec 2021 20:53:28 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 09:49:43 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>blog</title>
-      <link>https://example.com/categories/blog/</link>
-      <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
+      <title>docker</title>
+      <link>https://example.com/categories/docker/</link>
+      <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
       
-      <guid>https://example.com/categories/blog/</guid>
+      <guid>https://example.com/categories/docker/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>docker</title>
-      <link>https://example.com/categories/docker/</link>
-      <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
+      <title>blog</title>
+      <link>https://example.com/categories/blog/</link>
+      <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
-      <guid>https://example.com/categories/docker/</guid>
+      <guid>https://example.com/categories/blog/</guid>
       
         <description></description>
       
