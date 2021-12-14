@@ -77,9 +77,9 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使�
       
       <guid>/about/</guid>
       
-        <description>关于我 这里是 kevin 的 blog，AKA 4927525.
+        <description>关于我 这里是 kevin 的 blog，AKA hzbskak.
 未来方向：go后端开发
-type PersonalInformation struct { Name string Age int64 Address string Email string Description string } type Skills struct { Skill []string } func Me() (PersonalInformation, Skills) { information := PersonalInformation{ Name: &amp;#34;Kevin&amp;#34;, Age: 25, Address: &amp;#34;BeiJing&amp;#34;, Email: &amp;#34;hzbskak@gmail.</description>
+type PersonalInformation struct { Name string Age int64 Address string Email string Description string } type Skills struct { Skill []string } func Me() (PersonalInformation, Skills) { information := PersonalInformation{ Name: &amp;#34;Kevin&amp;#34;, Age: 26, Address: &amp;#34;BeiJing&amp;#34;, Email: &amp;#34;hzbskak@gmail.</description>
       
     </item>
     

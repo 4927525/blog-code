@@ -1325,8 +1325,12 @@ a.btn {
     width: calc(var(--sidebar-width) - 20%);
   }
   .content {
+    padding-right: 25%;
+    width: 50%;
+}
+  /* .content {
     padding-right: 20%;
-  }
+  } */
   header {
     position: fixed;
     width: var(--content-width);

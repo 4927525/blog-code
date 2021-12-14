@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec953e03-d239-44a8-ab3a-47523fef761b" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.min.178fc6b951ed3ac66aba54b598decc2eec223629ab4ebf66e3fc0cffe75afe0a.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.min.178fc6b951ed3ac66aba54b598decc2eec223629ab4ebf66e3fc0cffe75afe0a.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/anatole/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/anatole/layouts/_default/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../workspace/phal" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
@@ -62,7 +60,7 @@
       <workItem from="1639447853955" duration="35000" />
       <workItem from="1639447889555" duration="583000" />
       <workItem from="1639450027775" duration="220000" />
-      <workItem from="1639450275907" duration="312000" />
+      <workItem from="1639450275907" duration="778000" />
     </task>
     <servers />
   </component>
@@ -82,10 +80,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1589" y="416" key="FileChooserDialogImpl" timestamp="1639448471327">
+    <state x="1589" y="416" key="FileChooserDialogImpl" timestamp="1639451053646">
       <screen x="0" y="0" width="2483" height="1440" />
     </state>
-    <state x="1589" y="416" key="FileChooserDialogImpl/0.0.2483.1440@0.0.2483.1440" timestamp="1639448471327" />
+    <state x="1589" y="416" key="FileChooserDialogImpl/0.0.2483.1440@0.0.2483.1440" timestamp="1639451053646" />
     <state x="1490" y="395" width="760" height="650" key="find.popup" timestamp="1639450545576">
       <screen x="0" y="0" width="2483" height="1440" />
     </state>

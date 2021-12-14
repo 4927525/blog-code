@@ -5,7 +5,7 @@ draft: false
 ---
 
 # 关于我
-这里是 kevin 的 blog，AKA 4927525. 
+这里是 kevin 的 blog，AKA hzbskak. 
 
 未来方向：go后端开发
 ``` golang
@@ -22,7 +22,7 @@ type Skills struct {
 func Me() (PersonalInformation, Skills) {
 	information := PersonalInformation{
 		Name:        "Kevin",
-		Age:         25,
+		Age:         26,
 		Address:     "BeiJing",
 		Email:       "hzbskak@gmail.com",
 		Description: "Like you like liking coding",
