@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/</loc>
+    <lastmod>2021-12-14T21:11:37+08:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-12-14T21:11:37+08:00</lastmod>
+  </url><url>
+    <loc>/post/mq/tp6-rabbitmq%E4%BC%81%E4%B8%9A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2021-12-14T21:11:37+08:00</lastmod>
+  </url><url>
     <loc>/categories/blog/</loc>
     <lastmod>2021-12-14T10:13:29+08:00</lastmod>
   </url><url>
@@ -9,12 +18,6 @@
     <lastmod>2021-12-14T10:13:29+08:00</lastmod>
   </url><url>
     <loc>/tags/framework/</loc>
-    <lastmod>2021-12-14T10:13:29+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-12-14T10:13:29+08:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
     <lastmod>2021-12-14T10:13:29+08:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
