@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>framework on Hzbskak&#39;s Blog</title>
+    <link>/tags/framework/</link>
+    <description>Recent content in framework on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Dec 2021 10:13:29 +0800</lastBuildDate><atom:link href="/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后端分层架构开发规范</title>
+      <link>/post/blog/%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Tue, 14 Dec 2021 10:13:29 +0800</pubDate>
+      
+      <guid>/post/blog/%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</guid>
+      
+        <description>https://github.com/4927525/layer-code/blob/master/layer-code.html</description>
+      
+    </item>
+    
+  </channel>
+</rss>

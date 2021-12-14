@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker-compose on Website of 4927525</title>
-    <link>https://example.com/tags/docker-compose/</link>
-    <description>Recent content in docker-compose on Website of 4927525</description>
+    <title>docker-compose on Hzbskak&#39;s Blog</title>
+    <link>/tags/docker-compose/</link>
+    <description>Recent content in docker-compose on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Dec 2021 17:12:42 +0800</lastBuildDate><atom:link href="https://example.com/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 17:12:42 +0800</lastBuildDate><atom:link href="/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker学习笔记</title>
-      <link>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
       
-      <guid>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       
         <description>Docker安装 使用官方安装脚本自动安装 安装命令如下：
 curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使用国内 daocloud 一键安装命令：</description>
@@ -21,10 +21,10 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使�
     
     <item>
       <title>docker从零部署项目包括不间断线上更新</title>
-      <link>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</link>
+      <link>/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Mon, 13 Dec 2021 14:15:56 +0800</pubDate>
       
-      <guid>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</guid>
+      <guid>/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</guid>
       
         <description>序 记录自己用Docker从零搭建项目部署到服务器和使用红黑部署来保证程序不中断更新的心得和经验。
  对Docker还不熟悉的小伙伴可以看下这篇文章

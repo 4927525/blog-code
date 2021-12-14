@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Website of 4927525</title>
-    <link>https://example.com/tags/</link>
-    <description>Recent content in Tags on Website of 4927525</description>
+    <title>Tags on Hzbskak&#39;s Blog</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 09:49:43 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 10:13:29 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>framework</title>
+      <link>/tags/framework/</link>
+      <pubDate>Tue, 14 Dec 2021 10:13:29 +0800</pubDate>
+      
+      <guid>/tags/framework/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>docker</title>
-      <link>https://example.com/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
       
-      <guid>https://example.com/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       
         <description></description>
       
@@ -20,10 +31,10 @@
     
     <item>
       <title>Dockerfile</title>
-      <link>https://example.com/tags/dockerfile/</link>
+      <link>/tags/dockerfile/</link>
       <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
       
-      <guid>https://example.com/tags/dockerfile/</guid>
+      <guid>/tags/dockerfile/</guid>
       
         <description></description>
       
@@ -31,10 +42,10 @@
     
     <item>
       <title>blog</title>
-      <link>https://example.com/tags/blog/</link>
+      <link>/tags/blog/</link>
       <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
-      <guid>https://example.com/tags/blog/</guid>
+      <guid>/tags/blog/</guid>
       
         <description></description>
       
@@ -42,10 +53,10 @@
     
     <item>
       <title>hugo</title>
-      <link>https://example.com/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
-      <guid>https://example.com/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
       
         <description></description>
       
@@ -53,10 +64,10 @@
     
     <item>
       <title>docker-compose</title>
-      <link>https://example.com/tags/docker-compose/</link>
+      <link>/tags/docker-compose/</link>
       <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
       
-      <guid>https://example.com/tags/docker-compose/</guid>
+      <guid>/tags/docker-compose/</guid>
       
         <description></description>
       

@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website of 4927525</title>
-    <link>https://example.com/</link>
-    <description>Recent content on Website of 4927525</description>
+    <title>Hzbskak&#39;s Blog</title>
+    <link>/</link>
+    <description>Recent content on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 09:49:43 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 10:13:29 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后端分层架构开发规范</title>
+      <link>/post/blog/%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Tue, 14 Dec 2021 10:13:29 +0800</pubDate>
+      
+      <guid>/post/blog/%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</guid>
+      
+        <description>https://github.com/4927525/layer-code/blob/master/layer-code.html</description>
+      
+    </item>
+    
     <item>
       <title>Dockerfile文件docker build制作镜像时,出现pecl not found</title>
-      <link>https://example.com/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/</link>
+      <link>/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/</link>
       <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
       
-      <guid>https://example.com/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/</guid>
+      <guid>/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/</guid>
       
         <description>问题复现： 官方给出的扩展安装地址https://github.com/hyperf/hyperf-docker
 RUN apk add --no-cache librdkafka-dev \ &amp;amp;&amp;amp; pecl install rdkafka \ &amp;amp;&amp;amp; echo &amp;#34;extension=rdkafka.</description>
@@ -21,10 +32,10 @@ RUN apk add --no-cache librdkafka-dev \ &amp;amp;&amp;amp; pecl install rdkafka 
     
     <item>
       <title>hugo基本操作以及自动化部署</title>
-      <link>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+      <link>/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
-      <guid>https://example.com/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
+      <guid>/post/hugo/hugo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
       
         <description>序 一直以来的博客(有关技术性的)都是放在CSDN上写，从来没有过自己搭建博客的想法。 近期刚好有空，然后就想着说把过往遇到的技术点还有生活的点滴放到个人博客中。 有了这个想法，于是乎就有了下面的过程。
 1.Hugo的安装以及基础使用 1.1 安装Hugo 直接去hugo的github仓库下载对应系统的二进制文件：
@@ -35,10 +46,10 @@ https://github.com/gohugoio/hugo/releases
     
     <item>
       <title>Docker学习笔记</title>
-      <link>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
       
-      <guid>https://example.com/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/post/docker/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       
         <description>Docker安装 使用官方安装脚本自动安装 安装命令如下：
 curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使用国内 daocloud 一键安装命令：</description>
@@ -47,10 +58,10 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使�
     
     <item>
       <title>docker从零部署项目包括不间断线上更新</title>
-      <link>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</link>
+      <link>/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Mon, 13 Dec 2021 14:15:56 +0800</pubDate>
       
-      <guid>https://example.com/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</guid>
+      <guid>/post/docker/docker%E4%BB%8E%E9%9B%B6%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%8C%85%E6%8B%AC%E4%B8%8D%E9%97%B4%E6%96%AD%E7%BA%BF%E4%B8%8A%E6%9B%B4%E6%96%B0/</guid>
       
         <description>序 记录自己用Docker从零搭建项目部署到服务器和使用红黑部署来保证程序不中断更新的心得和经验。
  对Docker还不熟悉的小伙伴可以看下这篇文章
@@ -61,10 +72,10 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun也可以使�
     
     <item>
       <title>About</title>
-      <link>https://example.com/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 13 Dec 2021 13:51:40 +0800</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>/about/</guid>
       
         <description>关于我 这里是 kevin 的 blog，AKA 4927525.
 未来方向：go后端开发
