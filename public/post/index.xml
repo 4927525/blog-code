@@ -19,17 +19,6 @@
     </item>
     
     <item>
-      <title>Test</title>
-      <link>/post/blog/test/</link>
-      <pubDate>Wed, 15 Dec 2021 11:16:09 +0800</pubDate>
-      
-      <guid>/post/blog/test/</guid>
-      
-        <description>test case</description>
-      
-    </item>
-    
-    <item>
       <title>tp6 &amp; RabbitMQ企业最佳实践</title>
       <link>/post/mq/tp6-rabbitmq%E4%BC%81%E4%B8%9A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Tue, 14 Dec 2021 21:11:37 +0800</pubDate>
