@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mq on Hzbskak&#39;s Blog</title>
+    <link>/categories/mq/</link>
+    <description>Recent content in mq on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Dec 2021 21:11:37 +0800</lastBuildDate><atom:link href="/categories/mq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tp6 &amp; RabbitMQ企业最佳实践</title>
+      <link>/post/mq/tp6-rabbitmq%E4%BC%81%E4%B8%9A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 14 Dec 2021 21:11:37 +0800</pubDate>
+      
+      <guid>/post/mq/tp6-rabbitmq%E4%BC%81%E4%B8%9A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      
+        <description>代码包地址 GITEE
+ 目录 @TOC
+消息队列中间件-前言 消息队列中间件是分布式系统中重要的组件，主要解决应用耦合，异步消息，流量削锋等问题。实现高性能，高可用，可伸缩和最终一致性架构，是大型分布式系统不可缺少的中间件。
+RabbitMQ——Rabbit Message Queue的简写，RabbitMQ 是一个由 Erlang 语言开发的AMQP（高级消息队列协议）的开源实现。</description>
+      
+    </item>
+    
+  </channel>
+</rss>
