@@ -6,7 +6,40 @@
     <description>Recent content in Tags on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 21:11:37 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 17:54:53 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Wed, 15 Dec 2021 17:54:53 +0800</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>/tags/docker-compose/</link>
+      <pubDate>Wed, 15 Dec 2021 17:54:53 +0800</pubDate>
+      
+      <guid>/tags/docker-compose/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>swarm</title>
+      <link>/tags/swarm/</link>
+      <pubDate>Wed, 15 Dec 2021 17:54:53 +0800</pubDate>
+      
+      <guid>/tags/swarm/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>mq</title>
       <link>/tags/mq/</link>
@@ -52,17 +85,6 @@
     </item>
     
     <item>
-      <title>docker</title>
-      <link>/tags/docker/</link>
-      <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
-      
-      <guid>/tags/docker/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
       <title>Dockerfile</title>
       <link>/tags/dockerfile/</link>
       <pubDate>Tue, 14 Dec 2021 09:49:43 +0800</pubDate>
@@ -90,17 +112,6 @@
       <pubDate>Mon, 13 Dec 2021 20:53:28 +0800</pubDate>
       
       <guid>/tags/hugo/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>docker-compose</title>
-      <link>/tags/docker-compose/</link>
-      <pubDate>Mon, 13 Dec 2021 17:12:42 +0800</pubDate>
-      
-      <guid>/tags/docker-compose/</guid>
       
         <description></description>
       

@@ -6,7 +6,18 @@
     <description>Recent content in docker on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 09:49:43 +0800</lastBuildDate><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 17:54:53 +0800</lastBuildDate><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker swarm 搭建与服务更新</title>
+      <link>/post/docker/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Wed, 15 Dec 2021 17:54:53 +0800</pubDate>
+      
+      <guid>/post/docker/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0/</guid>
+      
+        <description>序 研究了好久的docker集群部署终于是在本地服务器跑通了。于是趁着热乎赶紧码下来。 1. 创建集群 docker swarm init --advertise-addr 192.168.101.67 将本机ip 作为默认leader节点创建。</description>
+      
+    </item>
+    
     <item>
       <title>Dockerfile文件docker build制作镜像时,出现pecl not found</title>
       <link>/post/docker/dockerfile%E6%96%87%E4%BB%B6docker-build%E5%88%B6%E4%BD%9C%E9%95%9C%E5%83%8F%E6%97%B6%E5%87%BA%E7%8E%B0pecl-not-found/</link>

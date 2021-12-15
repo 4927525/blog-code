@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swarm on Hzbskak&#39;s Blog</title>
+    <link>/tags/swarm/</link>
+    <description>Recent content in swarm on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Dec 2021 17:54:53 +0800</lastBuildDate><atom:link href="/tags/swarm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker swarm 搭建与服务更新</title>
+      <link>/post/docker/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Wed, 15 Dec 2021 17:54:53 +0800</pubDate>
+      
+      <guid>/post/docker/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0/</guid>
+      
+        <description>序 研究了好久的docker集群部署终于是在本地服务器跑通了。于是趁着热乎赶紧码下来。 1. 创建集群 docker swarm init --advertise-addr 192.168.101.67 将本机ip 作为默认leader节点创建。</description>
+      
+    </item>
+    
+  </channel>
+</rss>
