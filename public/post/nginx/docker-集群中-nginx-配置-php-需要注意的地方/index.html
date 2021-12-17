@@ -7,7 +7,7 @@
   <title>
     Hzbskak
       |
-      mq
+      docker 集群中 nginx 配置 php 需要注意的地方
 
 
     
@@ -62,12 +62,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="/tags/mq/" />
+  <link rel="canonical" href="/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/mq/index.xml" title="Hzbskak's Blog" />
-
-
   
   
   
@@ -90,8 +87,12 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="mq"/>
-<meta name="twitter:description" content="Hi I&#39;m Hzbskak, nice to meet you"/>
+<meta name="twitter:title" content="docker 集群中 nginx 配置 php 需要注意的地方"/>
+<meta name="twitter:description" content="序 最近docker部署集群的时候遇到了一个问题。于是就踩坑了&hellip;
+问题复现 那就是php和nginx不在同一个容器，却要通过nginx配置的server_name和listen来访问php项目。
+之前在本地集成环境部署的时候没有考虑过这个问题，是因为只要nginx的root根目录和php的root根目录指向同一个目录，这样把项目文件放到这个目录下就可同时访问，也就不存在说是php来访问还是nginx来访问的说法。
+但是在集群中也就需要考虑这个问题了。
+思路 静态文件需要在 nginx 容器内，php代码放在 php-fpm 的容器内，在nginx的配置里 php 部分设置php-fpm 所在容器内php的路径就可以了。"/>
 
 
 
@@ -100,6 +101,97 @@
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "docker 集群中 nginx 配置 php 需要注意的地方",
+        "headline": "docker 集群中 nginx 配置 php 需要注意的地方",
+        "alternativeHeadline": "",
+        "description": "
+      
+        序 最近docker部署集群的时候遇到了一个问题。于是就踩坑了\u0026hellip;\n问题复现 那就是php和nginx不在同一个容器，却要通过nginx配置的server_name和listen来访问php项目。\n之前在本地集成环境部署的时候没有考虑过这个问题，是因为只要nginx的root根目录和php的root根目录指向同一个目录，这样把项目文件放到这个目录下就可同时访问，也就不存在说是php来访问还是nginx来访问的说法。\n但是在集群中也就需要考虑这个问题了。\n思路 静态文件需要在 nginx 容器内，php代码放在 php-fpm 的容器内，在nginx的配置里 php 部分设置php-fpm 所在容器内php的路径就可以了。
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/nginx\/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-12-17T11:09:08.00Z",
+        "datePublished": "2021-12-17T11:09:08.00Z",
+        "dateModified": "2021-12-17T11:09:08.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/nginx\/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9\/",
+        "wordCount" : "71",
+        "genre" : [ 
+      
+      "docker"
+
+    ],
+        "keywords" : [ 
+      
+      "nginx"
+
+    
+      
+        ,
+
+      
+      "php"
+
+    
+      
+        ,
+
+      
+      "docker"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
 <body>
@@ -277,37 +369,99 @@
         <div class="autopagerize_page_element">
           <div class="content">
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
 
     "
   >
-    <ul class="list-with-title">
+    <div class="post-content">
       
-        <div class="listing-title">2021</div>
+      <div class="post-title">
+        <h2>docker 集群中 nginx 配置 php 需要注意的地方</h2>
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/mq/tp6-rabbitmq%E4%BC%81%E4%B8%9A%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" title="tp6 &amp; RabbitMQ企业最佳实践">tp6 &amp; RabbitMQ企业最佳实践</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Dec 14
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Fri, Dec 17, 2021
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 1 分钟</span>
+          </div>
 
         
+      </div><h1 id="序">序</h1>
+<p>最近docker部署集群的时候遇到了一个问题。于是就踩坑了&hellip;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---b-ssl.duitang.com-uploads-item-201806-08-20180608010339_nUV5Y.thumb.400_0.jpeg&amp;refer=http---b-ssl.duitang.3cfz68ibfo40.jpg" alt="src=http&mdash;b-ssl"></p>
+<h2 id="问题复现">问题复现</h2>
+<p>那就是php和nginx不在同一个容器，却要通过nginx配置的server_name和listen来访问php项目。</p>
+<p>之前在本地集成环境部署的时候没有考虑过这个问题，是因为只要nginx的root根目录和php的root根目录指向同一个目录，这样把项目文件放到这个目录下就可同时访问，也就不存在说是php来访问还是nginx来访问的说法。</p>
+<p>但是在集群中也就需要考虑这个问题了。</p>
+<h2 id="思路">思路</h2>
+<p>静态文件需要在 nginx 容器内，php代码放在 php-fpm 的容器内，在nginx的配置里 php 部分设置php-fpm 所在容器内php的路径就可以了。</p>
+<h2 id="实现">实现</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">server <span style="color:#f92672">{</span>
+    listen <span style="color:#ae81ff">80</span> default_server;
+    listen <span style="color:#f92672">[</span>::<span style="color:#f92672">]</span>:80 default_server;
+    server_name api.com;
+
+    location /     <span style="color:#f92672">{</span>
+        <span style="color:#75715e"># 隐藏index.php</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>!-e $request_filename<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            rewrite ^/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span>$ /index.php?$1 last;
+        <span style="color:#f92672">}</span>
+        index index.html index.htm index.php;
+        autoindex on;
+    <span style="color:#f92672">}</span>
+    location ~ <span style="color:#ae81ff">\.</span>php$ <span style="color:#f92672">{</span>
+        <span style="color:#75715e"># php项目</span>
+        root /var/www/html/phalapi/api/public;
+        fastcgi_split_path_info ^<span style="color:#f92672">(</span>.+<span style="color:#ae81ff">\.</span>php<span style="color:#f92672">)(</span>/.+<span style="color:#f92672">)</span>$;
+        fastcgi_pass php:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---c-ssl.duitang.com-uploads-item-202004-06-20200406031436_YdLWc.thumb.400_0.gif&amp;refer=http---c-ssl.duitang.6iau48gki5g0.gif" alt="src=http&mdash;c-ssl"></p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/docker/">docker</a></span>
 
 
-      
-    </ul>
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/nginx/">nginx</a><a class="tag" href="/tags/php/">php</a><a class="tag" href="/tags/docker/">docker</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
   </div>
 
 

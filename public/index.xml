@@ -6,7 +6,22 @@
     <description>Recent content on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Dec 2021 17:54:53 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Dec 2021 11:09:08 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker 集群中 nginx 配置 php 需要注意的地方</title>
+      <link>/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <pubDate>Fri, 17 Dec 2021 11:09:08 +0800</pubDate>
+      
+      <guid>/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      
+        <description>序 最近docker部署集群的时候遇到了一个问题。于是就踩坑了&amp;hellip;
+问题复现 那就是php和nginx不在同一个容器，却要通过nginx配置的server_name和listen来访问php项目。
+之前在本地集成环境部署的时候没有考虑过这个问题，是因为只要nginx的root根目录和php的root根目录指向同一个目录，这样把项目文件放到这个目录下就可同时访问，也就不存在说是php来访问还是nginx来访问的说法。
+但是在集群中也就需要考虑这个问题了。
+思路 静态文件需要在 nginx 容器内，php代码放在 php-fpm 的容器内，在nginx的配置里 php 部分设置php-fpm 所在容器内php的路径就可以了。</description>
+      
+    </item>
+    
     <item>
       <title>docker swarm 搭建与服务更新</title>
       <link>/post/docker/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0/</link>
