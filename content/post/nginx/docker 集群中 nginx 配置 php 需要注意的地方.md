@@ -31,21 +31,18 @@ DisableComments: false
 
 ```shell
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+    listen 80;
+    listen [::]:80;
     server_name api.com;
 
-    location /     {
-        # 隐藏index.php
-        if (!-e $request_filename) {
-            rewrite ^/(.*)$ /index.php?$1 last;
-        }
-        index index.html index.htm index.php;
-        autoindex on;
+    root /var/www/html/phalapi/api/public;
+    set $realdir "";
+
+    location / {
+        index index.html index.php index.htm;
+        try_files $uri $uri/ $realdir/index.php?$args;
     }
     location ~ \.php$ {
-        # php项目
-        root /var/www/html/phalapi/api/public;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_pass php:9000;
         fastcgi_index index.php;
