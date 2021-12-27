@@ -390,7 +390,7 @@ docker node update [OPTIONS] NODE [flags]
 
 
 
-# # 5. 注意
+# 6. 注意
 
 如果一台机器启用多个服务注意，合理分配cpu与内存资源，因mongo在启动编译时会很吃内存，且docker是多线程启动的，所有最好是限定一下（设置resources.limits）否者会导致内存在同一时刻用光，某些服务启动失败当然也可是设置出错重启（restart_policy.condition:on-failure），另外设置resources.reservations要注意，不要超出总内存或cpu百分比，否者会导致后面服务无法获取cpu或内存资源出现“no suitable node (insufficien”错误（这个错误很奇怪，某个service不启动，也不输出日志，使用“**docker stack ps [xxxx]**”查看状态会显示此错误）无法启动
 

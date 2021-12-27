@@ -159,7 +159,7 @@
 
     ,
         "url" : "\/post\/docker\/docker-swarm-%E6%90%AD%E5%BB%BA%E4%B8%8E%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0\/",
-        "wordCount" : "454",
+        "wordCount" : "453",
         "genre" : [ 
       
       "docker"
@@ -629,7 +629,7 @@ possibly leading to different nodes running different
 <li>&ndash;role 节点的作用(worker / manager)</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.22y4kbdhck1s.png" alt="image"></p>
-<h1 id="-5-注意"># 5. 注意</h1>
+<h1 id="6-注意">6. 注意</h1>
 <p>如果一台机器启用多个服务注意，合理分配cpu与内存资源，因mongo在启动编译时会很吃内存，且docker是多线程启动的，所有最好是限定一下（设置resources.limits）否者会导致内存在同一时刻用光，某些服务启动失败当然也可是设置出错重启（restart_policy.condition:on-failure），另外设置resources.reservations要注意，不要超出总内存或cpu百分比，否者会导致后面服务无法获取cpu或内存资源出现“no suitable node (insufficien”错误（这个错误很奇怪，某个service不启动，也不输出日志，使用“<strong>docker stack ps [xxxx]</strong>”查看状态会显示此错误）无法启动</p>
 <p>其实正常走下来觉得还是比较容易的，但是期间没少踩坑，每次编译文件都要好长时间。真的麻了。就比如编译一个php的dockerfile，要半个多小时。</p>
 <p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F13371439711%2F1000.jpg&amp;refer=http%3A%2F%2Finews.gtimg.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1642166629&amp;t=40180c298c83d82ef6eefb647bea898c" alt="" title="点击查看源网页"></p>
