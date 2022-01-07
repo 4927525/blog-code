@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Hzbskak&#39;s Blog</title>
+    <link>/categories/golang/</link>
+    <description>Recent content in golang on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Jan 2022 11:40:46 +0800</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>任务清单小项目</title>
+      <link>/post/golang/todo-list/</link>
+      <pubDate>Fri, 07 Jan 2022 11:40:46 +0800</pubDate>
+      
+      <guid>/post/golang/todo-list/</guid>
+      
+        <description>序 最近用gin+gorm写了一个小项目。所以有阵子没更新了。 项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了
+任务清单-后端 此项目使用Gin+Gorm ，基于RESTful API实现的一个任务清单。
+项目功能实现   登录鉴权（jwt-go）</description>
+      
+    </item>
+    
+  </channel>
+</rss>

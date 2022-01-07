@@ -6,7 +6,20 @@
     <description>Recent content on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Dec 2021 11:09:08 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 11:40:46 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>任务清单小项目</title>
+      <link>/post/golang/todo-list/</link>
+      <pubDate>Fri, 07 Jan 2022 11:40:46 +0800</pubDate>
+      
+      <guid>/post/golang/todo-list/</guid>
+      
+        <description>序 最近用gin+gorm写了一个小项目。所以有阵子没更新了。 项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了
+任务清单-后端 此项目使用Gin+Gorm ，基于RESTful API实现的一个任务清单。
+项目功能实现   登录鉴权（jwt-go）</description>
+      
+    </item>
+    
     <item>
       <title>docker 集群中 nginx 配置 php 需要注意的地方</title>
       <link>/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/</link>

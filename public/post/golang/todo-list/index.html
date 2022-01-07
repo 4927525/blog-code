@@ -7,7 +7,7 @@
   <title>
     Hzbskak
       |
-      framework
+      任务清单小项目
 
 
     
@@ -62,12 +62,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="/tags/framework/" />
+  <link rel="canonical" href="/post/golang/todo-list/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/framework/index.xml" title="Hzbskak's Blog" />
-
-
   
   
   
@@ -90,8 +87,10 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="framework"/>
-<meta name="twitter:description" content="Hi I&#39;m Hzbskak, nice to meet you"/>
+<meta name="twitter:title" content="任务清单小项目"/>
+<meta name="twitter:description" content="序 最近用gin&#43;gorm写了一个小项目。所以有阵子没更新了。 项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了
+任务清单-后端 此项目使用Gin&#43;Gorm ，基于RESTful API实现的一个任务清单。
+项目功能实现   登录鉴权（jwt-go）"/>
 
 
 
@@ -100,6 +99,90 @@
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "任务清单小项目",
+        "headline": "任务清单小项目",
+        "alternativeHeadline": "",
+        "description": "
+      
+        序 最近用gin\u002bgorm写了一个小项目。所以有阵子没更新了。 项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了\n任务清单-后端 此项目使用Gin\u002bGorm ，基于RESTful API实现的一个任务清单。\n项目功能实现   登录鉴权（jwt-go）
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/golang\/todo-list\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-01-07T11:40:46.00Z",
+        "datePublished": "2022-01-07T11:40:46.00Z",
+        "dateModified": "2022-01-07T11:40:46.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/golang\/todo-list\/",
+        "wordCount" : "132",
+        "genre" : [ 
+      
+      "golang"
+
+    ],
+        "keywords" : [ 
+      
+      "golang"
+
+    
+      
+        ,
+
+      
+      "golang-project"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
 <body>
@@ -277,37 +360,150 @@
         <div class="autopagerize_page_element">
           <div class="content">
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
 
     "
   >
-    <ul class="list-with-title">
+    <div class="post-content">
       
-        <div class="listing-title">2021</div>
+      <div class="post-title">
+        <h2>任务清单小项目</h2>
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/blog/%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" title="后端分层架构开发规范">后端分层架构开发规范</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Dec 14
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Fri, Jan 7, 2022
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 1 分钟</span>
+          </div>
 
         
+      </div><h1 id="序">序</h1>
+<p>最近用<code>gin</code>+<code>gorm</code>写了一个小项目。所以有阵子没更新了。
+项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20220107/u=1952558653,2764759773&amp;fm=26&amp;fmt=auto.3hi8f5yajey0.webp" alt="u=1952558653,2764759773&fm=26&fmt=auto"></p>
+<h1 id="任务清单-后端">任务清单-后端</h1>
+<p><strong>此项目使用<code>Gin</code>+<code>Gorm</code> ，基于<code>RESTful API</code>实现的一个任务清单</strong>。</p>
+<h2 id="项目功能实现">项目功能实现</h2>
+<ul>
+<li>
+<p>登录鉴权（jwt-go）</p>
+</li>
+<li>
+<p>清单 crud</p>
+</li>
+<li>
+<p>分页</p>
+</li>
+</ul>
+<h2 id="项目架构">项目架构</h2>
+<pre tabindex="0"><code>TodoList/
+├── api
+├── conf
+├── middleware
+├── model
+├── pkg
+│  ├── util
+├── routes
+├── serializer
+└── service
+</code></pre><ul>
+<li>
+<p>api : 用于定义接口函数</p>
+</li>
+<li>
+<p>conf : 用于存储配置文件</p>
+</li>
+<li>
+<p>middleware : 应用中间件</p>
+</li>
+<li>
+<p>model : 应用数据库模型</p>
+</li>
+<li>
+<p>pkg / util : 工具函数</p>
+</li>
+<li>
+<p>routers : 路由逻辑处理</p>
+</li>
+<li>
+<p>serializer : 将数据序列化为 json 的函数</p>
+</li>
+<li>
+<p>service : 接口函数的实现</p>
+</li>
+</ul>
+<h2 id="项目依赖">项目依赖</h2>
+<ul>
+<li>
+<p>go1.16</p>
+</li>
+<li>
+<p>gin</p>
+</li>
+<li>
+<p>gorm</p>
+</li>
+<li>
+<p>jwt-go</p>
+</li>
+<li>
+<p>mysql</p>
+</li>
+</ul>
+<h2 id="项目接口">项目接口</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/register     --&gt; TodoList/api.Register <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/login        --&gt; TodoList/api.Login <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/task              --&gt; TodoList/api.CreateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/task/:id          --&gt; TodoList/api.ShowTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/tasks             --&gt; TodoList/api.ListTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> PUT    /api/v1/task/:id          --&gt; TodoList/api.UpdateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> DELETE /api/v1/task/:id          --&gt; TodoList/api.DeleteTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="项目运行">项目运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go mod tidy
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go run main.go
+</code></pre></div><h2 id="感谢">感谢</h2>
+<p><a href="https://blog.csdn.net/weixin_45304503/article/details/120680957">【Go语言实战】(3) Gin + Gorm 简单备忘录 | 含接口文档_面向生活编程-CSDN博客</a></p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/golang/">golang</a></span>
 
 
-      
-    </ul>
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/golang-project/">golang-project</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
   </div>
 
 
