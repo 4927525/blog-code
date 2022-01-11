@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jan 2022 11:40:46 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 10:27:37 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于 WebSocket &#43; MongoDB 的IM即时聊天Demo</title>
+      <link>/post/golang/chat/</link>
+      <pubDate>Tue, 11 Jan 2022 10:27:37 +0800</pubDate>
+      
+      <guid>/post/golang/chat/</guid>
+      
+        <description>序 又过了几天，上个小项目还没来得及消化，就稀里糊涂的过了个周末，昨天收了点尾，现在刚好有时间安排！
+写在前面  这个项目是基于WebSocket + MongoDB + MySQL + Redis。</description>
+      
+    </item>
+    
     <item>
       <title>任务清单小项目</title>
       <link>/post/golang/todo-list/</link>

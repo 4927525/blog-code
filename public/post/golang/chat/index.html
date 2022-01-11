@@ -7,7 +7,7 @@
   <title>
     Hzbskak
       |
-      golang
+      基于 WebSocket &#43; MongoDB 的IM即时聊天Demo
 
 
     
@@ -62,12 +62,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="/tags/golang/" />
+  <link rel="canonical" href="/post/golang/chat/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/golang/index.xml" title="Hzbskak's Blog" />
-
-
   
   
   
@@ -90,8 +87,9 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="golang"/>
-<meta name="twitter:description" content="Hi I&#39;m Hzbskak, nice to meet you"/>
+<meta name="twitter:title" content="基于 WebSocket &#43; MongoDB 的IM即时聊天Demo"/>
+<meta name="twitter:description" content="序 又过了几天，上个小项目还没来得及消化，就稀里糊涂的过了个周末，昨天收了点尾，现在刚好有时间安排！
+写在前面  这个项目是基于WebSocket &#43; MongoDB &#43; MySQL &#43; Redis。"/>
 
 
 
@@ -100,6 +98,90 @@
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "基于 WebSocket \u002b MongoDB 的IM即时聊天Demo",
+        "headline": "基于 WebSocket \u002b MongoDB 的IM即时聊天Demo",
+        "alternativeHeadline": "",
+        "description": "
+      
+        序 又过了几天，上个小项目还没来得及消化，就稀里糊涂的过了个周末，昨天收了点尾，现在刚好有时间安排！\n写在前面  这个项目是基于WebSocket \u002b MongoDB \u002b MySQL \u002b Redis。
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/golang\/chat\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-01-11T10:27:37.00Z",
+        "datePublished": "2022-01-11T10:27:37.00Z",
+        "dateModified": "2022-01-11T10:27:37.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/golang\/chat\/",
+        "wordCount" : "125",
+        "genre" : [ 
+      
+      "golang"
+
+    ],
+        "keywords" : [ 
+      
+      "golang"
+
+    
+      
+        ,
+
+      
+      "websocket"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
 <body>
@@ -277,55 +359,172 @@
         <div class="autopagerize_page_element">
           <div class="content">
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
 
     "
   >
-    <ul class="list-with-title">
+    <div class="post-content">
       
-        <div class="listing-title">2022</div>
+      <div class="post-title">
+        <h2>基于 WebSocket &#43; MongoDB 的IM即时聊天Demo</h2>
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/golang/chat/" title="基于 WebSocket &#43; MongoDB 的IM即时聊天Demo">基于 WebSocket &#43; MongoDB 的IM即时聊天Demo</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Jan 11
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Tue, Jan 11, 2022
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 1 分钟</span>
+          </div>
 
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/golang/todo-list/" title="任务清单小项目">任务清单小项目</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Jan 7
+      </div><h1 id="序">序</h1>
+<p>又过了几天，上个小项目还没来得及消化，就稀里糊涂的过了个周末，昨天收了点尾，现在刚好有时间安排！</p>
+<img title="点击查看源网页" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201804%2F24%2F20180424234945_FA4QP.thumb.700_0.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644460567&t=7e4832ec5de2ef91ba66bd2c2cf33d26" alt="" data-align="inline">
+<h1 id="写在前面">写在前面</h1>
+<blockquote>
+<p>这个项目是基于WebSocket + MongoDB + MySQL + Redis。<br>
+业务逻辑很简单，只是两人的聊天。</p>
+</blockquote>
+<ul>
+<li><code>MySQL</code> 用来存储用户基本信息</li>
+<li><code>MongoDB</code> 用来存放用户聊天信息</li>
+<li><code>Redis</code> 用来存储处理过期信息</li>
+</ul>
+<h2 id="项目功能实现">项目功能实现</h2>
+<ul>
+<li>
+<p>登录鉴权（jwt-go）</p>
+</li>
+<li>
+<p>清单 crud</p>
+</li>
+<li>
+<p>分页</p>
+</li>
+</ul>
+<h2 id="项目架构">项目架构</h2>
+<pre tabindex="0"><code>TodoList/
+
+├── api
+
+├── conf
+
+├── e
+
+├── middleware
+
+├── model
+
+├── pkg
+
+│  ├── util
+
+├── routes
+
+├── serializer
+
+└── service
+</code></pre><ul>
+<li>
+<p>api : 用于定义接口函数</p>
+</li>
+<li>
+<p>conf : 用于存储配置文件</p>
+</li>
+<li>
+<p>e: 错误代码文件</p>
+</li>
+<li>
+<p>middleware : 应用中间件</p>
+</li>
+<li>
+<p>model : 应用数据库模型</p>
+</li>
+<li>
+<p>pkg / util : 工具函数</p>
+</li>
+<li>
+<p>routers : 路由逻辑处理</p>
+</li>
+<li>
+<p>serializer : 将数据序列化为 json 的函数</p>
+</li>
+<li>
+<p>service : 接口函数的实现</p>
+</li>
+</ul>
+<h2 id="项目依赖">项目依赖</h2>
+<ul>
+<li>
+<p>go1.16</p>
+</li>
+<li>
+<p>gin</p>
+</li>
+<li>
+<p>gorm</p>
+</li>
+<li>
+<p>mysql</p>
+</li>
+<li>
+<p>redis</p>
+</li>
+<li>
+<p>mongodb</p>
+</li>
+</ul>
+<h2 id="项目接口">项目接口</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /ping                     --&gt; chat/routers.NewRouters.func1 <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /user/register            --&gt; chat/api.UserRegister <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> handlers<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /ws                       --&gt; chat/service.Handler <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> handlers<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="项目运行">项目运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go mod tidy
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go run main.go
+</code></pre></div><h1 id="地址">地址</h1>
+<p><a href="https://github.com/4927525/go-chat">4927525/go-chat · GitHub</a><a href="https://github.com/4927525/go-chat">4927525/go-chat · GitHub</a></p>
+<h1 id="感谢">感谢</h1>
+<p><a href="https://blog.csdn.net/weixin_45304503/article/details/121787022">【Go语言实战】(7) 基于 WebSocket + MongoDB 的IM即时聊天Demo_面向生活编程-CSDN博客_golang 即时通讯</a></p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/golang/">golang</a></span>
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+
 
         
 
+        
+          <span class="separator"><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/websocket/">websocket</a></span>
 
-      
-    </ul>
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
   </div>
 
 
