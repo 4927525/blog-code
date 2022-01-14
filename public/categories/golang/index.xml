@@ -6,7 +6,20 @@
     <description>Recent content in golang on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Jan 2022 10:27:37 +0800</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jan 2022 10:12:46 +0800</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装gRPC-Gateway时遇到...descriptor.proto: File not found</title>
+      <link>/post/golang/grpc-gateway%E8%B8%A9%E5%9D%91/</link>
+      <pubDate>Fri, 14 Jan 2022 10:12:46 +0800</pubDate>
+      
+      <guid>/post/golang/grpc-gateway%E8%B8%A9%E5%9D%91/</guid>
+      
+        <description>将 gRPC-Gateway 注释添加到现有的 proto 文件 官方文档： https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/adding_annotations/
+根据官方文档在安装gRPC的时候，遇到这个错误
+D:\go project\go_grpc\pb&amp;gt;protoc --go_out .</description>
+      
+    </item>
+    
     <item>
       <title>基于 WebSocket &#43; MongoDB 的IM即时聊天Demo</title>
       <link>/post/golang/chat/</link>

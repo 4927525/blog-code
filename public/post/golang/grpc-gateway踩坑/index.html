@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="zh-cn"
+  data-theme="dark"
+><head>
+  <title>
+    Hzbskak
+      |
+      安装gRPC-Gateway时遇到...descriptor.proto: File not found
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.89.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      Hi I&#39;m Hzbskak, nice to meet you
+
+
+    "
+  />
+  
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.a3df9def4bf3695df2a083044a4f30cd6ccd824169f313a3733121d5d51b49a7.css"
+    integrity="sha256-o9&#43;d70vzaV3yoIMESk8wzWzNgkFp8xOjczEh1dUbSac="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.058b31f17db60602cc415fd63b0427e7932fbf35c70d8e341a4c39385f5f6f3e.css"
+    integrity="sha256-BYsx8X22BgLMQV/WOwQn55MvvzXHDY40Gkw5OF9fbz4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/golang/grpc-gateway%E8%B8%A9%E5%9D%91/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
+    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="安装gRPC-Gateway时遇到...descriptor.proto: File not found"/>
+<meta name="twitter:description" content="将 gRPC-Gateway 注释添加到现有的 proto 文件 官方文档： https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/adding_annotations/
+根据官方文档在安装gRPC的时候，遇到这个错误
+D:\go project\go_grpc\pb&gt;protoc --go_out ."/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "安装gRPC-Gateway时遇到...descriptor.proto: File not found",
+        "headline": "安装gRPC-Gateway时遇到...descriptor.proto: File not found",
+        "alternativeHeadline": "",
+        "description": "
+      
+        将 gRPC-Gateway 注释添加到现有的 proto 文件 官方文档： https:\/\/grpc-ecosystem.github.io\/grpc-gateway\/docs\/tutorials\/adding_annotations\/\n根据官方文档在安装gRPC的时候，遇到这个错误\nD:\\go project\\go_grpc\\pb\u0026gt;protoc --go_out .
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/golang\/grpc-gateway%E8%B8%A9%E5%9D%91\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-01-14T10:12:46.00Z",
+        "datePublished": "2022-01-14T10:12:46.00Z",
+        "dateModified": "2022-01-14T10:12:46.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/golang\/grpc-gateway%E8%B8%A9%E5%9D%91\/",
+        "wordCount" : "5666",
+        "genre" : [ 
+      
+      "golang"
+
+    ],
+        "keywords" : [ 
+      
+      "golang"
+
+    
+      
+        ,
+
+      
+      "grpc"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >categories</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >tags</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+      </div>
+      <ul>
+        
+        
+          <li>
+            <a class="theme-switch" title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+
+        
+      </ul>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/profile.jpg" alt="profile picture" />
+        <h3 title=""><a href="/">HZBSKAK&#39;S BLOG</a></h3>
+        <div class="description">
+          <p>Hi I'm Hzbskak, nice to meet you</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://github.com/4927525" rel="me" aria-label="github" title="github">
+            <i class="fab fa-github fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://sighttp.qq.com/msgrd?v=1&amp;uin=2536366291" rel="me" aria-label="qq" title="qq">
+            <i class="fab fa-qq fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://t.me/hzbskak" rel="me" aria-label="telegram" title="telegram">
+            <i class="fab fa-telegram fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:2536366291@qq.com" rel="me" aria-label="email" title="email">
+            <i class="fas fa-envelope fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h2>安装gRPC-Gateway时遇到...descriptor.proto: File not found</h2>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Fri, Jan 14, 2022
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 27 分钟</span>
+          </div>
+
+        
+      </div><h1 id="将-grpc-gateway-注释添加到现有的-proto-文件">将 gRPC-Gateway 注释添加到现有的 proto 文件</h1>
+<p>官方文档： <a href="https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/adding_annotations/">https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/adding_annotations/</a></p>
+<p>根据官方文档在安装gRPC的时候，遇到这个错误</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">D:<span style="color:#ae81ff">\g</span>o project<span style="color:#ae81ff">\g</span>o_grpc<span style="color:#ae81ff">\p</span>b&gt;protoc --go_out . --go_opt paths<span style="color:#f92672">=</span>source_relative --go-grpc_out . --go-grpc_opt paths<span style="color:#f92672">=</span>source
+_relative --grpc-gateway_out . --grpc-gateway_opt paths<span style="color:#f92672">=</span>source_relative ./person/person.proto
+google/protobuf/descriptor.proto: File not found.
+google/api/annotations.proto:20:1: Import <span style="color:#e6db74">&#34;google/protobuf/descriptor.proto&#34;</span> was not found or had errors.
+google/api/annotations.proto:28:8: <span style="color:#e6db74">&#34;google.protobuf.MethodOptions&#34;</span> is not defined.
+person/person.proto:7:1: Import <span style="color:#e6db74">&#34;google/api/annotations.proto&#34;</span> was not found or had errors.
+</code></pre></div><p>报错信息是提示 <code>google/protobuf/descriptor.proto: File not found</code></p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171125%2F88a57b6a2c1e42ec9b40c27d88cc7bce.jpeg&amp;refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1644719183&amp;t=a49338f0a4fcc988763b024912d8c551" alt="" title="点击查看图片来源"></p>
+<p>下面是文档里目录结构：</p>
+<pre tabindex="0"><code>proto
+├── google
+│   └── api
+│       ├── annotations.proto
+│       └── http.proto
+└── helloworld
+    └── hello_world.proto
+</code></pre><p>发现按照文档里的要求是做不到的，最后根据报错信息，把<code>descriptor.proto</code>引入到<code>google/protobuf</code>下即可</p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201806%2F08%2F20180608010339_nUV5Y.thumb.400_0.jpeg&amp;refer=http%3A%2F%2Fb-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1644719154&amp;t=322053f0aa2a888baa05745efc808b33" alt="" title="点击查看图片来源"></p>
+<p>目录结构为：</p>
+<pre tabindex="0"><code></code></pre><p>proto
+├── google
+│   └── api
+│       ├── annotations.proto
+│       └── http.proto
+│   └── protobuf
+│       └── descriptor.proto
+└── helloworld
+└── hello_world.proto</p>
+<pre tabindex="0"><code></code></pre><p>D:\GOPATH\pkg\mod\github.com\golang\protobuf@v1.3.3\protoc-gen-go\descriptor\descriptor.proto</p>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-protobuf" data-lang="protobuf"><span style="color:#75715e">// Protocol Buffers - Google&#39;s data interchange format
+</span><span style="color:#75715e">// Copyright 2008 Google Inc.  All rights reserved.
+</span><span style="color:#75715e">// https://developers.google.com/protocol-buffers/
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Redistribution and use in source and binary forms, with or without
+</span><span style="color:#75715e">// modification, are permitted provided that the following conditions are
+</span><span style="color:#75715e">// met:
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//     * Redistributions of source code must retain the above copyright
+</span><span style="color:#75715e">// notice, this list of conditions and the following disclaimer.
+</span><span style="color:#75715e">//     * Redistributions in binary form must reproduce the above
+</span><span style="color:#75715e">// copyright notice, this list of conditions and the following disclaimer
+</span><span style="color:#75715e">// in the documentation and/or other materials provided with the
+</span><span style="color:#75715e">// distribution.
+</span><span style="color:#75715e">//     * Neither the name of Google Inc. nor the names of its
+</span><span style="color:#75715e">// contributors may be used to endorse or promote products derived from
+</span><span style="color:#75715e">// this software without specific prior written permission.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+</span><span style="color:#75715e">// &#34;AS IS&#34; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+</span><span style="color:#75715e">// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+</span><span style="color:#75715e">// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+</span><span style="color:#75715e">// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+</span><span style="color:#75715e">// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+</span><span style="color:#75715e">// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+</span><span style="color:#75715e">// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+</span><span style="color:#75715e">// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+</span><span style="color:#75715e">// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+</span><span style="color:#75715e">// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Author: kenton@google.com (Kenton Varda)
+</span><span style="color:#75715e">//  Based on original Protocol Buffers design by
+</span><span style="color:#75715e">//  Sanjay Ghemawat, Jeff Dean, and others.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// The messages in this file describe the definitions found in .proto files.
+</span><span style="color:#75715e">// A valid .proto file can be translated directly to a FileDescriptorProto
+</span><span style="color:#75715e">// without any other information (e.g. without reading its imports).
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>syntax <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;proto2&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#f92672">package</span> google<span style="color:#f92672">.</span>protobuf;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> go_package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;github.com/golang/protobuf/protoc-gen-go/descriptor;descriptor&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> java_package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.google.protobuf&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> java_outer_classname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DescriptorProtos&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> csharp_namespace <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Google.Protobuf.Reflection&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> objc_class_prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;GPB&#34;</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">option</span> cc_enable_arenas <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// descriptor.proto must be optimized for speed because reflection-based
+</span><span style="color:#75715e">// algorithms don&#39;t work during bootstrapping.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">option</span> optimize_for <span style="color:#f92672">=</span> SPEED;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// The protocol compiler can output a FileDescriptorSet containing the .proto
+</span><span style="color:#75715e">// files it parses.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">FileDescriptorSet</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> FileDescriptorProto file <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a complete .proto file.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">FileDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;       <span style="color:#75715e">// file name, relative to root of source tree
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">package</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;    <span style="color:#75715e">// e.g. &#34;foo&#34;, &#34;foo.bar&#34;, etc.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Names of files imported by this file.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">string</span> dependency <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Indexes of the public imported files in the dependency list above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">int32</span> public_dependency <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Indexes of the weak imported files in the dependency list.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For Google-internal migration only. Do not use.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">int32</span> weak_dependency <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// All top-level definitions in this file.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> DescriptorProto message_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> EnumDescriptorProto enum_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> ServiceDescriptorProto <span style="color:#66d9ef">service</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> FieldDescriptorProto extension <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> FileOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// This field contains optional information about the original source code.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// You may safely remove this entire field without harming runtime
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// functionality of the descriptors -- the information is needed only by
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// development tools.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> SourceCodeInfo source_code_info <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The syntax of the proto file.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// The supported values are &#34;proto2&#34; and &#34;proto3&#34;.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> syntax <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a message type.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">DescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> FieldDescriptorProto field <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> FieldDescriptorProto extension <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> DescriptorProto nested_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> EnumDescriptorProto enum_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">ExtensionRange</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> start <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> end <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> ExtensionRangeOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> ExtensionRange extension_range <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> OneofDescriptorProto oneof_decl <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> MessageOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Range of reserved tag numbers. Reserved tag numbers may not be used by
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// fields or extension ranges in the same message. Reserved ranges may
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// not overlap.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">ReservedRange</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> start <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// Inclusive.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> end <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;   <span style="color:#75715e">// Exclusive.
+</span><span style="color:#75715e"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> ReservedRange reserved_range <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Reserved field names, which may not be used by fields in the same message.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// A given name may only be reserved once.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">string</span> reserved_name <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">ExtensionRangeOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a field within a message.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">FieldDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">enum</span> Type {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// 0 is reserved for errors.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Order is weird for historical reasons.
+</span><span style="color:#75715e"></span>    TYPE_DOUBLE         <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_FLOAT          <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Not ZigZag encoded.  Negative numbers take 10 bytes.  Use TYPE_SINT64 if
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// negative values are likely.
+</span><span style="color:#75715e"></span>    TYPE_INT64          <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_UINT64         <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Not ZigZag encoded.  Negative numbers take 10 bytes.  Use TYPE_SINT32 if
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// negative values are likely.
+</span><span style="color:#75715e"></span>    TYPE_INT32          <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_FIXED64        <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_FIXED32        <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_BOOL           <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_STRING         <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Tag-delimited aggregate.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Group type is deprecated and not supported in proto3. However, Proto3
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// implementations should still be able to parse the group wire format and
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// treat group fields as unknown fields.
+</span><span style="color:#75715e"></span>    TYPE_GROUP          <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_MESSAGE        <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;  <span style="color:#75715e">// Length-delimited aggregate.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// New in version 2.
+</span><span style="color:#75715e"></span>    TYPE_BYTES          <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_UINT32         <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_ENUM           <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_SFIXED32       <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_SFIXED64       <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    TYPE_SINT32         <span style="color:#f92672">=</span> <span style="color:#ae81ff">17</span>;  <span style="color:#75715e">// Uses ZigZag encoding.
+</span><span style="color:#75715e"></span>    TYPE_SINT64         <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;  <span style="color:#75715e">// Uses ZigZag encoding.
+</span><span style="color:#75715e"></span>  };<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">enum</span> Label {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// 0 is reserved for errors
+</span><span style="color:#75715e"></span>    LABEL_OPTIONAL      <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    LABEL_REQUIRED      <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    LABEL_REPEATED      <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  };<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> Label label <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// If type_name is set, this need not be set.  If both this and type_name
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// are set, this must be one of TYPE_ENUM, TYPE_MESSAGE or TYPE_GROUP.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> Type type <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// For message and enum types, this is the name of the type.  If the name
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// starts with a &#39;.&#39;, it is fully-qualified.  Otherwise, C++-like scoping
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// rules are used to find the type (i.e. first the nested types within this
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// message are searched, then within the parent, on up to the root
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// namespace).
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> type_name <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// For extensions, this is the name of the type being extended.  It is
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// resolved in the same manner as type_name.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> extendee <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// For numeric types, contains the original text representation of the value.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For booleans, &#34;true&#34; or &#34;false&#34;.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For strings, contains the default text contents (not escaped in any way).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For bytes, contains the C escaped value.  All bytes &gt;= 128 are escaped.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// TODO(kenton):  Base-64 encode?
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> default_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// If set, gives the index of a oneof in the containing type&#39;s oneof_decl
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// list.  This field is a member of that oneof.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> oneof_index <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// JSON name of this field. The value is set by protocol compiler. If the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// user has set a &#34;json_name&#34; option on this field, that option&#39;s value
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// will be used. Otherwise, it&#39;s deduced from the field&#39;s name by converting
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// it to camelCase.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> json_name <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> FieldOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a oneof.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">OneofDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> OneofOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes an enum type.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">EnumDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> EnumValueDescriptorProto value <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> EnumOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Range of reserved numeric values. Reserved values may not be used by
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// entries in the same enum. Reserved ranges may not overlap.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Note that this is distinct from DescriptorProto.ReservedRange in that it
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is inclusive such that it can appropriately represent the entire int32
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// domain.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">EnumReservedRange</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> start <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// Inclusive.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> end <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;   <span style="color:#75715e">// Inclusive.
+</span><span style="color:#75715e"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Range of reserved numeric values. Reserved numeric values may not be used
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// by enum values in the same enum declaration. Reserved ranges may not
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// overlap.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> EnumReservedRange reserved_range <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Reserved enum value names, which may not be reused. A given name may only
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// be reserved once.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">string</span> reserved_name <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a value within an enum.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">EnumValueDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> EnumValueOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a service.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">ServiceDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> MethodDescriptorProto method <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> ServiceOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes a method of a service.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">MethodDescriptorProto</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Input and output type names.  These are resolved in the same way as
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// FieldDescriptorProto.type_name, but must refer to a message type.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> input_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> output_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> MethodOptions options <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Identifies if client streams multiple client messages
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> client_streaming <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Identifies if server streams multiple server messages
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> server_streaming <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// ===================================================================
+</span><span style="color:#75715e">// Options
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Each of the definitions above may have &#34;options&#34; attached.  These are
+</span><span style="color:#75715e">// just annotations which may cause code to be generated slightly differently
+</span><span style="color:#75715e">// or may contain hints for code that manipulates protocol messages.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Clients may define custom options as extensions of the *Options messages.
+</span><span style="color:#75715e">// These extensions may not yet be known at parsing time, so the parser cannot
+</span><span style="color:#75715e">// store the values in them.  Instead it stores them in a field in the *Options
+</span><span style="color:#75715e">// message called uninterpreted_option. This field must have the same name
+</span><span style="color:#75715e">// across all *Options messages. We then use this field to populate the
+</span><span style="color:#75715e">// extensions when we build a descriptor, at which point all protos have been
+</span><span style="color:#75715e">// parsed and so all extensions are known.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Extension numbers for custom options may be chosen as follows:
+</span><span style="color:#75715e">// * For options which will only be used within a single application or
+</span><span style="color:#75715e">//   organization, or for experimental options, use field numbers 50000
+</span><span style="color:#75715e">//   through 99999.  It is up to you to ensure that you do not use the
+</span><span style="color:#75715e">//   same number for multiple options.
+</span><span style="color:#75715e">// * For options which will be published and used publicly by multiple
+</span><span style="color:#75715e">//   independent entities, e-mail protobuf-global-extension-registry@google.com
+</span><span style="color:#75715e">//   to reserve extension numbers. Simply provide your project name (e.g.
+</span><span style="color:#75715e">//   Objective-C plugin) and your project website (if available) -- there&#39;s no
+</span><span style="color:#75715e">//   need to explain how you intend to use them. Usually you only need one
+</span><span style="color:#75715e">//   extension number. You can declare multiple options with only one extension
+</span><span style="color:#75715e">//   number by putting them in a sub-message. See the Custom Options section of
+</span><span style="color:#75715e">//   the docs for examples:
+</span><span style="color:#75715e">//   https://developers.google.com/protocol-buffers/docs/proto#options
+</span><span style="color:#75715e">//   If this turns out to be popular, a web service will be set up
+</span><span style="color:#75715e">//   to automatically assign option numbers.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">FileOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Sets the Java package where classes generated from this .proto will be
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// placed.  By default, the proto package is used, but this is often
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// inappropriate because proto packages do not normally start with backwards
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// domain names.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> java_package <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// If set, all the classes from the .proto file are wrapped in a single
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// outer class with the given name.  This applies to both Proto1
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// (equivalent to the old &#34;--one_java_file&#34; option) and Proto2 (where
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a .proto always translates to a single class, but you may want to
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// explicitly choose the class name).
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> java_outer_classname <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// If set true, then the Java code generator will generate a separate .java
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// file for each top-level message, enum, and service defined in the .proto
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// file.  Thus, these types will *not* be nested inside the outer class
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// named by java_outer_classname.  However, the outer class will still be
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// generated to contain the file&#39;s getDescriptor() method as well as any
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// top-level extensions defined in the file.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> java_multiple_files <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// This option does nothing.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> java_generate_equals_and_hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span> [deprecated<span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// If set true, then the Java2 code generator will generate code that
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// throws an exception whenever an attempt is made to assign a non-UTF-8
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// byte sequence to a string field.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Message reflection will do the same.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// However, an extension field still accepts non-UTF-8 byte sequences.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This option has no effect on when used with the lite runtime.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> java_string_check_utf8 <span style="color:#f92672">=</span> <span style="color:#ae81ff">27</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Generated classes can be optimized for speed or code size.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">enum</span> OptimizeMode {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    SPEED <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;        <span style="color:#75715e">// Generate complete code for parsing, serialization,
+</span><span style="color:#75715e"></span>                      <span style="color:#75715e">// etc.
+</span><span style="color:#75715e"></span>    CODE_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;    <span style="color:#75715e">// Use ReflectionOps to implement these methods.
+</span><span style="color:#75715e"></span>    LITE_RUNTIME <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// Generate code using MessageLite and the lite runtime.
+</span><span style="color:#75715e"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> OptimizeMode optimize_for <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span>SPEED];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Sets the Go package where structs generated from this .proto will be
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// placed. If omitted, the Go package will be derived from the following:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   - The basename of the package import path, if provided.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   - Otherwise, the package statement in the .proto file, if present.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   - Otherwise, the basename of the .proto file, without extension.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> go_package <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Should generic services be generated in each language?  &#34;Generic&#34; services
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// are not specific to any particular RPC system.  They are generated by the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// main code generators in each language (without additional plugins).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Generic services were the only kind of service generation supported by
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// early versions of google.protobuf.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Generic services are now considered deprecated in favor of using plugins
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// that generate code specific to your particular RPC system.  Therefore,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// these default to false.  Old code which depends on generic services should
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// explicitly set them to true.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> cc_generic_services <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> java_generic_services <span style="color:#f92672">=</span> <span style="color:#ae81ff">17</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> py_generic_services <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> php_generic_services <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this file deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for everything in the file, or it will be completely ignored; in the very
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// least, this is a formalization for deprecating files.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Enables the use of arenas for the proto messages in this file. This applies
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// only to generated classes for C++.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> cc_enable_arenas <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Sets the objective c class prefix which is prepended to all objective c
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// generated classes from this .proto. There is no default.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> objc_class_prefix <span style="color:#f92672">=</span> <span style="color:#ae81ff">36</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Namespace for generated classes; defaults to the package.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> csharp_namespace <span style="color:#f92672">=</span> <span style="color:#ae81ff">37</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// By default Swift generators will take the proto package and CamelCase it
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// replacing &#39;.&#39; with underscore and use that to prefix the types/symbols
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// defined. When this options is provided, they will use this value instead
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to prefix the types/symbols defined.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> swift_prefix <span style="color:#f92672">=</span> <span style="color:#ae81ff">39</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Sets the php class prefix which is prepended to all php generated classes
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// from this .proto. Default is empty.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> php_class_prefix <span style="color:#f92672">=</span> <span style="color:#ae81ff">40</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Use this option to change the namespace of php generated classes. Default
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is empty. When this option is empty, the package name will be used for
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// determining the namespace.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> php_namespace <span style="color:#f92672">=</span> <span style="color:#ae81ff">41</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Use this option to change the namespace of php generated metadata classes.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Default is empty. When this option is empty, the proto file name will be used
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for determining the namespace.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> php_metadata_namespace <span style="color:#f92672">=</span> <span style="color:#ae81ff">44</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Use this option to change the package of ruby generated classes. Default
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is empty. When this option is not set, the package name will be used for
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// determining the ruby package.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> ruby_package <span style="color:#f92672">=</span> <span style="color:#ae81ff">45</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// See the documentation for the &#34;Options&#34; section above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// See the documentation for the &#34;Options&#34; section above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  reserved <span style="color:#ae81ff">38</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">MessageOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Set true to use the old proto1 MessageSet wire format for extensions.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This is provided for backwards-compatibility with the MessageSet wire
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// format.  You should not use this for any other reason:  It&#39;s less
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// efficient, has fewer features, and is more complicated.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// The message must be defined exactly as follows:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   message Foo {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     option message_set_wire_format = true;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     extensions 4 to max;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   }
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Note that the message cannot have any defined fields; MessageSets only
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// have extensions.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// All extensions of your type must be singular messages; e.g. they cannot
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// be int32s, enums, or repeated messages.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Because this is an option, the above two restrictions are not enforced by
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// the protocol compiler.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> message_set_wire_format <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Disables the generation of the standard &#34;descriptor()&#34; accessor, which can
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// conflict with a field of the same name.  This is meant to make migration
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// from proto1 easier; new code should avoid fields named &#34;descriptor&#34;.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> no_standard_descriptor_accessor <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this message deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for the message, or it will be completely ignored; in the very least,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// this is a formalization for deprecating messages.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Whether the message is an automatically generated map entry type for the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// maps field.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For maps fields:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     map&lt;KeyType, ValueType&gt; map_field = 1;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// The parsed descriptor looks like:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     message MapFieldEntry {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//         option map_entry = true;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//         optional KeyType key = 1;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//         optional ValueType value = 2;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     }
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     repeated MapFieldEntry map_field = 1;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Implementations may choose not to generate the map_entry=true message, but
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// use a native map in the target language to hold the keys and values.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// The reflection APIs in such implementions still need to work as
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// if the field is a repeated message field.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// NOTE: Do not set the option in .proto files. Always use the maps syntax
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// instead. The option should only be implicitly set by the proto compiler
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// parser.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> map_entry <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  reserved <span style="color:#ae81ff">8</span>;  <span style="color:#75715e">// javalite_serializable
+</span><span style="color:#75715e"></span>  reserved <span style="color:#ae81ff">9</span>;  <span style="color:#75715e">// javanano_as_lite
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">FieldOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The ctype option instructs the C++ code generator to use a different
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// representation of the field than it normally would.  See the specific
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// options below.  This option is not yet implemented in the open source
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// release -- sorry, we&#39;ll try to include it in a future version!
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> CType <span style="color:#66d9ef">ctype</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> [<span style="color:#66d9ef">default</span> <span style="color:#f92672">=</span> STRING];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">enum</span> CType {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Default mode.
+</span><span style="color:#75715e"></span>    STRING <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    CORD <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    STRING_PIECE <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The packed option can be enabled for repeated primitive fields to enable
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a more efficient representation on the wire. Rather than repeatedly
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// writing the tag and type for each element, the entire array is encoded as
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a single length-delimited blob. In proto3, only explicit setting it to
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// false will avoid using packed encoding.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">packed</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The jstype option determines the JavaScript type used for values of the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// field.  The option is permitted only for 64 bit integral and fixed types
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// (int64, uint64, sint64, fixed64, sfixed64).  A field with jstype JS_STRING
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is represented as JavaScript string, which avoids loss of precision that
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// can happen when a large value is converted to a floating point JavaScript.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Specifying JS_NUMBER for the jstype causes the generated JavaScript code to
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// use the JavaScript &#34;number&#34; type.  The behavior of the default option
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// JS_NORMAL is implementation dependent.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This option is an enum to permit additional types to be added, e.g.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// goog.math.Integer.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> JSType jstype <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span> [<span style="color:#66d9ef">default</span> <span style="color:#f92672">=</span> JS_NORMAL];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">enum</span> JSType {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Use the default type.
+</span><span style="color:#75715e"></span>    JS_NORMAL <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Use JavaScript strings.
+</span><span style="color:#75715e"></span>    JS_STRING <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Use JavaScript numbers.
+</span><span style="color:#75715e"></span>    JS_NUMBER <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Should this field be parsed lazily?  Lazy applies only to message-type
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// fields.  It means that when the outer message is initially parsed, the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// inner message&#39;s contents will not be parsed but instead stored in encoded
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// form.  The inner message will actually be parsed when it is first accessed.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This is only a hint.  Implementations are free to choose whether to use
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// eager or lazy parsing regardless of the value of this option.  However,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// setting this option true suggests that the protocol author believes that
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// using lazy parsing on this field is worth the additional bookkeeping
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// overhead typically needed to implement it.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This option does not affect the public interface of any generated code;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// all method signatures remain the same.  Furthermore, thread-safety of the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// interface is not affected by this option; const methods remain safe to
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// call from multiple threads concurrently, while non-const methods continue
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to require exclusive access.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Note that implementations may choose not to check required fields within
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a lazy sub-message.  That is, calling IsInitialized() on the outer message
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// may return true even if the inner message has missing required fields.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This is necessary because otherwise the inner message would have to be
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// parsed in order to perform the check, defeating the purpose of lazy
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// parsing.  An implementation which chooses not to check required fields
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// must be consistent about it.  That is, for any particular sub-message, the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// implementation must either *always* check its required fields, or *never*
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// check its required fields, regardless of whether or not the message has
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// been parsed.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> lazy <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this field deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for accessors, or it will be completely ignored; in the very least, this
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is a formalization for deprecating fields.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// For Google-internal migration only. Do not use.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> weak <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  reserved <span style="color:#ae81ff">4</span>;  <span style="color:#75715e">// removed jtype
+</span><span style="color:#75715e"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">OneofOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">EnumOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Set this option to true to allow mapping different tag names to the same
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// value.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> allow_alias <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this enum deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for the enum, or it will be completely ignored; in the very least, this
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// is a formalization for deprecating enums.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  reserved <span style="color:#ae81ff">5</span>;  <span style="color:#75715e">// javanano_as_lite
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">EnumValueOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this enum value deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for the enum value, or it will be completely ignored; in the very least,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// this is a formalization for deprecating enum values.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">ServiceOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Note:  Field numbers 1 through 32 are reserved for Google&#39;s internal RPC
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   framework.  We apologize for hoarding these numbers to ourselves, but
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   we were already using them long before we decided to release Protocol
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   Buffers.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this service deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for the service, or it will be completely ignored; in the very least,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// this is a formalization for deprecating services.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">33</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">MethodOptions</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Note:  Field numbers 1 through 32 are reserved for Google&#39;s internal RPC
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   framework.  We apologize for hoarding these numbers to ourselves, but
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   we were already using them long before we decided to release Protocol
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   Buffers.
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this method deprecated?
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Depending on the target platform, this can emit Deprecated annotations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for the method, or it will be completely ignored; in the very least,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// this is a formalization for deprecating methods.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bool</span> deprecated <span style="color:#f92672">=</span> <span style="color:#ae81ff">33</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Is this method side-effect-free (or safe in HTTP parlance), or idempotent,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// or neither? HTTP based RPC implementation may choose GET verb for safe
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// methods, and PUT verb for idempotent methods instead of the default POST.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">enum</span> IdempotencyLevel {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    IDEMPOTENCY_UNKNOWN <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    NO_SIDE_EFFECTS     <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// implies idempotent
+</span><span style="color:#75715e"></span>    IDEMPOTENT          <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// idempotent, but may have side effects
+</span><span style="color:#75715e"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> IdempotencyLevel idempotency_level <span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      <span style="color:#ae81ff">34</span> [<span style="color:#66d9ef">default</span><span style="color:#f92672">=</span>IDEMPOTENCY_UNKNOWN];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The parser stores options it doesn&#39;t recognize here. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> UninterpretedOption uninterpreted_option <span style="color:#f92672">=</span> <span style="color:#ae81ff">999</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// Clients can define custom options in extensions of this message. See above.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">extensions</span> <span style="color:#ae81ff">1000</span> <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">max</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// A message representing a option the parser does not recognize. This only
+</span><span style="color:#75715e">// appears in options protos created by the compiler::Parser class.
+</span><span style="color:#75715e">// DescriptorPool resolves these when building Descriptor objects. Therefore,
+</span><span style="color:#75715e">// options protos in descriptor objects (e.g. returned by Descriptor::options(),
+</span><span style="color:#75715e">// or produced by Descriptor::CopyTo()) will never have UninterpretedOptions
+</span><span style="color:#75715e">// in them.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">UninterpretedOption</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The name of the uninterpreted option.  Each string represents a segment in
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a dot-separated name.  is_extension is true iff a segment represents an
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// extension (denoted with parentheses in options specs in .proto files).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// E.g.,{ [&#34;foo&#34;, false], [&#34;bar.baz&#34;, true], [&#34;qux&#34;, false] } represents
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// &#34;foo.(bar.baz).qux&#34;.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">NamePart</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">string</span> name_part <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">bool</span> is_extension <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">repeated</span> NamePart name <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// The value of the uninterpreted option, in whatever type the tokenizer
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// identified it as during parsing. Exactly one of these should be set.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> identifier_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">uint64</span> positive_int_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int64</span> negative_int_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">double</span> double_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">bytes</span> string_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> aggregate_value <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// ===================================================================
+</span><span style="color:#75715e">// Optional source code info
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Encapsulates information about the original source file from which a
+</span><span style="color:#75715e">// FileDescriptorProto was generated.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">SourceCodeInfo</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// A Location identifies a piece of source code in a .proto file which
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// corresponds to a particular definition.  This information is intended
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to be useful to IDEs, code indexers, documentation generators, and similar
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// tools.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// For example, say we have a file like:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   message Foo {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//     optional string foo = 1;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   }
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Let&#39;s look at just the field definition:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   optional string foo = 1;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   ^       ^^     ^^  ^  ^^^
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   a       bc     de  f  ghi
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// We have the following locations:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   span   path               represents
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   [a,i)  [ 4, 0, 2, 0 ]     The whole field definition.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   [a,b)  [ 4, 0, 2, 0, 4 ]  The label (optional).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   [c,d)  [ 4, 0, 2, 0, 5 ]  The type (string).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   [e,f)  [ 4, 0, 2, 0, 1 ]  The name (foo).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   [g,h)  [ 4, 0, 2, 0, 3 ]  The number (1).
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Notes:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - A location may refer to a repeated field itself (i.e. not to any
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   particular index within it).  This is used whenever a set of elements are
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   logically enclosed in a single code segment.  For example, an entire
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   extend block (possibly containing multiple extension definitions) will
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   have an outer location whose path refers to the &#34;extensions&#34; repeated
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   field without an index.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - Multiple locations may have the same path.  This happens when a single
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   logical declaration is spread out across multiple places.  The most
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   obvious example is the &#34;extend&#34; block again -- there may be multiple
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   extend blocks in the same scope, each of which will have the same path.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - A location&#39;s span is not always a subset of its parent&#39;s span.  For
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   example, the &#34;extendee&#34; of an extension declaration appears at the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   beginning of the &#34;extend&#34; block and is shared by all extensions within
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   the block.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - Just because a location&#39;s span is a subset of some other location&#39;s span
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   does not mean that it is a descendent.  For example, a &#34;group&#34; defines
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   both a type and a field in a single declaration.  Thus, the locations
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   corresponding to the type and field and their components will overlap.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - Code which tries to interpret locations should probably be designed to
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   ignore those that it doesn&#39;t understand, as more types of locations could
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   be recorded in the future.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> Location location <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">Location</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Identifies which part of the FileDescriptorProto was defined at this
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// location.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Each element is a field number or an index.  They form a path from
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// the root FileDescriptorProto to the place where the definition.  For
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// example, this path:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   [ 4, 3, 2, 7, 1 ]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// refers to:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   file.message_type(3)  // 4, 3
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//       .field(7)         // 2, 7
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//       .name()           // 1
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// This is because FileDescriptorProto.message_type has field number 4:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   repeated DescriptorProto message_type = 4;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// and DescriptorProto.field has field number 2:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   repeated FieldDescriptorProto field = 2;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// and FieldDescriptorProto.name has field number 1:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional string name = 1;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Thus, the above path gives the location of a field name.  If we removed
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// the last element:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   [ 4, 3, 2, 7 ]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// this path refers to the whole field declaration (from the beginning
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// of the label to the terminating semicolon).
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">int32</span> path <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> [<span style="color:#66d9ef">packed</span><span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Always has exactly three or four elements: start line, start column,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// end line (optional, otherwise assumed same as start line), end column.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// These are packed into a single field for efficiency.  Note that line
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// and column numbers are zero-based -- typically you will want to add
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 1 to each before displaying to a user.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">int32</span> span <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> [<span style="color:#66d9ef">packed</span><span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// If this SourceCodeInfo represents a complete declaration, these are any
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// comments appearing before and after the declaration which appear to be
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// attached to the declaration.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// A series of line comments appearing on consecutive lines, with no other
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// tokens appearing on those lines, will be treated as a single comment.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// leading_detached_comments will keep paragraphs of comments that appear
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// before (but not connected to) the current element. Each paragraph,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// separated by empty lines, will be one comment element in the repeated
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// field.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Only the comment content is provided; comment markers (e.g. //) are
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// stripped out.  For block comments, leading whitespace and an asterisk
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// will be stripped from the beginning of each line other than the first.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Newlines are included in the output.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Examples:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional int32 foo = 1;  // Comment attached to foo.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Comment attached to bar.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional int32 bar = 2;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional string baz = 3;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Comment attached to baz.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Another line attached to baz.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Comment attached to qux.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   //
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Another line attached to qux.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional double qux = 4;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Detached comment for corge. This is not leading or trailing comments
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // to qux or corge because there are blank lines separating it from
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // both.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // Detached comment for corge paragraph 2.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional string corge = 5;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   /* Block comment attached
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//    * to corge.  Leading asterisks
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//    * will be removed. */
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   /* Block comment attached to
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//    * grault. */
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   optional int32 grault = 6;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // ignored detached comments.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> leading_comments <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> trailing_comments <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">string</span> leading_detached_comments <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">// Describes the relationship between generated code and its original source
+</span><span style="color:#75715e">// file. A GeneratedCodeInfo message is associated with only one generated
+</span><span style="color:#75715e">// source file, but may contain references to different source .proto files.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">message</span> <span style="color:#a6e22e">GeneratedCodeInfo</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#75715e">// An Annotation connects some span of text in generated code to an element
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// of its generating .proto file.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">repeated</span> Annotation annotation <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">message</span> <span style="color:#a6e22e">Annotation</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Identifies the element in the original source .proto file. This field
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// is formatted the same as SourceCodeInfo.Location.path.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">repeated</span> <span style="color:#66d9ef">int32</span> path <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> [<span style="color:#66d9ef">packed</span><span style="color:#f92672">=</span><span style="color:#66d9ef">true</span>];<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Identifies the filesystem path to the original source .proto.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">string</span> source_file <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Identifies the starting offset in bytes in the generated code
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// that relates to the identified object.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> begin <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">// Identifies the ending offset in bytes in the generated code that
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// relates to the identified offset. The end offset should be one past
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// the last relevant byte (so the length of the text = end - begin).
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">optional</span> <span style="color:#66d9ef">int32</span> end <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div></div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/golang/">golang</a></span>
+
+
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/golang/">golang</a><a class="tag" href="/tags/grpc/">grpc</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

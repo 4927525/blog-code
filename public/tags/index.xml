@@ -6,13 +6,24 @@
     <description>Recent content in Tags on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Jan 2022 10:27:37 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jan 2022 10:12:46 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golang</title>
       <link>/tags/golang/</link>
-      <pubDate>Tue, 11 Jan 2022 10:27:37 +0800</pubDate>
+      <pubDate>Fri, 14 Jan 2022 10:12:46 +0800</pubDate>
       
       <guid>/tags/golang/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>grpc</title>
+      <link>/tags/grpc/</link>
+      <pubDate>Fri, 14 Jan 2022 10:12:46 +0800</pubDate>
+      
+      <guid>/tags/grpc/</guid>
       
         <description></description>
       
