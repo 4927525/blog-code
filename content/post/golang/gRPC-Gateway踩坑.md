@@ -47,7 +47,6 @@ proto
 目录结构为：
 
 ```
-```
 proto
 ├── google
 │   └── api
@@ -57,7 +56,6 @@ proto
 │       └── descriptor.proto
 └── helloworld
     └── hello_world.proto
-```
 ```
 
 D:\GOPATH\pkg\mod\github.com\golang\protobuf@v1.3.3\protoc-gen-go\descriptor\descriptor.proto
