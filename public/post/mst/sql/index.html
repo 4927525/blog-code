@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="zh-cn"
+  data-theme="dark"
+><head>
+  <title>
+    Hzbskak
+      |
+      MySQL面试题
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      Hi I&#39;m Hzbskak, nice to meet you
+
+
+    "
+  />
+  
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.a3df9def4bf3695df2a083044a4f30cd6ccd824169f313a3733121d5d51b49a7.css"
+    integrity="sha256-o9&#43;d70vzaV3yoIMESk8wzWzNgkFp8xOjczEh1dUbSac="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.058b31f17db60602cc415fd63b0427e7932fbf35c70d8e341a4c39385f5f6f3e.css"
+    integrity="sha256-BYsx8X22BgLMQV/WOwQn55MvvzXHDY40Gkw5OF9fbz4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/mst/sql/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
+    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MySQL面试题"/>
+<meta name="twitter:description" content="1. MySQL 索引使用有哪些注意事项呢？ 索引哪些情况下会失效
+  查询条件包含or 会导致索引失效
+  组合索引中，查询时要按照最左原则进行where条件判断"/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "MySQL面试题",
+        "headline": "MySQL面试题",
+        "alternativeHeadline": "",
+        "description": "
+      
+        1. MySQL 索引使用有哪些注意事项呢？ 索引哪些情况下会失效\n  查询条件包含or 会导致索引失效\n  组合索引中，查询时要按照最左原则进行where条件判断
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/mst\/sql\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-02-23T23:04:47.00Z",
+        "datePublished": "2022-02-23T23:04:47.00Z",
+        "dateModified": "2022-02-23T23:04:47.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/mst\/sql\/",
+        "wordCount" : "661",
+        "genre" : [ 
+      
+      "mst"
+
+    ],
+        "keywords" : [ 
+      
+      "mysql"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >categories</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >tags</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+      </div>
+      <ul>
+        
+        
+          <li>
+            <a class="theme-switch" title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+
+        
+      </ul>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/profile.jpg" alt="profile picture" />
+        <h3 title=""><a href="/">HZBSKAK&#39;S BLOG</a></h3>
+        <div class="description">
+          <p>Hi I'm Hzbskak, nice to meet you</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://github.com/4927525" rel="me" aria-label="github" title="github">
+            <i class="fab fa-github fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://sighttp.qq.com/msgrd?v=1&amp;uin=2536366291" rel="me" aria-label="qq" title="qq">
+            <i class="fab fa-qq fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://t.me/hzbskak" rel="me" aria-label="telegram" title="telegram">
+            <i class="fab fa-telegram fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:2536366291@qq.com" rel="me" aria-label="email" title="email">
+            <i class="fas fa-envelope fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h2>MySQL面试题</h2>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Wed, Feb 23, 2022
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 4 分钟</span>
+          </div>
+
+        
+      </div><h2 id="1-mysql-索引使用有哪些注意事项呢">1. MySQL 索引使用有哪些注意事项呢？</h2>
+<p>索引哪些情况下会失效</p>
+<ul>
+<li>
+<p>查询条件包含or 会导致索引失效</p>
+</li>
+<li>
+<p>组合索引中，查询时要按照最左原则进行where条件判断</p>
+</li>
+<li>
+<p>like中 &ldquo;%asdg&quot;会导致索引失效</p>
+</li>
+<li>
+<p>对索引进行函数操作或加减会导致索引失效</p>
+</li>
+<li>
+<p>*索引中使用!= 或者 not in 会失效</p>
+</li>
+<li>
+<p>*隐式转换也会失效 比如字段是int 却用where age=&lsquo;1&rsquo;</p>
+</li>
+<li>
+<p>不适用的场景</p>
+</li>
+<li>
+<p>数据量少的情况下不建议用索引</p>
+</li>
+<li>
+<p>离散低的不建议用索引如 sex 男女</p>
+</li>
+<li>
+<p>频繁更新的字段不建议加索引</p>
+</li>
+</ul>
+<h2 id="2-mysql-遇到过死锁问题吗你是如何解决的">2. MySQL 遇到过死锁问题吗，你是如何解决的？</h2>
+<p>步骤：</p>
+<ul>
+<li>
+<p>查看死锁日志show engine innodb status;</p>
+</li>
+<li>
+<p>找出死锁sql</p>
+</li>
+<li>
+<p>分析sql加锁情况</p>
+</li>
+<li>
+<p>模拟死锁案发</p>
+</li>
+<li>
+<p>分析死锁日志</p>
+</li>
+<li>
+<p>分析死锁结果</p>
+</li>
+</ul>
+<h2 id="3-日常工作中你是怎么优化sql的">3. 日常工作中你是怎么优化SQL的？</h2>
+<ul>
+<li>加索引</li>
+</ul>
+<ol>
+<li>查询条件包含or 会导致索引失效</li>
+<li>组合索引中，查询时要按照最左原则进行where条件判断</li>
+<li>like中 &ldquo;%asdg&quot;会导致索引失效</li>
+<li>对索引进行函数操作或加减会导致索引失效</li>
+<li>对索引进行函数操作或加减会导致索引失效</li>
+<li>索引中使用!= 或者 not in 会失效</li>
+</ol>
+<ul>
+<li>数据处理多时要分批次进行</li>
+<li>尽量避免使用2个表以上的join</li>
+<li>满足三大范式</li>
+<li>主从复制读写分离</li>
+<li>分表分库
+-&hellip;</li>
+</ul>
+<h2 id="4-分库分表的设计">4. 分库分表的设计</h2>
+<p>应该是先按业务垂直分库 再到按业务垂直分表 然后就是 按字段水平分表</p>
+<ul>
+<li>水平分库：以字段为依据，按照range、hash策略，将一个库中的数据拆分到多个库中</li>
+<li>水平分表：以字段为依据，按照range、hash策略，将一个表中的数据拆分到多个表中</li>
+<li>垂直分库：以表为依据，按照业务归属不同，将不同的表拆到不同的库中</li>
+<li>垂直分表：以字段为依据，按照字段的活跃性，将表中字段拆到不同的表中</li>
+</ul>
+<p>-分表分库常用中间件 sharding-jdbc 和 mycat</p>
+<h2 id="5-innodb与myisam的区别">5. InnoDB与MyISAM的区别</h2>
+<p>// 事务 索引 锁</p>
+<ul>
+<li>I 支持事务，M不支持事物</li>
+<li>I 支持外键，M不支持外键</li>
+<li>I 支持MVCC，M不支持</li>
+<li>select count(*) from table 时 M快，因为他有一个变量存着表的总行数，I需要全表扫描</li>
+<li>I 支持表 行锁，M只支持表锁</li>
+</ul>
+<h2 id="6-数据库索引的原理为什么要用-b树为什么不用二叉树">6. 数据库索引的原理，为什么要用 B+树，为什么不用二叉树？</h2>
+<p>1）当数据量大时，树的高度会比较高（树的高度决定着它的IO操作次数，IO操作耗时大），查询会比较慢。</p>
+<p>2）每个磁盘块（节点/页）保存的数据太小</p>
+<h2 id="7-聚集索引与非聚集索引的区别">7. 聚集索引与非聚集索引的区别</h2>
+<ul>
+<li>一个表中只能拥有一个聚集索引，而非聚集索引一个表可以存在多个。</li>
+<li>聚集索引，索引中键值的逻辑顺序决定了表中相应行的物理顺序；非聚集索引，索引中索引的逻辑顺序与磁盘上行的物理存储顺序不同。</li>
+</ul>
+<h2 id="8-limit-1000000-加载很慢的话你是怎么解决的呢">8. limit 1000000 加载很慢的话，你是怎么解决的呢？</h2>
+<ul>
+<li>如果id是连续的，可以返回上次查询的最大记录，再往下limit</li>
+<li>在业务允许的情况是下限制页数 ，是否需要如此靠后的数据</li>
+<li>order by + 索引 （id为索引）</li>
+</ul>
+<h2 id="9-如何选择合适的分布式主键方案呢">9. 如何选择合适的分布式主键方案呢？</h2>
+<ul>
+<li>UUID</li>
+<li>雪花算法</li>
+<li>Redis生成ID</li>
+</ul>
+<h2 id="10-事务的隔离级别有哪些mysql的默认隔离级别是什么">10. 事务的隔离级别有哪些？MySQL的默认隔离级别是什么？</h2>
+<blockquote>
+<p>读脏：一个事务对数据进行了修改但未提交，另一个事务也在访问这个数据并且读到了修改的数据
+不可重复读：A事务多次读，B事务在A读取中修改了数据，可能造成结果不一致
+幻读：一个事务在读取某一范围数据的时候，另一个事务在该范围内插入了新行，再次读取的时候与之前的数据不一致</p>
+</blockquote>
+<p><strong>不可重复读的和幻读很容易混淆，不可重复读侧重于修改，幻读侧重于新增或删除。解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表</strong></p>
+<ol>
+<li>读未提交</li>
+</ol>
+<ul>
+<li>这种事务隔离级别下，select语句不加锁，此时可能不一致的数据，读脏。是并发最高，一致性最差的隔离级别</li>
+</ul>
+<ol start="2">
+<li>读提交 RC</li>
+</ol>
+<ul>
+<li>可能会出现幻读</li>
+</ul>
+<ol start="3">
+<li>可重复读 RR</li>
+</ol>
+<ul>
+<li>无论读几次都不会读到重复的数据</li>
+</ul>
+<ol start="4">
+<li>串行化</li>
+</ol>
+<ul>
+<li>如果有未提交的事务正在修改某些行，所有读取这些行的select就会被堵塞住，一致性最好的，但并发性最差的隔离级别。</li>
+</ul>
+<h2 id="11-在高并发情况下如何做到安全的修改同一行数据">11. 在高并发情况下，如何做到安全的修改同一行数据？</h2>
+<ol>
+<li>使用悲观锁</li>
+</ol>
+<ul>
+<li>for update ，本次事务提交之前，别的线程都无法修改这些记录</li>
+</ul>
+<ol start="2">
+<li>使用乐观锁</li>
+</ol>
+<ul>
+<li>有线程进来，先放过去修改，如果看到别的线程没修改过，就可以修改成功。如果别的线程修改过，就修改失败或者重试</li>
+</ul>
+<h2 id="12-数据库的乐观锁和悲观锁">12. 数据库的乐观锁和悲观锁</h2>
+<ul>
+<li>悲观锁 ，任何事务都不能对数据进行修改，只能等待锁被释放后才能执行</li>
+<li>乐观锁，先把线程放进来，如果没有其他线程对数据进行修改则可以修改成功，否则修改失败或者重试。</li>
+</ul>
+<h2 id="13-sql优化的一般步骤是什么怎么看执行计划explain如何理解其中各个字段的含义">13. SQL优化的一般步骤是什么，怎么看执行计划（explain），如何理解其中各个字段的含义？</h2>
+<ol>
+<li>show status 了解各种sql的执行频率</li>
+<li>通过慢日志定位那些执行效率低的sql语句</li>
+<li>explain分析低效的sql执行计划</li>
+</ol>
+<h2 id="14-select-for-update有什么含义-锁表还是锁行还是其他">14. select for update有什么含义， 锁表还是锁行还是其他？</h2>
+<ul>
+<li>是悲观锁，用索引是行锁，没有是表锁</li>
+</ul>
+<h2 id="15-mysql事务得四大特性以及实现原理">15. MySQL事务得四大特性以及实现原理</h2>
+<ul>
+<li>原子性：要么全部执行，全部不执行</li>
+<li>一致性：事务开始前后，数据不会被破坏</li>
+<li>隔离性：事务与事务之间互相隔离，不会冲突</li>
+<li>持久性：会永久的保存到数据库中</li>
+</ul>
+<h2 id="16-如果某个表有近千万数据crud比较慢如何优化">16. 如果某个表有近千万数据，CRUD比较慢，如何优化？</h2>
+<ul>
+<li>优化sql语句，加索引，适当反三范式，适当冗余</li>
+<li>可以将一部分常用的数据存到redis中</li>
+<li>主从复制，读写分离</li>
+<li>水平分库分表，垂直分库分表</li>
+</ul>
+<h2 id="17-如何写sql能够有效的使用到复合索引">17. 如何写sql能够有效的使用到复合索引？</h2>
+<ul>
+<li>注意查询sql条件的顺序，确保最左匹配原则有效</li>
+</ul>
+<h2 id="18-mysql中in-和exists的区别">18. mysql中in 和exists的区别</h2>
+<ul>
+<li>如果子查询的表数据比主查询中的少，适合用in。如果子查询的表数据比主查询中的多，适合用exists</li>
+</ul>
+<h2 id="19-数据库自增主键可能遇到什么问题">19. 数据库自增主键可能遇到什么问题？</h2>
+<ul>
+<li>使用自增主键进行分表分库时，会造成主键重复问题，可以使用UUID。</li>
+<li>自增主键可能会用完</li>
+</ul>
+<h2 id="20-mvcc底层原理">20. MVCC底层原理</h2>
+<p><img src="https://img-blog.csdnimg.cn/20200725024356278.png" alt="img"></p>
+<p>MVCC只在RC和RR下才有效。</p>
+<p>​ 在每个表的后面有三个隐藏字段 行ID、事务ID、回滚指针</p>
+<p>​ ReadView由未提交的事务ID数组和已提交的最大事务ID组成</p>
+<p>ReadView策略不同：</p>
+<p>​ RC下每执行一次select都会重新生成一个ReadView。</p>
+<p>​ RR下只会在第一次select执行时生成，后续沿用第一次的ReadView</p>
+<p>版本链：</p>
+<p>​ 在版本链中拿出最上面的事务ID开始逐个进行对比</p>
+<p>​ 有一个最小事务ID和最大事务ID。分别在已提交事务和未提交事务区间边缘。中间夹着未提交和已提交事务</p>
+<p>​ 当这个版本的事务ID比最小事务小时，则是可见的。</p>
+<p>​ 当这个版本的事务ID比最大事务大时，则是不可见的。</p>
+<p>​ 落在中间时，有两种情况</p>
+<p>​ 第一种：在未提交事务中，是不可见的</p>
+<p>​ 第二种：在已提交事务中，是可见的</p>
+<h2 id="21-数据库中间件了解过吗sharding-jdbcmycat">21. 数据库中间件了解过吗，sharding jdbc，mycat？</h2>
+<ul>
+<li>sharding-jdbc基于jdbc驱动，无需额外的proxy。Mycat基于proxy</li>
+</ul>
+<h2 id="22-mysql的主从延迟你怎么解决">22. MySQL的主从延迟，你怎么解决？</h2>
+<ul>
+<li>主从复制分了五个步骤进行：</li>
+</ul>
+<ol>
+<li>主库的更新写入到binlog</li>
+<li>从库发起连接，连接到主库</li>
+<li>主库创建一个binlog dump thread发送到从库，将binlog发送的从库</li>
+<li>从库创建一个I/O线程，读取主库传来的binlog内容写入到relay log</li>
+<li>从库创建一个sql线程，从relay log中读取内容，将内容写入到从库</li>
+</ol>
+<p>这种问题，注意了。划重点。问你出现问题，寻找解决方案的时候，一定要对症下药，也就是说这个问题你可以这样考虑，什么情况下导致的主从延迟。</p>
+<ol>
+<li>如果主库和从库服务器配置不一样，从库的差点，那么就可能导致延迟时间加长。这时候，换成相同的服务器配置服务器即可。</li>
+<li>从库压力太大了。一般主从了，从库基本用来查询，比如可能运营或者开发者自己都在从库上进行一系列的 sql 操作。那简单呗。多配几个从库，分摊压力，一主多从。</li>
+<li>大事务。比如 delete 这种语句 不 limit 限制一下，如果数据量过大，导致主库运行时都花费了长时间，再同步到从库，这个时间间隔过长。</li>
+</ol>
+<h2 id="23-说一下大表查询的优化方案">23. 说一下大表查询的优化方案</h2>
+<p>分表分库，sql优化+索引 加缓存 ，主从复制读写分离
+同16</p>
+<h2 id="24-什么是数据库连接池为什么需要数据库连接池呢">24. 什么是数据库连接池?为什么需要数据库连接池呢?</h2>
+<p>数据库连接池原理：在内部对象池中，维护一定数量的数据库连接，并对外暴露数据库连接的获取和返回方法</p>
+<ul>
+<li>资源重用</li>
+<li>提高响应速度</li>
+<li>统一管理，避免数据库链接泄漏</li>
+</ul>
+<h2 id="25-一条sql语句在mysql中如何执行的">25. 一条SQL语句在MySQL中如何执行的？</h2>
+<ol>
+<li>先连接到数据库</li>
+<li>查询缓存，大多数情况下不建议用缓存，因为缓存失效很频繁</li>
+<li>分析器，如果没有命中缓存，就需要对语句及逆行解析</li>
+<li>优化器，经过优化器进行处理，优化器是在表里面有多个索引时，决定使用哪个索引，或者一个语句有多表关联时。</li>
+<li>执行器，判断表是否有查询权限，如果有，则根据表的引擎定义，去使用这个引擎提供的接口</li>
+</ol>
+<h2 id="26-innodb引擎中的索引策略了解过吗">26. InnoDB引擎中的索引策略，了解过吗？</h2>
+<p>覆盖索引：</p>
+<p>​ 在普通索引树中可以得到查询的结果，不需要在回到主键索引树中再次搜索</p>
+<p>​ 如果select * from table where age between 12 and 25，这样会回表再查一次</p>
+<p>​ select id from table where age between 12 and 25，就不会进行回表。减少了搜索次数，叫做覆盖索引</p>
+<p>最左前缀：</p>
+<p>​ 原则就是经常用的列有优先</p>
+<p>​ 离散型高的优先</p>
+<p>​ 宽度小的列优先</p>
+<p>索引下推：</p>
+<p>​ 在索引遍历过程中，会对索引包含的字段先判断，直接过滤掉不满足条件的记录。减少回表次数</p>
+<h2 id="27-数据库存储日期格式时如何考虑时区转换问题">27. 数据库存储日期格式时，如何考虑时区转换问题？</h2>
+<ul>
+<li>datetime 类型适用于数据原始的创建时间，修改其他字段值时，datetime 字段不会改变</li>
+<li>timestamp 类型会记录数据最后一次修改的时间，且自动更新</li>
+</ul>
+<h2 id="28-一条sql执行过长的时间你如何优化从哪些方面入手">28. 一条sql执行过长的时间，你如何优化，从哪些方面入手？</h2>
+<ul>
+<li>是否用到了多表和子查询，优化sql结构，比如除去冗余字段</li>
+<li>优化索引结构，是否可以适当增加索引</li>
+<li>分表分库</li>
+<li>explain分析sql语句</li>
+<li>主从复制 读写分离</li>
+<li>查看mysql 慢日志</li>
+</ul>
+<h2 id="29-blob和text有什么区别">29. Blob和text有什么区别？</h2>
+<p>Blob用于存储二进制数据，text用于存储大字符串数据</p>
+<p>Blob被当作二进制字符串数据，没有字符集，并且排序和比较基于列值中的字节数值</p>
+<p>text被当作非二进制字符串，有一个字符集，并根据字符集的排序规则对值进行排序和比较</p>
+<h2 id="30-mysql里记录货币用什么字段类型比较好">30. MySQL里记录货币用什么字段类型比较好？</h2>
+<p>decimal / numeric</p>
+<h2 id="31-innodb有哪几种锁">31. InnoDB有哪几种锁？</h2>
+<p>常见锁问题：</p>
+<p>行锁超时：</p>
+<p>SQL优化，有效利用索引减少SQL执行时间</p>
+<p>及时提交事务，避免长事务占用锁资源不释放</p>
+<p>代码优化，同一事务中，将执行时间长的sql放到最后</p>
+<p>表锁超时：</p>
+<p>1）尽量避免表级锁操作；<br>
+2）高并发情况下导致的表锁等待可考虑相关SQL优化<br>
+3）DDL变更操作尽量在业务低峰执行；<br>
+4）DDL执行期间，关注数据库会话运行情况，避免DDL变更相关表涉及的长事务/大查询阻塞DDL操作峰进行</p>
+<p>尽量</p>
+<ol>
+<li>共享锁和排他锁</li>
+</ol>
+<ul>
+<li>
+<p>如果没有指定某行，两个都是行锁否则就是表锁</p>
+</li>
+<li>
+<p>share： for share 允许多个事务同时读同一记录，互不干扰，但不允许加其他锁</p>
+</li>
+<li>
+<p>exclusive： for update 只有一个事务可以写数据</p>
+</li>
+</ul>
+<ol start="2">
+<li>意向锁 Intention</li>
+</ol>
+<ul>
+<li>
+<p>未来某个时间要加 share/ exclusive 锁</p>
+</li>
+<li>
+<p>是一个表级别的锁</p>
+</li>
+</ul>
+<ol start="3">
+<li>记录锁 Record</li>
+</ol>
+<ul>
+<li>封锁索引记录 for update 防止其他事务插入更新删除</li>
+</ul>
+<ol start="4">
+<li>间隙锁 gap</li>
+</ol>
+<ul>
+<li>封锁索引记录中的间隔，防止其他事务在间隔中插入数据，RR级别下导致不可重复读</li>
+</ul>
+<ol start="5">
+<li>插入意向锁 insert intention</li>
+</ol>
+<ul>
+<li>在行插入之前由插入操作设置的一种间隙锁</li>
+</ul>
+<ol start="6">
+<li>自增锁 auto-inc</li>
+</ol>
+<p>-AUTO-INC锁是一种特殊的表级锁，由插入到具有自动增量列的表中的事务使用。</p>
+<ol start="7">
+<li>下一个键锁（临界锁） Next-Key</li>
+</ol>
+<p>临键锁，是记录锁与间隙锁的组合，它的封锁范围，既包含索引记录，又包含索引区间。</p>
+<p>更具体的，临键锁会封锁索引记录本身，以及索引记录之前的区间。</p>
+<h2 id="32-hash索引和b树区别是什么你在设计索引是怎么抉择的">32. Hash索引和B+树区别是什么？你在设计索引是怎么抉择的？</h2>
+<ol>
+<li>B+支持范围搜索</li>
+<li>B+支持联合索引的最左原则</li>
+<li>B+支持order by</li>
+<li>B+支持like模糊</li>
+<li>hash等值查询效率高</li>
+</ol>
+<h2 id="33-mysql-的内连接左连接右连接有什么区别">33. mysql 的内连接、左连接、右连接有什么区别？</h2>
+<ul>
+<li>内连接，只返回匹配的结果集</li>
+<li>左连接，返回左表的所有行，即时右表没有匹配的记录</li>
+<li>右连接，返回右表的所有行，即时左表没有匹配的记录</li>
+</ul>
+<h2 id="34-什么是内连接外连接交叉连接笛卡尔积呢">34. 什么是内连接、外连接、交叉连接、笛卡尔积呢？</h2>
+<ul>
+<li>内连接（inner join）：取得两张表中满足存在连接匹配关系的记录。</li>
+<li>外连接（outer join）：取得两张表中满足存在连接匹配关系的记录，以及某张表（或两张表）中不满足匹配关系的记录。</li>
+<li>交叉连接（cross join）：显示两张表所有记录一一对应，没有匹配关系进行筛选，也被称为：笛卡尔积。</li>
+</ul>
+<h2 id="35-说一下数据库的三大范式">35. 说一下数据库的三大范式</h2>
+<ol>
+<li>数据库表的每一列都是不可拆分的</li>
+<li>在1的基础上 每一列都与主键直接相关</li>
+<li>在2的基础上，每一列数据都与主键直接相关</li>
+</ol>
+<h2 id="36-mysql有关权限的表有哪几个呢">36. mysql有关权限的表有哪几个呢？</h2>
+<p>user权限表：记录允许连接到服务器的用户帐号信息，里面的权限是全局级的。
+db权限表：记录各个帐号在各个数据库上的操作权限。
+table_priv权限表：记录数据表级的操作权限。
+columns_priv权限表：记录数据列级的操作权限。
+host权限表：配合db权限表对给定主机上数据库级操作权限作更细致的控制。这个权限表不受GRANT和REVOKE语句的影响。</p>
+<h2 id="37-主从复制binlog格式有哪几种有什么区别">37. 主从复制binlog格式有哪几种？有什么区别？</h2>
+<p>STATEMENT，基于语句的日志记录，把所有写操作的sql语句写入 binlog （默认）</p>
+<p>ROW，基于行的日志记录，把每一行的改变写入binlog</p>
+<p>MIXED，混合模式</p>
+<h2 id="38-mysql主从复制方式有什么区别">38. Mysql主从复制方式？有什么区别？</h2>
+<p>STATEMENT，基于语句的日志记录，把所有写操作的sql语句写入 binlog （默认）</p>
+<p>ROW，基于行的日志记录，把每一行的改变写入binlog</p>
+<p>MIXED，混合模式</p>
+<h2 id="39-innodb内存结构包含四大核心组件">39. InnoDB内存结构包含四大核心组件</h2>
+<h2 id="40-索引有哪些优缺点">40. 索引有哪些优缺点？</h2>
+<ul>
+<li>
+<p>唯一索引可以保证数据库表中每一行数据的唯一性</p>
+</li>
+<li>
+<p>索引可以加快查询速度，减少查询时间</p>
+</li>
+<li>
+<p>创建索引和维护索引需要时间</p>
+</li>
+<li>
+<p>表中数据进行增删改时，索引也要动态的维护</p>
+</li>
+</ul>
+<h2 id="41-索引有哪几种类型">41. 索引有哪几种类型？</h2>
+<ol>
+<li>主键索引：数据列不允许重复 不允许为空 只能有一个主键</li>
+<li>唯一索引：数据列不允许重复 允许为空 可以创建多个索引</li>
+<li>普通索引： 允许为空 可以创建多个索引</li>
+<li>全文索引：可以对文本的内容进行分词，搜索</li>
+<li>覆盖索引：查询列要被所建的索引覆盖，不必读取数据行</li>
+<li>组合索引：多个列组成一个索引，用于组合搜索</li>
+</ol>
+<h2 id="42-创建索引的三种方式">42. 创建索引的三种方式</h2>
+<ul>
+<li>create index index_name on table table_name(column)</li>
+<li>alter table table_name add index index_name(column)</li>
+</ul>
+<h2 id="43-百万级别或以上的数据你是如何删除的">43. 百万级别或以上的数据，你是如何删除的？</h2>
+<ul>
+<li>先删除表中的索引，在删除数据，在创建索引</li>
+</ul>
+<h2 id="44-覆盖索引回表等这些了解过吗">44. 覆盖索引、回表等这些，了解过吗？</h2>
+<ul>
+<li>覆盖索引：查询列要被所创建的索引覆盖，这样查询数据时不会去查询数据列</li>
+<li>回表：二级索引无法直接查询所有列的数据，所以通过二级索引查询到聚簇索引后，再查询到想要的数据，这种通过二级索引查询出来的过程，就叫做回表。</li>
+</ul>
+<h2 id="45-b树在满足聚簇索引和覆盖索引的时候不需要回表查询数据">45. B+树在满足聚簇索引和覆盖索引的时候不需要回表查询数据？</h2>
+<p>当查询使用聚簇索引时，不需要回表查询</p>
+<h2 id="46-何时使用聚簇索引与非聚簇索引">46. 何时使用聚簇索引与非聚簇索引</h2>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/07596c40e8f22b104fd0ce20dd52fa6b.png" alt="聚簇索引"></p>
+<h2 id="47-非聚簇索引一定会回表查询吗">47. 非聚簇索引一定会回表查询吗？</h2>
+<p>不一定，如果查询语句的字段全部命中了索引，那么就不必再进行回表查询</p>
+<p>举个简单的例子，假设我们在学生表的上建立了索引，那么当进行select age from student where age &lt; 20的查询时，在索引的叶子节点上，已经包含了age信息，不会再次进行回表查询。</p>
+<h2 id="48-组合索引是什么为什么需要注意组合索引中的顺序">48. 组合索引是什么？为什么需要注意组合索引中的顺序？</h2>
+<ul>
+<li>组合索引：由多个列创建的索引。索引策略是最左原则</li>
+</ul>
+<h2 id="49-什么是死锁怎么解决">49. 什么是死锁？怎么解决？</h2>
+<p>有P1P2两个进程，都需要A和B两个资源，现在P1持有A等待B，P2持有B等待A，现在两个都等待另一个资源而不肯释放资源，就会无限等待，导致死锁</p>
+<p>1：尽量避免同时锁定两个资源</p>
+<p>2: 必须同时锁定两个资源时，要保证在任何时刻都应该按照相同的顺序来锁定资源.</p>
+<ul>
+<li>
+<p>死锁是指两个或以上的事务占用同一资源并请求锁定对方资源，从而导致形成恶性循环的现象</p>
+</li>
+<li>
+<p>死锁的四个必要条件：互斥，请求和保持，环路等待，不剥夺。解决思路是切断环路</p>
+</li>
+</ul>
+<h2 id="50-你是如何监控你们的数据库的你们的慢日志都是怎么查询的">50. 你是如何监控你们的数据库的？你们的慢日志都是怎么查询的？</h2>
+<ul>
+<li>zabbix，lepus</li>
+</ul>
+<h3 id="mysql-分区有哪几种">mysql 分区有哪几种</h3>
+<p>RANGE：属于一个给定的连续区间的列值被放入分区。</p>
+<p>LIST：和RANGE分区相似，只是分区列的值是离散的。</p>
+<p>HASH：将数据均匀的分布到预先定义的各个分区中，保证每个分区的数量大致相同。</p>
+<p>KEY：和HASH相似，KEY分区使用数据库提供的函数进行分区。</p>
+<h3 id="索引底层是什么数据结构">索引底层是什么数据结构？</h3>
+<p>B + 树。</p>
+<h3 id="为什么用的是-b--树不能使用红黑树或者其他的">为什么用的是 B + 树，不能使用红黑树或者其他的？</h3>
+<p>可以使用红黑树。但是这样的话可能会造成树的高度过高，意味着相同查询下，会进行更多的磁盘 I/O，影响性能，而 B+ 树可以保持树的高度不至于过高</p>
+<h3 id="一条查询sql以主键查和二级索引查区别">一条查询sql以主键查和二级索引查区别</h3>
+<p>1、如果查询语句是 select * from table where ID = 100,即主键查询的方式，则只需要搜索 ID 这棵 B+树。</p>
+<p>2、如果查询语句是 select * from table where k = 1，即非主键的查询方式，则先搜索k索引树，得到ID=100,再到ID索引树搜索一次，</p>
+<p>这个过程也被称为回表。</p>
+<h3 id="说一说mysql最左前缀匹配">说一说Mysql最左前缀匹配</h3>
+<p>建立联合索引时会遵循最左前缀匹配的原则</p>
+<p>对abc三列建立联合索引</p>
+<p>实际是建立了a ab abc 三个索引</p>
+<p>对量大的数据表，可以减少开销</p>
+<h3 id="现在有3张表1个主表2个副表主表数据大概在1w左右副表大概在1000w和2000w左右怎么优化">现在有3张表，1个主表，2个副表，主表数据大概在1W左右，副表大概在1000W和2000W左右，怎么优化？</h3>
+<p>首先，确保每条数据不会产生null值，然后合理建立索引，合理写SQL，避免select *之类的方式，用什么就取什么。</p>
+<h3 id="mysql给一个大表加一列_mysql-大表添加一列的实现">Mysql给一个大表加一列_MySQL 大表添加一列的实现</h3>
+<p>5.6之前, 加触发器自动完成.
+5.6及之后, 使用在线DDL语句</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> person_trigger_update <span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">ON</span> <span style="color:#960050;background-color:#1e0010">原有表</span> <span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+<span style="color:#66d9ef">BEGIN</span>
+
+        <span style="color:#66d9ef">SET</span> <span style="color:#f92672">@</span>x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;trigger UPDATE&#34;</span>;
+    <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">新表</span> <span style="color:#66d9ef">SELECT</span>
+    <span style="color:#f92672">*</span> 
+    <span style="color:#66d9ef">FROM</span>
+        <span style="color:#960050;background-color:#1e0010">原有表</span> 
+    <span style="color:#66d9ef">WHERE</span>
+        <span style="color:#960050;background-color:#1e0010">新表</span>.id <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">原有表</span>.id;
+
+<span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+<span style="color:#66d9ef">END</span>;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">你的表</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#960050;background-color:#1e0010">新列</span> char(<span style="color:#ae81ff">128</span>), ALGORITHM<span style="color:#f92672">=</span>INSTANT, <span style="color:#66d9ef">LOCK</span><span style="color:#f92672">=</span><span style="color:#66d9ef">NONE</span>;
+</code></pre></div><p><a href="https://blog.csdn.net/weixin_31842775/article/details/114351029">https://blog.csdn.net/weixin_31842775/article/details/114351029</a></p>
+<h3 id="怎么加读写锁">怎么加读写锁</h3>
+<p>LOCK TABLE my_table_name READ; 用读锁锁表，会阻塞其他事务修改表数据。</p>
+<p>LOCK TABLE my_table_name WRITe; 用写锁锁表，会阻塞其他事务读和写。</p>
+<h3 id="b-树b树b树都是什么">B-树、B+树、B*树都是什么</h3>
+<p>​ B-树：多路搜索树，每个结点存储M/2到M个关键字，非叶子结点存储指向关键字范围的子结点；</p>
+<p>​ 所有关键字在整颗树中出现，且只出现一次，非叶子结点可以命中；</p>
+<p>​ B+树：在B-树基础上，为叶子结点增加链表指针，所有关键字都在叶子结点中出现，非叶子结点作为叶子结点的索引；B+树总是到叶子结<del>点才命中；</del></p>
+<p>​ B*树：在B+树基础上，为非叶子结点也增加链表指针，将结点的最低利用率从1/2提高到2/3；</p>
+<h3 id="mysql和-mongo区别">MYSQL和 MONGO区别</h3>
+<table>
+<thead>
+<tr>
+<th>数据库</th>
+<th>MongoDB</th>
+<th>MySQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库模型</td>
+<td>非关系型</td>
+<td>关系型</td>
+</tr>
+<tr>
+<td>存储方式</td>
+<td>以类JSON的文档的格式存储虚拟内存+持久化</td>
+<td>不同引擎有不同的存储方式</td>
+</tr>
+<tr>
+<td>查询语句</td>
+<td>MongoDB查询方式（类似JavaScript的函数）</td>
+<td>SQL语句</td>
+</tr>
+<tr>
+<td>架构特点</td>
+<td>可以通过副本集，以及分片来实现高可用（在副本集中，当主库遇到问题，无法继续提供服务时，副本集将选举一个新的主库继续提供服务， 高可用和集群架构拥有十分高的扩展性）</td>
+<td>常见有单点，M-S，MHA,MMM,Cluster等架构方式</td>
+</tr>
+<tr>
+<td>数据处理方式</td>
+<td>基于内存，将热数据存放在物理内存中，从而达到高速读写</td>
+<td>不同引擎有自己的特点处理海量数据效率先住变慢</td>
+</tr>
+<tr>
+<td>成熟度</td>
+<td>新兴数据库，成熟度较低</td>
+<td>成熟度高</td>
+</tr>
+<tr>
+<td>广泛度</td>
+<td>NoSQL数据库中，比较完善且开源，使用人数在不断增长</td>
+<td>开源数据库，市场份额不断增长</td>
+</tr>
+<tr>
+<td>事务性</td>
+<td>仅支持单文档事务操作，弱一致性（本身没有带事务机制，需要在MongoDB中实现事务机制，需要通过一个额外的表，从逻辑上自行实现事务）</td>
+<td>支持事务操作</td>
+</tr>
+<tr>
+<td>占用空间</td>
+<td>占用空间大</td>
+<td>占用空间小</td>
+</tr>
+<tr>
+<td>join操作</td>
+<td>MongoDB没有join</td>
+<td>MySQL支持join</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mysql占用cpu过高">Mysql占用cpu过高</h3>
+<ul>
+<li>
+<p>show processlist语句，查找cpu占用最高的SQL语句，优化该SQL，比如适当建立某字段的索引</p>
+</li>
+<li>
+<p>打开慢查询日志，将那些执行时间过长且占用资源过多的SQL拿来进行explain分析</p>
+</li>
+<li>
+<p>考虑定时优化文件及索引</p>
+</li>
+<li>
+<p>考虑是否是锁问题</p>
+</li>
+<li>
+<p>如果数据量过大，可以考虑使用MySQL集群或者搭建高可用环境。</p>
+</li>
+</ul>
+<h3 id="inoodb快照读和当前读">Inoodb快照读和当前读</h3>
+<ul>
+<li>
+<p><strong>快照读：读取的是记录的可见版本（有可能是历史版本），不加锁。</strong></p>
+</li>
+<li>
+<p><strong>当前读：读取的是记录的最新版本，并且当前读返回的记录都会加上锁，保证其他事务不会再并发修改这条记录。</strong></p>
+</li>
+</ul>
+<p>快照读实现：mvcc</p>
+<p>当前读实现：主要靠加锁（行记录锁+间隙锁）实现，保证其他事务不会再并发修改这条记录。</p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/mst/">mst</a></span>
+
+
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/mysql/">mysql</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

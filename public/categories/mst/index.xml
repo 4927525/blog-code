@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mst on Hzbskak&#39;s Blog</title>
+    <link>/categories/mst/</link>
+    <description>Recent content in mst on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Feb 2022 23:04:47 +0800</lastBuildDate><atom:link href="/categories/mst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL面试题</title>
+      <link>/post/mst/sql/</link>
+      <pubDate>Wed, 23 Feb 2022 23:04:47 +0800</pubDate>
+      
+      <guid>/post/mst/sql/</guid>
+      
+        <description>1. MySQL 索引使用有哪些注意事项呢？ 索引哪些情况下会失效
+  查询条件包含or 会导致索引失效
+  组合索引中，查询时要按照最左原则进行where条件判断</description>
+      
+    </item>
+    
+  </channel>
+</rss>

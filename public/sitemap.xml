@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-01-14T10:12:46+08:00</lastmod>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/categories/mst/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/tags/mysql/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/post/mst/sql/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-02-23T23:04:47+08:00</lastmod>
   </url><url>
     <loc>/tags/golang/</loc>
     <lastmod>2022-01-14T10:12:46+08:00</lastmod>
@@ -12,15 +30,6 @@
     <lastmod>2022-01-14T10:12:46+08:00</lastmod>
   </url><url>
     <loc>/tags/grpc/</loc>
-    <lastmod>2022-01-14T10:12:46+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2022-01-14T10:12:46+08:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-01-14T10:12:46+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-01-14T10:12:46+08:00</lastmod>
   </url><url>
     <loc>/post/golang/grpc-gateway%E8%B8%A9%E5%9D%91/</loc>
