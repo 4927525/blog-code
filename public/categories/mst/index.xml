@@ -6,9 +6,48 @@
     <description>Recent content in mst on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Feb 2022 23:04:47 +0800</lastBuildDate><atom:link href="/categories/mst/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 23:43:04 +0800</lastBuildDate><atom:link href="/categories/mst/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MySQL面试题</title>
+      <title>Php相关</title>
+      <link>/post/mst/php/</link>
+      <pubDate>Wed, 23 Feb 2022 23:43:04 +0800</pubDate>
+      
+      <guid>/post/mst/php/</guid>
+      
+        <description>列举一些 PHP 中的设计模式？   单例模式：保证在整个应用程序的生命周期中，单例类的实例只存在一个
+  工厂模式：定义一个创建对象的接口，让子类去实例化具体类。
+  观察者模式 发布/订阅模式：当一个对象状态发生变化时，依赖它的对象全部会收到通知，并自动更新。</description>
+      
+    </item>
+    
+    <item>
+      <title>Nginx相关</title>
+      <link>/post/mst/nginx/</link>
+      <pubDate>Wed, 23 Feb 2022 23:42:18 +0800</pubDate>
+      
+      <guid>/post/mst/nginx/</guid>
+      
+        <description>为什么要用Nginx？ 因为跨平台，配置简单，支持高并发，耗费内存少。
+为什么Nginx性能这么高？ 因为nginx是异步非阻塞事件处理机制：运用了epoll模型，提供了一个队列，排队解决
+Nginx怎么处理请求的？ nginx接受一个请求后，首先由listen和server_name 匹配server模块，在匹配的server模块里location，location就是实际地址
+什么是正向代理和反向代理？ 正向代理：客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端（访问国外网站）
+反向代理：代理服务器来接受请求，然后将请求转发给内网服务器，再将获得的内容返回给客户端。</description>
+      
+    </item>
+    
+    <item>
+      <title>Redis相关</title>
+      <link>/post/mst/redis/</link>
+      <pubDate>Wed, 23 Feb 2022 23:41:03 +0800</pubDate>
+      
+      <guid>/post/mst/redis/</guid>
+      
+        <description>Redis和Memcached相比，有哪些优势？  redis支持 string list set hash zset，memcached只支持string redis支持数据持久化，可以把内存中的数据持久化到硬盘上，memcached不支持，只能存到内存中，重启就没有数据了。 redis使用的是单线程的多路IO复用机制  为什么用redis？ 因为传统的关系型数据库已经不适用于所用的场景了，比如秒杀时的库存扣减，APP首页的访问流量高峰。很容易把数据库搞崩，所以就需要用到缓存中间件。目前市面上常用的中间件就是redis和mc。</description>
+      
+    </item>
+    
+    <item>
+      <title>MySQL相关</title>
       <link>/post/mst/sql/</link>
       <pubDate>Wed, 23 Feb 2022 23:04:47 +0800</pubDate>
       

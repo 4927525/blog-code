@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on Hzbskak&#39;s Blog</title>
+    <link>/tags/redis/</link>
+    <description>Recent content in redis on Hzbskak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Feb 2022 23:41:03 +0800</lastBuildDate><atom:link href="/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis相关</title>
+      <link>/post/mst/redis/</link>
+      <pubDate>Wed, 23 Feb 2022 23:41:03 +0800</pubDate>
+      
+      <guid>/post/mst/redis/</guid>
+      
+        <description>Redis和Memcached相比，有哪些优势？  redis支持 string list set hash zset，memcached只支持string redis支持数据持久化，可以把内存中的数据持久化到硬盘上，memcached不支持，只能存到内存中，重启就没有数据了。 redis使用的是单线程的多路IO复用机制  为什么用redis？ 因为传统的关系型数据库已经不适用于所用的场景了，比如秒杀时的库存扣减，APP首页的访问流量高峰。很容易把数据库搞崩，所以就需要用到缓存中间件。目前市面上常用的中间件就是redis和mc。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,40 @@
     <description>Recent content in Tags on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Feb 2022 23:04:47 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 23:43:04 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php</title>
+      <link>/tags/php/</link>
+      <pubDate>Wed, 23 Feb 2022 23:43:04 +0800</pubDate>
+      
+      <guid>/tags/php/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Wed, 23 Feb 2022 23:42:18 +0800</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>/tags/redis/</link>
+      <pubDate>Wed, 23 Feb 2022 23:41:03 +0800</pubDate>
+      
+      <guid>/tags/redis/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>mysql</title>
       <link>/tags/mysql/</link>
@@ -68,28 +101,6 @@
       <pubDate>Fri, 17 Dec 2021 11:09:08 +0800</pubDate>
       
       <guid>/tags/docker/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>/tags/nginx/</link>
-      <pubDate>Fri, 17 Dec 2021 11:09:08 +0800</pubDate>
-      
-      <guid>/tags/nginx/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>/tags/php/</link>
-      <pubDate>Fri, 17 Dec 2021 11:09:08 +0800</pubDate>
-      
-      <guid>/tags/php/</guid>
       
         <description></description>
       

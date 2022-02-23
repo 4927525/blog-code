@@ -1,5 +1,5 @@
 ---
-title: "MySQL面试题"
+title: "MySQL相关"
 date: 2022-02-23T23:04:47+08:00
 Description: ""
 Tags: ["mysql"]

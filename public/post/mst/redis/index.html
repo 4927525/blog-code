@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="zh-cn"
+  data-theme="dark"
+><head>
+  <title>
+    Hzbskak
+      |
+      Redis相关
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      Hi I&#39;m Hzbskak, nice to meet you
+
+
+    "
+  />
+  
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.a3df9def4bf3695df2a083044a4f30cd6ccd824169f313a3733121d5d51b49a7.css"
+    integrity="sha256-o9&#43;d70vzaV3yoIMESk8wzWzNgkFp8xOjczEh1dUbSac="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.058b31f17db60602cc415fd63b0427e7932fbf35c70d8e341a4c39385f5f6f3e.css"
+    integrity="sha256-BYsx8X22BgLMQV/WOwQn55MvvzXHDY40Gkw5OF9fbz4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/mst/redis/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
+    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Redis相关"/>
+<meta name="twitter:description" content="Redis和Memcached相比，有哪些优势？  redis支持 string list set hash zset，memcached只支持string redis支持数据持久化，可以把内存中的数据持久化到硬盘上，memcached不支持，只能存到内存中，重启就没有数据了。 redis使用的是单线程的多路IO复用机制  为什么用redis？ 因为传统的关系型数据库已经不适用于所用的场景了，比如秒杀时的库存扣减，APP首页的访问流量高峰。很容易把数据库搞崩，所以就需要用到缓存中间件。目前市面上常用的中间件就是redis和mc。"/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Redis相关",
+        "headline": "Redis相关",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Redis和Memcached相比，有哪些优势？  redis支持 string list set hash zset，memcached只支持string redis支持数据持久化，可以把内存中的数据持久化到硬盘上，memcached不支持，只能存到内存中，重启就没有数据了。 redis使用的是单线程的多路IO复用机制  为什么用redis？ 因为传统的关系型数据库已经不适用于所用的场景了，比如秒杀时的库存扣减，APP首页的访问流量高峰。很容易把数据库搞崩，所以就需要用到缓存中间件。目前市面上常用的中间件就是redis和mc。
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/mst\/redis\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-02-23T23:41:03.00Z",
+        "datePublished": "2022-02-23T23:41:03.00Z",
+        "dateModified": "2022-02-23T23:41:03.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/mst\/redis\/",
+        "wordCount" : "93",
+        "genre" : [ 
+      
+      "mst"
+
+    ],
+        "keywords" : [ 
+      
+      "redis"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >categories</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/tags/"
+              
+              title=""
+              >tags</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+      </div>
+      <ul>
+        
+        
+          <li>
+            <a class="theme-switch" title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+
+        
+      </ul>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/profile.jpg" alt="profile picture" />
+        <h3 title=""><a href="/">HZBSKAK&#39;S BLOG</a></h3>
+        <div class="description">
+          <p>Hi I'm Hzbskak, nice to meet you</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://github.com/4927525" rel="me" aria-label="github" title="github">
+            <i class="fab fa-github fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://sighttp.qq.com/msgrd?v=1&amp;uin=2536366291" rel="me" aria-label="qq" title="qq">
+            <i class="fab fa-qq fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://t.me/hzbskak" rel="me" aria-label="telegram" title="telegram">
+            <i class="fab fa-telegram fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:2536366291@qq.com" rel="me" aria-label="email" title="email">
+            <i class="fas fa-envelope fa-2x fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h2>Redis相关</h2>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Wed, Feb 23, 2022
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 1 分钟</span>
+          </div>
+
+        
+      </div><h3 id="redis和memcached相比有哪些优势">Redis和Memcached相比，有哪些优势？</h3>
+<ol>
+<li>redis支持 string list set hash zset，memcached只支持string</li>
+<li>redis支持数据持久化，可以把内存中的数据持久化到硬盘上，memcached不支持，只能存到内存中，重启就没有数据了。</li>
+<li>redis使用的是单线程的多路IO复用机制</li>
+</ol>
+<h3 id="为什么用redis">为什么用redis？</h3>
+<p>因为传统的关系型数据库已经不适用于所用的场景了，比如秒杀时的库存扣减，APP首页的访问流量高峰。很容易把数据库搞崩，所以就需要用到缓存中间件。目前市面上常用的中间件就是redis和mc。</p>
+<h2 id="2redis为什么要把数据放到内存中">2Redis为什么要把数据放到内存中？</h2>
+<p>如果不将数据放到内存中，磁盘的IO速度会严重影响性能。</p>
+<h3 id="redis为什么这么快">Redis为什么这么快？</h3>
+<ol>
+<li>redis的大部分操作在内存中完成，</li>
+<li>redis是单线程的多路IO复用机制</li>
+</ol>
+<h3 id="redis数据类型有哪些分别应用于哪些场景">Redis数据类型有哪些？分别应用于哪些场景？</h3>
+<p>string：缓存，做计数器，分布式系统升自增长ID</p>
+<p>list：异步队列，任务轮询，文章列表</p>
+<p>hash：记录博客中某个博主的页面访问量，名字，信息</p>
+<p>set：微博抽奖，QQ标签，共同关注 好友（交集）</p>
+<p>sorted set：排行榜</p>
+<h3 id="redis的过期策略有哪些">Redis的过期策略有哪些？</h3>
+<p>Redis过期策略采用的是惰性删除+定期删除策略。</p>
+<h3 id="大量key集中过期导致卡顿如何解决">大量key集中过期导致卡顿如何解决？</h3>
+<p>在设置过期时间时，增加一个随机时间</p>
+<h3 id="持久化方式有哪些有什么区别">持久化方式有哪些？有什么区别？</h3>
+<p>RDB做全量持久化，AOF做增量持久化。因为RDB会耗费较长时间，不够实时，在停机的时候会导致大量丢失数据，所以需要AOF来配合使用。在redis实例重启时，会使用RDB持久化文件重新构建内存，再使用AOF重放近期的操作指令来实现完整恢复重启之前的状态。</p>
+<h3 id="缓存雪崩击穿穿透如何解决">缓存雪崩、击穿、穿透如何解决？</h3>
+<ul>
+<li>
+<p>缓存雪崩：设置缓存时采用了相同的过期时间，导致缓存在某一时刻同时失效，全部转发到数据库中，导致数据库压力过大而崩溃。</p>
+<p>可以加给过期时间加一个随机数</p>
+</li>
+<li>
+<p>缓存击穿：某一个key在某个时间点被高并发的访问。</p>
+<p>可以采用互斥锁/分布锁。让一个线程去查询，其他线程等待</p>
+</li>
+<li>
+<p>缓存穿透：恶意请求不存在的key，导致缓存无法命中，每次都去查数据库</p>
+<p>如果数据库查不到就设置NULL并设置过期时间</p>
+<p>对参数做校验，不合法的参数直接return</p>
+<p>使用布隆过滤器判断数据是否存在</p>
+</li>
+</ul>
+<h3 id="如何保证redis命令的原子性">如何保证Redis命令的原子性？</h3>
+<p>原子性：多个命令要么全部成功，要么全部失败。
+通过Lua脚本实现：多个操作写道lua脚本中，redis把整个lua脚本作为整体执行</p>
+<h3 id="有序集合是怎么排序的">有序集合是怎么排序的？</h3>
+<p>它给集合中的每一个元素设置分数，按照其分数进行排序，也不允许有重复值</p>
+<h3 id="缓存的原理">缓存的原理</h3>
+<p>有缓存则读缓存，没缓存则读数据库然后做缓存</p>
+<h3 id="mysql里有2000w数据redis中只存20w的数据如何保证redis中的数据都是热点数据">MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据？</h3>
+<p>redis内存数据集大小上升到一定大小的时候，就会施行数据淘汰策略。</p>
+<h3 id="如果有大量的key需要设置同一时间过期一般需要注意什么">如果有大量的key需要设置同一时间过期，一般需要注意什么？</h3>
+<p>可能会出现缓存雪崩，我们一般需要在过期时间上加一个随机值。</p>
+<h3 id="那你使用过redis分布式锁么它是什么回事">那你使用过Redis分布式锁么，它是什么回事？</h3>
+<p>先拿setnx来争抢锁，抢到之后，再用expire给锁加一个过期时间防止锁忘记释放。</p>
+<h3 id="使用过redis做异步队列么你是怎么用的">使用过Redis做异步队列么，你是怎么用的？</h3>
+<p>使用list最为队列，rpush生产消息，lpop消费消息。当lpop没有消息的时候，要适当sleep一会再试。</p>
+<h3 id="如果对方追问可不可以不用sleep呢">如果对方追问可不可以不用sleep呢？</h3>
+<p>list还有个指令叫<strong>blpop</strong>，在没有消息的时候，它会阻塞住直到消息到来。</p>
+<h3 id="如果对方接着追问能不能生产一次消费多次呢">如果对方接着追问能不能生产一次消费多次呢？</h3>
+<p>使用pub/sub主题订阅者模式，可以实现 1:N 的消息队列。</p>
+<h3 id="如果对方继续追问-pubsub有什么缺点">如果对方继续追问 pub/sub有什么缺点？</h3>
+<p>在消费者下线的情况下，生产的消息会丢失，得使用专业的消息队列如<strong>RocketMQ</strong>等。</p>
+<h3 id="redis-的aof选项有哪几种写入配置">REDIS 的AOF选项有哪几种写入配置？</h3>
+<p>在redis.conf文件中，设置：appendonly yes（默认为no）</p>
+<h3 id="为什么aof日志需要重写">为什么AOF日志需要重写</h3>
+<p>当AOF很大的时候，再去追加是很慢的，这时可以把多条命令压缩成一条，这就是AOF重写</p>
+<h3 id="跳表原理">跳表原理</h3>
+<p>在原有的有序链表上增加了多级索引，通过索引来实现快速查询，提高搜索性能</p>
+<h3 id="布隆过滤器">布隆过滤器</h3>
+<p>场景：</p>
+<ul>
+<li>字处理软件中，需要检查一个英语单词是否拼写正确</li>
+<li>在 FBI，一个嫌疑人的名字是否已经在嫌疑名单上</li>
+<li>在网络爬虫里，一个网址是否被访问过</li>
+<li>yahoo, gmail等邮箱垃圾邮件过滤功能</li>
+</ul>
+<p><img src="https://images2015.cnblogs.com/blog/1030776/201701/1030776-20170106143141784-1475031003.png" alt="img"></p>
+<p>假设集合里面有3个元素{x, y, z}，哈希函数的个数为3。首先将位数组进行初始化，将里面每个位都设置位0。对于集合里面的每一个元素，将元素依次通过3个哈希函数进行映射，每次映射都会产生一个哈希值，这个值对应位数组上面的一个点，然后将位数组对应的位置标记为1。查询W元素是否存在集合中的时候，同样的方法将W通过哈希映射到位数组上的3个点。如果3个点的其中有一个点不为1，则可以判断该元素一定不存在集合中。反之，如果3个点都为1，则该元素可能存在集合中。</p>
+<h3 id="redis做延迟队列预约到点发短信的业务">redis做延迟队列/预约到点发短信的业务</h3>
+<p>zset, 要发送的内容id作为key, score是发送时间.</p>
+<p>因为时间是有序的. 第一个没到发送时间,后面的肯定也没到</p>
+<p>每次检测第一个., 如果没到发送时间, 休眠0.5秒. 否则就开始根据ID取出内容发送.</p>
+<p>这样发送的内容都不在内存中这是分发器的实现，分发器将到时间了要发送的推到队列，由发送器去即时发送</p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+          <span class="separator"><a class="category" href="/categories/mst/">mst</a></span>
+
+
+
+
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/redis/">redis</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          Hzbskak
+          2022
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
+    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

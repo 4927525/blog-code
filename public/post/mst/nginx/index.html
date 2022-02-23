@@ -7,7 +7,7 @@
   <title>
     Hzbskak
       |
-      php
+      Nginx相关
 
 
     
@@ -62,12 +62,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="/tags/php/" />
+  <link rel="canonical" href="/post/mst/nginx/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/php/index.xml" title="Hzbskak's Blog" />
-
-
   
   
   
@@ -90,8 +87,12 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="php"/>
-<meta name="twitter:description" content="Hi I&#39;m Hzbskak, nice to meet you"/>
+<meta name="twitter:title" content="Nginx相关"/>
+<meta name="twitter:description" content="为什么要用Nginx？ 因为跨平台，配置简单，支持高并发，耗费内存少。
+为什么Nginx性能这么高？ 因为nginx是异步非阻塞事件处理机制：运用了epoll模型，提供了一个队列，排队解决
+Nginx怎么处理请求的？ nginx接受一个请求后，首先由listen和server_name 匹配server模块，在匹配的server模块里location，location就是实际地址
+什么是正向代理和反向代理？ 正向代理：客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端（访问国外网站）
+反向代理：代理服务器来接受请求，然后将请求转发给内网服务器，再将获得的内容返回给客户端。"/>
 
 
 
@@ -100,6 +101,83 @@
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Nginx相关",
+        "headline": "Nginx相关",
+        "alternativeHeadline": "",
+        "description": "
+      
+        为什么要用Nginx？ 因为跨平台，配置简单，支持高并发，耗费内存少。\n为什么Nginx性能这么高？ 因为nginx是异步非阻塞事件处理机制：运用了epoll模型，提供了一个队列，排队解决\nNginx怎么处理请求的？ nginx接受一个请求后，首先由listen和server_name 匹配server模块，在匹配的server模块里location，location就是实际地址\n什么是正向代理和反向代理？ 正向代理：客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端（访问国外网站）\n反向代理：代理服务器来接受请求，然后将请求转发给内网服务器，再将获得的内容返回给客户端。
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/mst\/nginx\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Hzbskak"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-02-23T23:42:18.00Z",
+        "datePublished": "2022-02-23T23:42:18.00Z",
+        "dateModified": "2022-02-23T23:42:18.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Hzbskak",
+            "url": "/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "\/images\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/mst\/nginx\/",
+        "wordCount" : "20",
+        "genre" : [ 
+      
+      "mst"
+
+    ],
+        "keywords" : [ 
+      
+      "nginx"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
 <body>
@@ -277,60 +355,87 @@
         <div class="autopagerize_page_element">
           <div class="content">
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
 
     "
   >
-    <ul class="list-with-title">
+    <div class="post-content">
       
-        <div class="listing-title">2022</div>
+      <div class="post-title">
+        <h2>Nginx相关</h2>
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/mst/php/" title="Php相关">Php相关</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Feb 23
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Wed, Feb 23, 2022
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">阅读时间 1 分钟</span>
+          </div>
 
         
-
-
-      
-        <div class="listing-title">2021</div>
+      </div><h3 id="为什么要用nginx">为什么要用Nginx？</h3>
+<p>因为跨平台，配置简单，支持高并发，耗费内存少。</p>
+<h3 id="为什么nginx性能这么高">为什么Nginx性能这么高？</h3>
+<p>因为nginx是异步非阻塞事件处理机制：运用了epoll模型，提供了一个队列，排队解决</p>
+<h3 id="nginx怎么处理请求的">Nginx怎么处理请求的？</h3>
+<p>nginx接受一个请求后，首先由listen和server_name 匹配server模块，在匹配的server模块里location，location就是实际地址</p>
+<h3 id="什么是正向代理和反向代理">什么是正向代理和反向代理？</h3>
+<p>正向代理：客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端（访问国外网站）</p>
+<p>反向代理：代理服务器来接受请求，然后将请求转发给内网服务器，再将获得的内容返回给客户端。</p>
+<h3 id="反向代理的用途"><strong>反向代理的用途</strong></h3>
+<ul>
+<li><strong>隐藏服务器真实IP</strong></li>
+<li><strong>负载均衡</strong></li>
+</ul>
+<h3 id="正向代理和反向代理的区别"><strong>正向代理和反向代理的区别</strong></h3>
+<p>正向代理代理的是客户端，反向代理代理的是服务器</p>
+<p>正向代理解决访问限制问题，反向代理解决了高并发问题</p>
+<h3 id="nginx负载均衡的算法怎么实现的策略有哪些">Nginx负载均衡的算法怎么实现的?策略有哪些?</h3>
+<ol>
+<li>轮询：如果有服务器宕机，能够自动剔除</li>
+<li>权重：将服务器性能高的权值设置大点。</li>
+<li>ip绑定：使同一ip的访客固定访问一台服务器</li>
+</ol>
+</div>
+    <div class="post-footer">
+      <div class="info">
         
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/" title="docker 集群中 nginx 配置 php 需要注意的地方">docker 集群中 nginx 配置 php 需要注意的地方</a>
-                <div class="post-time">
-                  <span class="date"
-                    >
-                      Dec 17
+          <span class="separator"><a class="category" href="/categories/mst/">mst</a></span>
 
 
-                    </span
-                  >
-                </div>
-              </div>
-            </div>
-          </ul>
+
 
         
 
+        
+          <span class="separator"><a class="tag" href="/tags/nginx/">nginx</a></span>
 
-      
-    </ul>
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>评论</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="4927525/4927525.github.io"
+  issue-term="title"
+  theme="github-dark"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
   </div>
 
 
