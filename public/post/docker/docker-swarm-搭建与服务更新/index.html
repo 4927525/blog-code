@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.97.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -70,8 +70,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
-    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    src="/js/anatole-header.min.d0408165d31a17f17bba83038bf54e86121f85021bdf936382e636f0f77a952f.js"
+    integrity="sha256-0ECBZdMaF/F7uoMDi/VOhhIfhQIb35NjguY28Pd6lS8="
     crossorigin="anonymous"
   ></script>
 
@@ -80,8 +80,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      src="/js/anatole-theme-switcher.min.65e936b591bf81484a5ac438c8e4ae6454fb25516d58ce911e4888d7f230bdc5.js"
+      integrity="sha256-Zek2tZG/gUhKWsQ4yOSuZFT7JVFtWM6RHkiI1/IwvcU="
       crossorigin="anonymous"
     ></script>
 
@@ -350,8 +350,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -391,29 +391,29 @@
         
       </div><h1 id="序">序</h1>
 <p>研究了好久的docker集群部署终于是在本地服务器跑通了。于是趁着热乎赶紧码下来。    </p>
-<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/src=http---pic1.zhimg.com-50-v2-a0b6937057b1ca1f6b695929017695e0_hd.jpg&amp;refer=http---pic1.zhimg.24mok2d62g1s.jpg" alt="src=http&mdash;pic1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/src=http---pic1.zhimg.com-50-v2-a0b6937057b1ca1f6b695929017695e0_hd.jpg&amp;refer=http---pic1.zhimg.24mok2d62g1s.jpg" alt="src=http&amp;mdash;pic1"></p>
 <h2 id="1创建集群">1. 创建集群</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker swarm init --advertise-addr 192.168.101.67
-</code></pre></div><p>将本机ip 作为默认leader节点创建。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  Swarm: active <span style="color:#75715e">#已激活</span>
-  NodeID: p9cf3rg9ygyqxe3vr0psm0t7a <span style="color:#75715e">#节点id </span>
-  Is Manager: true
-  ClusterID: pdch8cn7rh82vw9lzx81k7bcn
-  Managers: <span style="color:#ae81ff">1</span>
-  Nodes: <span style="color:#ae81ff">1</span> <span style="color:#75715e">#节点数</span>
-  Default Address Pool: 10.0.0.0/8
-
-通过
-</code></pre></div><p>通过命令在本机获取join-token，将其他服务器以manager或worker节点加入集群中</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker swarm join-token <span style="color:#f92672">[</span>worker|manager<span style="color:#f92672">]</span>
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.7jjwzkm59ic0.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm init --advertise-addr 192.168.101.67
+</span></span></code></pre></div><p>将本机ip 作为默认leader节点创建。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  Swarm: active <span style="color:#75715e">#已激活</span>
+</span></span><span style="display:flex;"><span>  NodeID: p9cf3rg9ygyqxe3vr0psm0t7a <span style="color:#75715e">#节点id </span>
+</span></span><span style="display:flex;"><span>  Is Manager: true
+</span></span><span style="display:flex;"><span>  ClusterID: pdch8cn7rh82vw9lzx81k7bcn
+</span></span><span style="display:flex;"><span>  Managers: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  Nodes: <span style="color:#ae81ff">1</span> <span style="color:#75715e">#节点数</span>
+</span></span><span style="display:flex;"><span>  Default Address Pool: 10.0.0.0/8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>通过
+</span></span></code></pre></div><p>通过命令在本机获取join-token，将其他服务器以manager或worker节点加入集群中</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm join-token <span style="color:#f92672">[</span>worker|manager<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.7jjwzkm59ic0.png" alt="image"></p>
 <p>在需要加入的节点中输入这行命令就可以直接加入。</p>
 <p>所有服务器执行完成后，可以在manager节点中输入<code>docker info</code> 查看</p>
 <p>显示当前有四个节点，其中三个节点是管理节点</p>
 <p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.4q2b71vmnno0.png" alt="image"></p>
 <p>离开集群</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker swarm leave
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.3bntdykzcfw0.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm leave
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.3bntdykzcfw0.png" alt="image"></p>
 <h1 id="2-使用yml文件编排服务">2. 使用yml文件编排服务</h1>
 <blockquote>
 <p>Docker stack 也是一个yaml文件，和一份docker-compose.yml文件差不多，指令也基本一致。但是与compose相比其不支持build、links和network_mode。Docker stack有一个新的指令deploy。</p>
@@ -424,132 +424,128 @@
 <blockquote>
 <p>Deploy是用来指定swarm服务部署和运行时的相关配置，并且只有使用docker stack deploy 部署swarm集群时才会生效。如果使用docker-compose up 或者docker-compose run时，该选项会被忽略。要使用deploy选项，compose-file中version版本要在3或3+。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">version: <span style="color:#e6db74">&#39;3.3&#39;</span>
-services:
-    nginx:
-        image: registry.xxx.com/nginx:5.6-alpine
-        ports:
-            - <span style="color:#e6db74">&#34;80:80&#34;</span>
-            - <span style="color:#e6db74">&#34;443:443&#34;</span>
-        env_file:
-            - .env
-        environment:
-            - NGINX_HOST<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>NGINX_HOST<span style="color:#e6db74">}</span>
-            - TZ<span style="color:#f92672">=</span>Asia/Shanghai
-        command: /bin/sh -c <span style="color:#e6db74">&#34;envsubst &#39;</span>$$<span style="color:#e6db74">NGINX_HOST&#39; &lt; /etc/nginx/conf.d/default.template &gt; /etc/nginx/conf.d/default.conf &amp;&amp; nginx -g &#39;daemon off;&#39;&#34;</span>
-        depends_on:
-            - php
-            - mysql
-        networks:
-            phal_net:
-                aliases:
-                    - nginx
-        deploy:
-            replicas: <span style="color:#ae81ff">4</span>
-            update_config:
-                parallelism: <span style="color:#ae81ff">2</span>
-                failure_action: rollback
-            restart_policy:
-                condition: on-failure
-                delay: 5s
-                max_attempts: <span style="color:#ae81ff">3</span>
-                window: 120s
-    php:
-        image: registry.xxx.com/php:8.0-fpm-alpine
-        environment:
-          - TZ<span style="color:#f92672">=</span>Asia/Shanghai
-        networks:
-            phal_net:
-                aliases:
-                    - php
-        deploy:
-            replicas: <span style="color:#ae81ff">4</span>
-            update_config:
-                parallelism: <span style="color:#ae81ff">2</span>
-                failure_action: rollback
-            restart_policy:
-                condition: on-failure
-                delay: 5s
-                max_attempts: <span style="color:#ae81ff">3</span>
-                window: 120s
-    redis:
-        image: registry.xxx.com/redis-test
-        volumes:
-            - redis-volume:/data
-            - redis-volume:/redis/conf
-            - redis-volume:/redis/logs
-        ports:
-            - 6379:6379
-        networks:
-            phal_net:
-                aliases:
-                    - redis
-        deploy:
-            replicas: <span style="color:#ae81ff">4</span>
-            update_config:
-                parallelism: <span style="color:#ae81ff">2</span>
-                failure_action: rollback
-            restart_policy:
-                condition: on-failure
-                delay: 5s
-                max_attempts: <span style="color:#ae81ff">3</span>
-                window: 120s
-    mongo:
-        image: mongo:latest
-        ports:
-            - 27017:27017
-        volumes:
-            - mongo-volume:/data/configdb/mongo.conf
-            - mongo-volume:/data/db
-            - mongo-volume:/data/log/config.log
-            - mongo-volume:/data/backup
-        networks:
-            phal_net:
-                aliases:
-                    - mongo
-        deploy:
-            replicas: <span style="color:#ae81ff">1</span>
-            update_config:
-                parallelism: <span style="color:#ae81ff">1</span>
-                failure_action: rollback
-            restart_policy:
-                condition: on-failure
-                delay: 5s
-                max_attempts: <span style="color:#ae81ff">3</span>
-                window: 120s
-    visualizer:
-        image: dockersamples/visualizer:latest
-        ports:
-            - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
-        stop_grace_period: 1m30s
-        volumes:
-            - <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span>
-        deploy:
-            replicas: <span style="color:#ae81ff">1</span>
-            placement:
-                constraints: <span style="color:#f92672">[</span>node.role <span style="color:#f92672">==</span> manager<span style="color:#f92672">]</span>
-    portainer:
-        image: portainer/portainer
-        ports:
-            - <span style="color:#e6db74">&#34;8090:9000&#34;</span>
-        volumes:
-            - <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span>
-        deploy:
-            replicas: <span style="color:#ae81ff">1</span>
-            placement:
-                constraints: <span style="color:#f92672">[</span>node.role <span style="color:#f92672">==</span> manager<span style="color:#f92672">]</span>
-networks:
-  phal_net:
-
-volumes:
-    mongo-volume:
-    redis-volume:
-    mysql-volume:
-
-
-
-
-</code></pre></div><p><em>visualizer，portainer 为服务管理与监听服务</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>version: <span style="color:#e6db74">&#39;3.3&#39;</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>    nginx:
+</span></span><span style="display:flex;"><span>        image: registry.xxx.com/nginx:5.6-alpine
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;80:80&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;443:443&#34;</span>
+</span></span><span style="display:flex;"><span>        env_file:
+</span></span><span style="display:flex;"><span>            - .env
+</span></span><span style="display:flex;"><span>        environment:
+</span></span><span style="display:flex;"><span>            - NGINX_HOST<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>NGINX_HOST<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>            - TZ<span style="color:#f92672">=</span>Asia/Shanghai
+</span></span><span style="display:flex;"><span>        command: /bin/sh -c <span style="color:#e6db74">&#34;envsubst &#39;</span>$$<span style="color:#e6db74">NGINX_HOST&#39; &lt; /etc/nginx/conf.d/default.template &gt; /etc/nginx/conf.d/default.conf &amp;&amp; nginx -g &#39;daemon off;&#39;&#34;</span>
+</span></span><span style="display:flex;"><span>        depends_on:
+</span></span><span style="display:flex;"><span>            - php
+</span></span><span style="display:flex;"><span>            - mysql
+</span></span><span style="display:flex;"><span>        networks:
+</span></span><span style="display:flex;"><span>            phal_net:
+</span></span><span style="display:flex;"><span>                aliases:
+</span></span><span style="display:flex;"><span>                    - nginx
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>            update_config:
+</span></span><span style="display:flex;"><span>                parallelism: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>                failure_action: rollback
+</span></span><span style="display:flex;"><span>            restart_policy:
+</span></span><span style="display:flex;"><span>                condition: on-failure
+</span></span><span style="display:flex;"><span>                delay: 5s
+</span></span><span style="display:flex;"><span>                max_attempts: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>                window: 120s
+</span></span><span style="display:flex;"><span>    php:
+</span></span><span style="display:flex;"><span>        image: registry.xxx.com/php:8.0-fpm-alpine
+</span></span><span style="display:flex;"><span>        environment:
+</span></span><span style="display:flex;"><span>          - TZ<span style="color:#f92672">=</span>Asia/Shanghai
+</span></span><span style="display:flex;"><span>        networks:
+</span></span><span style="display:flex;"><span>            phal_net:
+</span></span><span style="display:flex;"><span>                aliases:
+</span></span><span style="display:flex;"><span>                    - php
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>            update_config:
+</span></span><span style="display:flex;"><span>                parallelism: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>                failure_action: rollback
+</span></span><span style="display:flex;"><span>            restart_policy:
+</span></span><span style="display:flex;"><span>                condition: on-failure
+</span></span><span style="display:flex;"><span>                delay: 5s
+</span></span><span style="display:flex;"><span>                max_attempts: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>                window: 120s
+</span></span><span style="display:flex;"><span>    redis:
+</span></span><span style="display:flex;"><span>        image: registry.xxx.com/redis-test
+</span></span><span style="display:flex;"><span>        volumes:
+</span></span><span style="display:flex;"><span>            - redis-volume:/data
+</span></span><span style="display:flex;"><span>            - redis-volume:/redis/conf
+</span></span><span style="display:flex;"><span>            - redis-volume:/redis/logs
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - 6379:6379
+</span></span><span style="display:flex;"><span>        networks:
+</span></span><span style="display:flex;"><span>            phal_net:
+</span></span><span style="display:flex;"><span>                aliases:
+</span></span><span style="display:flex;"><span>                    - redis
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>            update_config:
+</span></span><span style="display:flex;"><span>                parallelism: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>                failure_action: rollback
+</span></span><span style="display:flex;"><span>            restart_policy:
+</span></span><span style="display:flex;"><span>                condition: on-failure
+</span></span><span style="display:flex;"><span>                delay: 5s
+</span></span><span style="display:flex;"><span>                max_attempts: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>                window: 120s
+</span></span><span style="display:flex;"><span>    mongo:
+</span></span><span style="display:flex;"><span>        image: mongo:latest
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - 27017:27017
+</span></span><span style="display:flex;"><span>        volumes:
+</span></span><span style="display:flex;"><span>            - mongo-volume:/data/configdb/mongo.conf
+</span></span><span style="display:flex;"><span>            - mongo-volume:/data/db
+</span></span><span style="display:flex;"><span>            - mongo-volume:/data/log/config.log
+</span></span><span style="display:flex;"><span>            - mongo-volume:/data/backup
+</span></span><span style="display:flex;"><span>        networks:
+</span></span><span style="display:flex;"><span>            phal_net:
+</span></span><span style="display:flex;"><span>                aliases:
+</span></span><span style="display:flex;"><span>                    - mongo
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            update_config:
+</span></span><span style="display:flex;"><span>                parallelism: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                failure_action: rollback
+</span></span><span style="display:flex;"><span>            restart_policy:
+</span></span><span style="display:flex;"><span>                condition: on-failure
+</span></span><span style="display:flex;"><span>                delay: 5s
+</span></span><span style="display:flex;"><span>                max_attempts: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>                window: 120s
+</span></span><span style="display:flex;"><span>    visualizer:
+</span></span><span style="display:flex;"><span>        image: dockersamples/visualizer:latest
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
+</span></span><span style="display:flex;"><span>        stop_grace_period: 1m30s
+</span></span><span style="display:flex;"><span>        volumes:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span>
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            placement:
+</span></span><span style="display:flex;"><span>                constraints: <span style="color:#f92672">[</span>node.role <span style="color:#f92672">==</span> manager<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    portainer:
+</span></span><span style="display:flex;"><span>        image: portainer/portainer
+</span></span><span style="display:flex;"><span>        ports:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;8090:9000&#34;</span>
+</span></span><span style="display:flex;"><span>        volumes:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span>
+</span></span><span style="display:flex;"><span>        deploy:
+</span></span><span style="display:flex;"><span>            replicas: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            placement:
+</span></span><span style="display:flex;"><span>                constraints: <span style="color:#f92672">[</span>node.role <span style="color:#f92672">==</span> manager<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>networks:
+</span></span><span style="display:flex;"><span>  phal_net:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>volumes:
+</span></span><span style="display:flex;"><span>    mongo-volume:
+</span></span><span style="display:flex;"><span>    redis-volume:
+</span></span><span style="display:flex;"><span>    mysql-volume:
+</span></span></code></pre></div><p><em>visualizer，portainer 为服务管理与监听服务</em></p>
 <p>1，mode ：global 全局（每个群集节点只有一个容器）replicated 副本（指定容器的数量）。默认值：replicated。</p>
 <p>2，replicas：副本模式下每个节点启动副本的数量</p>
 <p>3，endpoint_mode：指定swarm服务发现的模式</p>
@@ -583,45 +579,43 @@ volumes:
 </ul>
 <h1 id="3-docker-stack-的一些命令">3. docker stack 的一些命令</h1>
 <h3 id="31-部署新的堆栈或更新现有堆栈">3.1 部署新的堆栈或更新现有堆栈</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stack deploy <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> STACK
-</code></pre></div><p><em>私有仓库需要携带&quot;&ndash;with-registry-auth&quot;参数，否则提示</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mage registry.xxx.com/xxx:latest could not be accessed on a registry to record 
-its digest. Each node will access registry.xxx.com/ejiyuan/xxx:latest,
-possibly leading to different nodes running different
-
-
-</code></pre></div><p>先登录到私有仓库</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker login registry.xxx.com
-</code></pre></div><p>执行命令开始使用 docker-stack.yml 文件部署服务堆，堆名为“phal”</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> docker stack deploy -c docker-stack.yml phal--with-registry-auth
-</code></pre></div><p>会先创建网络，然后创建服务， 服务名(stack名+下划线+service名)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stack deploy <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> STACK
+</span></span></code></pre></div><p><em>私有仓库需要携带&quot;&ndash;with-registry-auth&quot;参数，否则提示</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mage registry.xxx.com/xxx:latest could not be accessed on a registry to record 
+</span></span><span style="display:flex;"><span>its digest. Each node will access registry.xxx.com/ejiyuan/xxx:latest,
+</span></span><span style="display:flex;"><span>possibly leading to different nodes running different
+</span></span></code></pre></div><p>先登录到私有仓库</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker login registry.xxx.com
+</span></span></code></pre></div><p>执行命令开始使用 docker-stack.yml 文件部署服务堆，堆名为“phal”</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker stack deploy -c docker-stack.yml phal--with-registry-auth
+</span></span></code></pre></div><p>会先创建网络，然后创建服务， 服务名(stack名+下划线+service名)</p>
 <p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.6x2xp5oa9ds0.png" alt="image"></p>
 <h3 id="32-列出现有堆栈和服务数">3.2 列出现有堆栈和服务数</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stack ls
-</code></pre></div><p><img src="C:%5CUsers%5Cwindows%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2021-12-15-20-48-39-image.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stack ls
+</span></span></code></pre></div><p><img src="C:%5CUsers%5Cwindows%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2021-12-15-20-48-39-image.png" alt=""></p>
 <h3 id="33-列出堆栈中的服务">3.3 列出堆栈中的服务</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-basic" data-lang="basic">docker stack services [OPTIONS]
-</code></pre></div><p><img src="C:%5CUsers%5Cwindows%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2021-12-15-20-50-21-image.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-basic" data-lang="basic"><span style="display:flex;"><span>docker stack services [OPTIONS]
+</span></span></code></pre></div><p><img src="C:%5CUsers%5Cwindows%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2021-12-15-20-50-21-image.png" alt=""></p>
 <h3 id="34-列出堆栈中的任务">3.4 列出堆栈中的任务</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stack ps <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span>
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.2wwemav04js0.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stack ps <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.2wwemav04js0.png" alt="image"></p>
 <h3 id="35-删除一个或多个堆栈">3.5 删除一个或多个堆栈</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stack rm STACK <span style="color:#f92672">[</span>STACK...<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>flags<span style="color:#f92672">]</span>
-</code></pre></div><h1 id="4-服务升级">4. 服务升级</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stack rm STACK <span style="color:#f92672">[</span>STACK...<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>flags<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h1 id="4-服务升级">4. 服务升级</h1>
 <h3 id="41-更新镜像">4.1 更新镜像</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker service update --image registry.xxx.com/php:8.0-fpm-alpine  phal_php --with-registry-auth
-</code></pre></div><p>因为有4个副本，parallelism设置同时更新2个。先更新两个，等待delay后在更新两个</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service update --image registry.xxx.com/php:8.0-fpm-alpine  phal_php --with-registry-auth
+</span></span></code></pre></div><p>因为有4个副本，parallelism设置同时更新2个。先更新两个，等待delay后在更新两个</p>
 <p><img src="C:%5CUsers%5Cwindows%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2021-12-15-20-57-28-image.png" alt=""></p>
 <p>注：即使设置了update_config.order: start-first，服务会先启动在停止，但是php启动 项目需要一定时间，这段时间服务是不可用的，但是服务状态是Runing的，所以，这里启用两个副本，每次更新一个，等待一个服务启动完成后，在执行另一个更新，主要目的是为了，无缝的升级系统，具体update_config.delay设置为多少可以参考php的启动时间</p>
 <h3 id="42-更新节点数量">4.2 更新节点数量</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker service scale phal_redis<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.5qzh5nrthmc0.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service scale phal_redis<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.5qzh5nrthmc0.png" alt="image"></p>
 <h3 id="43-添加或者更新一个对外端口">4.3 添加或者更新一个对外端口</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker service update --publish-add <span style="color:#ae81ff">9001</span> phal_portainer
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.53cga1wu3d00.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service update --publish-add <span style="color:#ae81ff">9001</span> phal_portainer
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211215/image.53cga1wu3d00.png" alt="image"></p>
 <h1 id="5-更新节点">5. 更新节点</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker node update <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NODE <span style="color:#f92672">[</span>flags<span style="color:#f92672">]</span>
-</code></pre></div><p>参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node update <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NODE <span style="color:#f92672">[</span>flags<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>参数：</p>
 <ul>
 <li>&ndash;availability 节点的可用性(有效/暂停/耗尽)</li>
 <li>&ndash;label-add 添加或更新节点标签(key = value)</li>
@@ -694,8 +688,8 @@ possibly leading to different nodes running different
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

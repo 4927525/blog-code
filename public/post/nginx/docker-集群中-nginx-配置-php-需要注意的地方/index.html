@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.97.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -70,8 +70,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
-    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    src="/js/anatole-header.min.d0408165d31a17f17bba83038bf54e86121f85021bdf936382e636f0f77a952f.js"
+    integrity="sha256-0ECBZdMaF/F7uoMDi/VOhhIfhQIb35NjguY28Pd6lS8="
     crossorigin="anonymous"
   ></script>
 
@@ -80,8 +80,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      src="/js/anatole-theme-switcher.min.65e936b591bf81484a5ac438c8e4ae6454fb25516d58ce911e4888d7f230bdc5.js"
+      integrity="sha256-Zek2tZG/gUhKWsQ4yOSuZFT7JVFtWM6RHkiI1/IwvcU="
       crossorigin="anonymous"
     ></script>
 
@@ -354,8 +354,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -395,7 +395,7 @@
         
       </div><h1 id="序">序</h1>
 <p>最近docker部署集群的时候遇到了一个问题。于是就踩坑了&hellip;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---b-ssl.duitang.com-uploads-item-201806-08-20180608010339_nUV5Y.thumb.400_0.jpeg&amp;refer=http---b-ssl.duitang.3cfz68ibfo40.jpg" alt="src=http&mdash;b-ssl"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---b-ssl.duitang.com-uploads-item-201806-08-20180608010339_nUV5Y.thumb.400_0.jpeg&amp;refer=http---b-ssl.duitang.3cfz68ibfo40.jpg" alt="src=http&amp;mdash;b-ssl"></p>
 <h2 id="问题复现">问题复现</h2>
 <p>那就是php和nginx不在同一个容器，却要通过nginx配置的server_name和listen来访问php项目。</p>
 <p>之前在本地集成环境部署的时候没有考虑过这个问题，是因为只要nginx的root根目录和php的root根目录指向同一个目录，这样把项目文件放到这个目录下就可同时访问，也就不存在说是php来访问还是nginx来访问的说法。</p>
@@ -403,28 +403,28 @@
 <h2 id="思路">思路</h2>
 <p>静态文件需要在 nginx 容器内，php代码放在 php-fpm 的容器内，在nginx的配置里 php 部分设置php-fpm 所在容器内php的路径就可以了。</p>
 <h2 id="实现">实现</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">server <span style="color:#f92672">{</span>
-    listen 80;
-    listen <span style="color:#f92672">[</span>::<span style="color:#f92672">]</span>:80;
-    server_name api.com;
-
-    root /var/www/html/phalapi/api/public;
-    set $realdir <span style="color:#e6db74">&#34;&#34;</span>;
-
-    location / <span style="color:#f92672">{</span>
-        index index.html index.php index.htm;
-        try_files $uri $uri/ $realdir/index.php?$args;
-    <span style="color:#f92672">}</span>
-    location ~ <span style="color:#ae81ff">\.</span>php$ <span style="color:#f92672">{</span>
-        fastcgi_split_path_info ^<span style="color:#f92672">(</span>.+<span style="color:#ae81ff">\.</span>php<span style="color:#f92672">)(</span>/.+<span style="color:#f92672">)</span>$;
-        fastcgi_pass php:9000;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO $fastcgi_path_info;
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---c-ssl.duitang.com-uploads-item-202004-06-20200406031436_YdLWc.thumb.400_0.gif&amp;refer=http---c-ssl.duitang.6iau48gki5g0.gif" alt="src=http&mdash;c-ssl"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen 80;
+</span></span><span style="display:flex;"><span>    listen <span style="color:#f92672">[</span>::<span style="color:#f92672">]</span>:80;
+</span></span><span style="display:flex;"><span>    server_name api.com;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    root /var/www/html/phalapi/api/public;
+</span></span><span style="display:flex;"><span>    set $realdir <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        index index.html index.php index.htm;
+</span></span><span style="display:flex;"><span>        try_files $uri $uri/ $realdir/index.php?$args;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    location ~ <span style="color:#ae81ff">\.</span>php$ <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        fastcgi_split_path_info ^<span style="color:#f92672">(</span>.+<span style="color:#ae81ff">\.</span>php<span style="color:#f92672">)(</span>/.+<span style="color:#f92672">)</span>$;
+</span></span><span style="display:flex;"><span>        fastcgi_pass php:9000;
+</span></span><span style="display:flex;"><span>        fastcgi_index index.php;
+</span></span><span style="display:flex;"><span>        include fastcgi_params;
+</span></span><span style="display:flex;"><span>        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+</span></span><span style="display:flex;"><span>        fastcgi_param PATH_INFO $fastcgi_path_info;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211217/src=http---c-ssl.duitang.com-uploads-item-202004-06-20200406031436_YdLWc.thumb.400_0.gif&amp;refer=http---c-ssl.duitang.6iau48gki5g0.gif" alt="src=http&amp;mdash;c-ssl"></p>
 </div>
     <div class="post-footer">
       <div class="info">
@@ -484,8 +484,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

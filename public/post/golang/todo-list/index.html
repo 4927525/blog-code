@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.97.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -70,8 +70,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
-    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    src="/js/anatole-header.min.d0408165d31a17f17bba83038bf54e86121f85021bdf936382e636f0f77a952f.js"
+    integrity="sha256-0ECBZdMaF/F7uoMDi/VOhhIfhQIb35NjguY28Pd6lS8="
     crossorigin="anonymous"
   ></script>
 
@@ -80,8 +80,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      src="/js/anatole-theme-switcher.min.65e936b591bf81484a5ac438c8e4ae6454fb25516d58ce911e4888d7f230bdc5.js"
+      integrity="sha256-Zek2tZG/gUhKWsQ4yOSuZFT7JVFtWM6RHkiI1/IwvcU="
       crossorigin="anonymous"
     ></script>
 
@@ -345,8 +345,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -387,7 +387,7 @@
       </div><h1 id="序">序</h1>
 <p>最近用<code>gin</code>+<code>gorm</code>写了一个小项目。所以有阵子没更新了。
 项目十分简单，主要是以学习开发规范和熟悉代码编写为主，所以没有踩到什么大坑，这里就不多述了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20220107/u=1952558653,2764759773&amp;fm=26&amp;fmt=auto.3hi8f5yajey0.webp" alt="u=1952558653,2764759773&fm=26&fmt=auto"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20220107/u=1952558653,2764759773&amp;fm=26&amp;fmt=auto.3hi8f5yajey0.webp" alt="u=1952558653,2764759773&amp;fm=26&amp;fmt=auto"></p>
 <h1 id="任务清单-后端">任务清单-后端</h1>
 <p><strong>此项目使用<code>Gin</code>+<code>Gorm</code> ，基于<code>RESTful API</code>实现的一个任务清单</strong>。</p>
 <h2 id="项目功能实现">项目功能实现</h2>
@@ -458,17 +458,17 @@
 </li>
 </ul>
 <h2 id="项目接口">项目接口</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/register     --&gt; TodoList/api.Register <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/login        --&gt; TodoList/api.Login <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/task              --&gt; TodoList/api.CreateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/task/:id          --&gt; TodoList/api.ShowTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/tasks             --&gt; TodoList/api.ListTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> PUT    /api/v1/task/:id          --&gt; TodoList/api.UpdateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> DELETE /api/v1/task/:id          --&gt; TodoList/api.DeleteTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="项目运行">项目运行</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go mod tidy
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go run main.go
-</code></pre></div><h2 id="感谢">感谢</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/register     --&gt; TodoList/api.Register <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/user/login        --&gt; TodoList/api.Login <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> POST   /api/v1/task              --&gt; TodoList/api.CreateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/task/:id          --&gt; TodoList/api.ShowTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> GET    /api/v1/tasks             --&gt; TodoList/api.ListTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> PUT    /api/v1/task/:id          --&gt; TodoList/api.UpdateTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GIN-debug<span style="color:#f92672">]</span> DELETE /api/v1/task/:id          --&gt; TodoList/api.DeleteTask <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> handlers<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="项目运行">项目运行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go mod tidy
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go run main.go
+</span></span></code></pre></div><h2 id="感谢">感谢</h2>
 <p><a href="https://blog.csdn.net/weixin_45304503/article/details/120680957">【Go语言实战】(3) Gin + Gorm 简单备忘录 | 含接口文档_面向生活编程-CSDN博客</a></p>
 </div>
     <div class="post-footer">
@@ -529,8 +529,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

@@ -6,20 +6,7 @@
     <description>Recent content in php on Hzbskak&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Feb 2022 23:43:04 +0800</lastBuildDate><atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Php相关</title>
-      <link>/post/mst/php/</link>
-      <pubDate>Wed, 23 Feb 2022 23:43:04 +0800</pubDate>
-      
-      <guid>/post/mst/php/</guid>
-      
-        <description>列举一些 PHP 中的设计模式？   单例模式：保证在整个应用程序的生命周期中，单例类的实例只存在一个
-  工厂模式：定义一个创建对象的接口，让子类去实例化具体类。
-  观察者模式 发布/订阅模式：当一个对象状态发生变化时，依赖它的对象全部会收到通知，并自动更新。</description>
-      
-    </item>
-    
+    <lastBuildDate>Fri, 17 Dec 2021 11:09:08 +0800</lastBuildDate><atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker 集群中 nginx 配置 php 需要注意的地方</title>
       <link>/post/nginx/docker-%E9%9B%86%E7%BE%A4%E4%B8%AD-nginx-%E9%85%8D%E7%BD%AE-php-%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/</link>

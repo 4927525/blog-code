@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.97.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -70,8 +70,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
-    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    src="/js/anatole-header.min.d0408165d31a17f17bba83038bf54e86121f85021bdf936382e636f0f77a952f.js"
+    integrity="sha256-0ECBZdMaF/F7uoMDi/VOhhIfhQIb35NjguY28Pd6lS8="
     crossorigin="anonymous"
   ></script>
 
@@ -80,8 +80,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      src="/js/anatole-theme-switcher.min.65e936b591bf81484a5ac438c8e4ae6454fb25516d58ce911e4888d7f230bdc5.js"
+      integrity="sha256-Zek2tZG/gUhKWsQ4yOSuZFT7JVFtWM6RHkiI1/IwvcU="
       crossorigin="anonymous"
     ></script>
 
@@ -353,8 +353,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -403,189 +403,189 @@
 <p><img src="https://img0.baidu.com/it/u=2759264495,1166948461&amp;fm=26&amp;fmt=auto" alt=""></p>
 <h2 id="2-创建网络">2. 创建网络</h2>
 <p>这是容器通信的基础</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker network create pay-notify-net
-</code></pre></div><h2 id="3-dockerfile构建镜像">3. Dockerfile构建镜像</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker network create pay-notify-net
+</span></span></code></pre></div><h2 id="3-dockerfile构建镜像">3. Dockerfile构建镜像</h2>
 <h3 id="31-编写一个dockerfile文件">3.1. 编写一个dockerfile文件</h3>
 <p>在项目根目录下新建一个Dockerfile文件，用来构建镜像</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Default Dockerfile</span>
-<span style="color:#75715e">#</span>
-<span style="color:#75715e"># @link     https://www.hyperf.io</span>
-<span style="color:#75715e"># @document https://hyperf.wiki</span>
-<span style="color:#75715e"># @contact  group@hyperf.io</span>
-<span style="color:#75715e"># @license  https://github.com/hyperf/hyperf/blob/master/LICENSE</span>
-
-FROM hyperf/hyperf:7.4-alpine-v3.11-swoole
-LABEL maintainer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf Developers &lt;group@hyperf.io&gt;&#34;</span> version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> license<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MIT&#34;</span> app.name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf&#34;</span>
-
-<span style="color:#75715e">##</span>
-<span style="color:#75715e"># ---------- env settings ----------</span>
-<span style="color:#75715e">##</span>
-<span style="color:#75715e"># --build-arg timezone=Asia/Shanghai</span>
-ARG timezone
-
-ENV TIMEZONE<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>timezone<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;Asia/Shanghai&#34;</span><span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    APP_ENV<span style="color:#f92672">=</span>prod <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    SCAN_CACHEABLE<span style="color:#f92672">=(</span>true<span style="color:#f92672">)</span>
-
-<span style="color:#75715e"># update</span>
-RUN set -ex <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># show php version and extensions</span>
-    <span style="color:#f92672">&amp;&amp;</span> php -v <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php -m <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php --ri swoole <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#75715e">#  ---------- some config ----------</span>
-    <span style="color:#f92672">&amp;&amp;</span> cd /etc/php7 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config PHP</span>
-    <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">{</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;upload_max_filesize=128M&#34;</span>; <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;post_max_size=128M&#34;</span>; <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;memory_limit=1G&#34;</span>; <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;date.timezone=</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">}</span> | tee conf.d/99_overrides.ini <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config timezone</span>
-    <span style="color:#f92672">&amp;&amp;</span> ln -sf /usr/share/zoneinfo/<span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span> /etc/localtime <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /etc/timezone <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># ---------- clear works ----------</span>
-    <span style="color:#f92672">&amp;&amp;</span> rm -rf /var/cache/apk/* /tmp/* /usr/share/man <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo -e <span style="color:#e6db74">&#34;\033[42;37m Build Completed :).\033[0m\n&#34;</span>
-
-RUN set -ex <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> apk add php7-mongodb
-
-WORKDIR /opt/www
-
-<span style="color:#75715e"># Composer Cache</span>
-<span style="color:#75715e"># COPY ./composer.* /opt/www/</span>
-<span style="color:#75715e"># RUN composer install --no-dev --no-scripts</span>
-
-COPY . /opt/www
-RUN composer install --no-dev -o <span style="color:#f92672">&amp;&amp;</span> php bin/hyperf.php
-
-EXPOSE <span style="color:#ae81ff">9501</span>
-
-ENTRYPOINT <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;php&#34;</span>, <span style="color:#e6db74">&#34;/opt/www/bin/hyperf.php&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div><h3 id="32-docker-build-构建成为一个镜像">3.2. docker build 构建成为一个镜像</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># -t 打标签</span>
-$ docker build -t pay-notify:1.0.1 .
-
-<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Building 3.9s <span style="color:#f92672">(</span>11/11<span style="color:#f92672">)</span> FINISHED
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load build definition from Dockerfile                                                                                               0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring dockerfile: 32B                                                                                                                0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load .dockerignore                                                                                                                  0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring context: 2B                                                                                                                    0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load metadata <span style="color:#66d9ef">for</span> docker.io/hyperf/hyperf:7.4-alpine-v3.11-swoole                                                                   0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>1/6<span style="color:#f92672">]</span> FROM docker.io/hyperf/hyperf:7.4-alpine-v3.11-swoole                                                                                     0.0s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load build context                                                                                                                  0.3s
- <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring context: 573.27kB                                                                                                              0.3s
- <span style="color:#f92672">=</span>&gt; CACHED <span style="color:#f92672">[</span>2/6<span style="color:#f92672">]</span> RUN set -ex     <span style="color:#f92672">&amp;&amp;</span> php -v     <span style="color:#f92672">&amp;&amp;</span> php -m     <span style="color:#f92672">&amp;&amp;</span> php --ri swoole     <span style="color:#f92672">&amp;&amp;</span> cd /etc/php7     <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">{</span>         echo <span style="color:#e6db74">&#34;upload_max_filesize=12  0.0s
-</span><span style="color:#e6db74"> =&gt; CACHED [3/6] RUN set -ex     &amp;&amp; apk add php7-mongodb                                                                                           0.0s
-</span><span style="color:#e6db74"> =&gt; CACHED [4/6] WORKDIR /opt/www                                                                                                                  0.0s
-</span><span style="color:#e6db74"> =&gt; [5/6] COPY . /opt/www                                                                                                                          0.5s
-</span><span style="color:#e6db74"> =&gt; [6/6] RUN composer install --no-dev -o &amp;&amp; php bin/hyperf.php                                                                                   2.3s
-</span><span style="color:#e6db74"> =&gt; exporting to image                                                                                                                             0.6s
-</span><span style="color:#e6db74"> =&gt; =&gt; exporting layers                                                                                                                            0.6s
-</span><span style="color:#e6db74"> =&gt; =&gt; writing image sha256:d81127be6073d3cb76c2323ad5a8c58fb5d9372b805e00310f0cdf9dc80b6f4d                                                       0.0s
-</span><span style="color:#e6db74"> =&gt; =&gt; naming to pay-notify:1.0.1
-</span></code></pre></div><h2 id="4-推送到私有仓库">4. 推送到私有仓库</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># Default Dockerfile</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># @link     https://www.hyperf.io</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># @document https://hyperf.wiki</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># @contact  group@hyperf.io</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># @license  https://github.com/hyperf/hyperf/blob/master/LICENSE</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FROM hyperf/hyperf:7.4-alpine-v3.11-swoole
+</span></span><span style="display:flex;"><span>LABEL maintainer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf Developers &lt;group@hyperf.io&gt;&#34;</span> version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> license<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MIT&#34;</span> app.name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hyperf&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---------- env settings ----------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --build-arg timezone=Asia/Shanghai</span>
+</span></span><span style="display:flex;"><span>ARG timezone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ENV TIMEZONE<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>timezone<span style="color:#66d9ef">:-</span><span style="color:#e6db74">&#34;Asia/Shanghai&#34;</span><span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    APP_ENV<span style="color:#f92672">=</span>prod <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    SCAN_CACHEABLE<span style="color:#f92672">=(</span>true<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># update</span>
+</span></span><span style="display:flex;"><span>RUN set -ex <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># show php version and extensions</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> php -v <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php -m <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> php --ri swoole <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e">#  ---------- some config ----------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> cd /etc/php7 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config PHP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">{</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;upload_max_filesize=128M&#34;</span>; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;post_max_size=128M&#34;</span>; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;memory_limit=1G&#34;</span>; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>        echo <span style="color:#e6db74">&#34;date.timezone=</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">}</span> | tee conf.d/99_overrides.ini <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># - config timezone</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> ln -sf /usr/share/zoneinfo/<span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span> /etc/localtime <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>TIMEZONE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /etc/timezone <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#75715e"># ---------- clear works ----------</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> rm -rf /var/cache/apk/* /tmp/* /usr/share/man <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> echo -e <span style="color:#e6db74">&#34;\033[42;37m Build Completed :).\033[0m\n&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>RUN set -ex <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> apk add php7-mongodb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>WORKDIR /opt/www
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Composer Cache</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># COPY ./composer.* /opt/www/</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RUN composer install --no-dev --no-scripts</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COPY . /opt/www
+</span></span><span style="display:flex;"><span>RUN composer install --no-dev -o <span style="color:#f92672">&amp;&amp;</span> php bin/hyperf.php
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">9501</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ENTRYPOINT <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;php&#34;</span>, <span style="color:#e6db74">&#34;/opt/www/bin/hyperf.php&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="32-docker-build-构建成为一个镜像">3.2. docker build 构建成为一个镜像</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># -t 打标签</span>
+</span></span><span style="display:flex;"><span>$ docker build -t pay-notify:1.0.1 .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Building 3.9s <span style="color:#f92672">(</span>11/11<span style="color:#f92672">)</span> FINISHED
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load build definition from Dockerfile                                                                                               0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring dockerfile: 32B                                                                                                                0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load .dockerignore                                                                                                                  0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring context: 2B                                                                                                                    0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load metadata <span style="color:#66d9ef">for</span> docker.io/hyperf/hyperf:7.4-alpine-v3.11-swoole                                                                   0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>1/6<span style="color:#f92672">]</span> FROM docker.io/hyperf/hyperf:7.4-alpine-v3.11-swoole                                                                                     0.0s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">[</span>internal<span style="color:#f92672">]</span> load build context                                                                                                                  0.3s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">=</span>&gt; transferring context: 573.27kB                                                                                                              0.3s
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">=</span>&gt; CACHED <span style="color:#f92672">[</span>2/6<span style="color:#f92672">]</span> RUN set -ex     <span style="color:#f92672">&amp;&amp;</span> php -v     <span style="color:#f92672">&amp;&amp;</span> php -m     <span style="color:#f92672">&amp;&amp;</span> php --ri swoole     <span style="color:#f92672">&amp;&amp;</span> cd /etc/php7     <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">{</span>         echo <span style="color:#e6db74">&#34;upload_max_filesize=12  0.0s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; CACHED [3/6] RUN set -ex     &amp;&amp; apk add php7-mongodb                                                                                           0.0s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; CACHED [4/6] WORKDIR /opt/www                                                                                                                  0.0s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; [5/6] COPY . /opt/www                                                                                                                          0.5s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; [6/6] RUN composer install --no-dev -o &amp;&amp; php bin/hyperf.php                                                                                   2.3s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; exporting to image                                                                                                                             0.6s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; =&gt; exporting layers                                                                                                                            0.6s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; =&gt; writing image sha256:d81127be6073d3cb76c2323ad5a8c58fb5d9372b805e00310f0cdf9dc80b6f4d                                                       0.0s
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> =&gt; =&gt; naming to pay-notify:1.0.1
+</span></span></span></code></pre></div><h2 id="4-推送到私有仓库">4. 推送到私有仓库</h2>
 <h3 id="41-给本地镜像打标签">4.1 给本地镜像打标签</h3>
 <blockquote>
 <p>启动私有仓库官网地址：</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker tag pay-notify:1.0.1 xxx.com/pay-notify:1.0.1
-</code></pre></div><h3 id="42-登录私有仓库">4.2 登录私有仓库</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker login xxx.com
-Authenticating with existing credentials...
-WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
-</code></pre></div><h3 id="43-推送私有仓库">4.3 推送私有仓库</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker tag pay-notify:1.0.1 xxx.com/pay-notify:1.0.1
+</span></span></code></pre></div><h3 id="42-登录私有仓库">4.2 登录私有仓库</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker login xxx.com
+</span></span><span style="display:flex;"><span>Authenticating with existing credentials...
+</span></span><span style="display:flex;"><span>WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+</span></span><span style="display:flex;"><span>Configure a credential helper to remove this warning. See
+</span></span><span style="display:flex;"><span>https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Login Succeeded
+</span></span></code></pre></div><h3 id="43-推送私有仓库">4.3 推送私有仓库</h3>
 <p>这里要将本地镜像推送到私有仓库中，方便服务器拉取。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$  docker push xxx.com/pay-notify:1.0.1
-The push refers to repository <span style="color:#f92672">[</span>xxx.com/pay-notify<span style="color:#f92672">]</span>
-ff4a8d479433: Pushed
-13d5b39dde0c: Pushed
-79ced1246ab1: Layer already exists
-7b6bce294554: Layer already exists
-6df89ea81a26: Layer already exists
-cfd4b1189b9e: Layer already exists
-04ab725ccb75: Layer already exists
-55bf8cdb863f: Layer already exists
-39982b2a789a: Layer already exists
-1.0.7: digest: sha256:3026839811d8d4cd125d58575120026a132b7747beda4c7813aa8e26d05543dd size: <span style="color:#ae81ff">2204</span>
-</code></pre></div><h3 id="44-获取私有仓库list">4.4 获取私有仓库list</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X GET https://xxx.com/v2/pay-notify/tags/list <span style="color:#75715e"># 或者浏览器访问</span>
-<span style="color:#f92672">{</span>
-    name: <span style="color:#e6db74">&#34;pay-notify&#34;</span>,
-    tags: <span style="color:#f92672">[</span>
-        <span style="color:#e6db74">&#34;1.0.2&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.4&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.7&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.1&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.6&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.3&#34;</span>,
-        <span style="color:#e6db74">&#34;1.0.5&#34;</span>
-    <span style="color:#f92672">]</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="5-编排docker-compose">5. 编排Docker-compose</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$  docker push xxx.com/pay-notify:1.0.1
+</span></span><span style="display:flex;"><span>The push refers to repository <span style="color:#f92672">[</span>xxx.com/pay-notify<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>ff4a8d479433: Pushed
+</span></span><span style="display:flex;"><span>13d5b39dde0c: Pushed
+</span></span><span style="display:flex;"><span>79ced1246ab1: Layer already exists
+</span></span><span style="display:flex;"><span>7b6bce294554: Layer already exists
+</span></span><span style="display:flex;"><span>6df89ea81a26: Layer already exists
+</span></span><span style="display:flex;"><span>cfd4b1189b9e: Layer already exists
+</span></span><span style="display:flex;"><span>04ab725ccb75: Layer already exists
+</span></span><span style="display:flex;"><span>55bf8cdb863f: Layer already exists
+</span></span><span style="display:flex;"><span>39982b2a789a: Layer already exists
+</span></span><span style="display:flex;"><span>1.0.7: digest: sha256:3026839811d8d4cd125d58575120026a132b7747beda4c7813aa8e26d05543dd size: <span style="color:#ae81ff">2204</span>
+</span></span></code></pre></div><h3 id="44-获取私有仓库list">4.4 获取私有仓库list</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET https://xxx.com/v2/pay-notify/tags/list <span style="color:#75715e"># 或者浏览器访问</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    name: <span style="color:#e6db74">&#34;pay-notify&#34;</span>,
+</span></span><span style="display:flex;"><span>    tags: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.4&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.7&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.6&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.3&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;1.0.5&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="5-编排docker-compose">5. 编排Docker-compose</h2>
 <h3 id="51-yaml文件编写">5.1 yaml文件编写</h3>
 <p>将pay_notify1.yml文件上传到服务器上</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.3&#39;</span>
-<span style="color:#f92672">services</span>:
-  <span style="color:#f92672">hc</span>:
-    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">xxx.com/pay-notify:1.0.1</span>
-    <span style="color:#f92672">ports</span>:
-      - <span style="color:#ae81ff">9501</span>:<span style="color:#ae81ff">9501</span>
-    <span style="color:#f92672">environment</span>:
-      - <span style="color:#e6db74">&#34;APPENV=prod&#34;</span>
-      - <span style="color:#e6db74">&#34;REDIS_HOST=pay_notify_redis_1&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_HOST=xxxx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_DATABASE=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_USERNAME=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_PASSWORD=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;SYS_DEBUG=false&#34;</span>
-    <span style="color:#f92672">networks</span>:
-      - <span style="color:#ae81ff">pay-notify-net</span>
-    <span style="color:#f92672">depends_on</span>:
-      - <span style="color:#ae81ff">redis</span>
-  <span style="color:#f92672">redis</span>:
-    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">redis:6.0.10</span>
-    <span style="color:#f92672">volumes</span>:
-      - <span style="color:#ae81ff">/www/wwwroot/test/redis/data:/data</span>
-      - <span style="color:#ae81ff">/www/wwwroot/test/redis/redis.conf:/usr/local/etc/redis/redis.conf</span>
-      - <span style="color:#ae81ff">/www/wwwroot/test/redis/logs:/logs</span>
-    <span style="color:#f92672">ports</span>:
-      - <span style="color:#ae81ff">6379</span>:<span style="color:#ae81ff">6379</span>
-    <span style="color:#f92672">networks</span>:
-      - <span style="color:#ae81ff">pay-notify-net</span>
-<span style="color:#f92672">networks</span>:
-  <span style="color:#f92672">pay-notify-net</span>:
-    <span style="color:#f92672">external</span>: <span style="color:#66d9ef">true</span>
-</code></pre></div><h3 id="52-启动项目">5.2 启动项目</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-compose -f pay_notify1.yml -p pay-notify up -d 
-
-Pulling hc2 <span style="color:#f92672">(</span>xxx.com/pay-notify:1.0.1<span style="color:#f92672">)</span>...
-1.0.1: Pulling from pay-notify
-6a428f9f83b0: Already exists
-069b9d0dbac2: Already exists
-0be19dcd9b08: Already exists
-720818493b30: Already exists
-11053722a517: Already exists
-dc75e73f3321: Already exists
-a121be122369: Already exists
-9cacf81feb94: Pull complete
-409c206cf402: Pull complete
-Digest: sha256:b636a24f4101912bac3639a83aff3453fedfd5b8f904340707d97e04e6ac7591
-Status: Downloaded newer image <span style="color:#66d9ef">for</span> xxx.com/pay-notify:1.0.1
-Recreating pay_notify_hc_1 ... <span style="color:#66d9ef">done</span>
-Recreating pay_notify_redis_1 ... <span style="color:#66d9ef">done</span>
-</code></pre></div><h3 id="53-测试">5.3 测试</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker ps
-CONTAINER ID   IMAGE                                  COMMAND                  CREATED       STATUS       PORTS                    NAMES
-2531c6e84038   xxx.com/pay-notify:1.0.1   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago   Up <span style="color:#ae81ff">3</span> hours   0.0.0.0:9501-&gt;9501/tcp   pay_notify_hc_1
-bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">6</span> hours ago   Up <span style="color:#ae81ff">4</span> hours   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
-</code></pre></div><p><img src="https://img0.baidu.com/it/u=1623228430,4099085262&amp;fm=26&amp;fmt=auto" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.3&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hc</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">xxx.com/pay-notify:1.0.1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">9501</span>:<span style="color:#ae81ff">9501</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;APPENV=prod&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;REDIS_HOST=pay_notify_redis_1&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_HOST=xxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_DATABASE=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_USERNAME=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_PASSWORD=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;SYS_DEBUG=false&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pay-notify-net</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">redis</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">redis:6.0.10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/www/wwwroot/test/redis/data:/data</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/www/wwwroot/test/redis/redis.conf:/usr/local/etc/redis/redis.conf</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/www/wwwroot/test/redis/logs:/logs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">6379</span>:<span style="color:#ae81ff">6379</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pay-notify-net</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pay-notify-net</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">external</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h3 id="52-启动项目">5.2 启动项目</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker-compose -f pay_notify1.yml -p pay-notify up -d 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Pulling hc2 <span style="color:#f92672">(</span>xxx.com/pay-notify:1.0.1<span style="color:#f92672">)</span>...
+</span></span><span style="display:flex;"><span>1.0.1: Pulling from pay-notify
+</span></span><span style="display:flex;"><span>6a428f9f83b0: Already exists
+</span></span><span style="display:flex;"><span>069b9d0dbac2: Already exists
+</span></span><span style="display:flex;"><span>0be19dcd9b08: Already exists
+</span></span><span style="display:flex;"><span>720818493b30: Already exists
+</span></span><span style="display:flex;"><span>11053722a517: Already exists
+</span></span><span style="display:flex;"><span>dc75e73f3321: Already exists
+</span></span><span style="display:flex;"><span>a121be122369: Already exists
+</span></span><span style="display:flex;"><span>9cacf81feb94: Pull complete
+</span></span><span style="display:flex;"><span>409c206cf402: Pull complete
+</span></span><span style="display:flex;"><span>Digest: sha256:b636a24f4101912bac3639a83aff3453fedfd5b8f904340707d97e04e6ac7591
+</span></span><span style="display:flex;"><span>Status: Downloaded newer image <span style="color:#66d9ef">for</span> xxx.com/pay-notify:1.0.1
+</span></span><span style="display:flex;"><span>Recreating pay_notify_hc_1 ... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Recreating pay_notify_redis_1 ... <span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><h3 id="53-测试">5.3 测试</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker ps
+</span></span><span style="display:flex;"><span>CONTAINER ID   IMAGE                                  COMMAND                  CREATED       STATUS       PORTS                    NAMES
+</span></span><span style="display:flex;"><span>2531c6e84038   xxx.com/pay-notify:1.0.1   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago   Up <span style="color:#ae81ff">3</span> hours   0.0.0.0:9501-&gt;9501/tcp   pay_notify_hc_1
+</span></span><span style="display:flex;"><span>bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">6</span> hours ago   Up <span style="color:#ae81ff">4</span> hours   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
+</span></span></code></pre></div><p><img src="https://img0.baidu.com/it/u=1623228430,4099085262&amp;fm=26&amp;fmt=auto" alt=""></p>
 <blockquote>
 <p>到这里其实就可以用Docker部署一个完整的项目了。</p>
 <p>如果想要完成线上不停机更新的话，就要用过反代来实现了。</p>
@@ -594,80 +594,80 @@ bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74
 <h2 id="6红黑部署">6.红黑部署</h2>
 <h3 id="61-利用nginx反代实现红黑部署">6.1 利用nginx反代实现红黑部署</h3>
 <p>利用反代映射两个端口，让这两个端口都可以请求项目</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">upstream hc <span style="color:#f92672">{</span> 
-      server 127.0.0.1:9501; 
-      server 127.0.0.1:9502; 
-<span style="color:#f92672">}</span>
-server
-<span style="color:#f92672">{</span>
-
-    location /pay_notify/ <span style="color:#f92672">{</span>
-      <span style="color:#75715e"># Do not allow connections from docker 1.5 and earlier</span>
-      <span style="color:#75715e"># docker pre-1.6.0 did not properly set the user agent on ping, catch &#34;Go *&#34; user agents</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>$http_user_agent ~ <span style="color:#e6db74">&#34;^(docker\/1\.(3|4|5(?!\.[0-9]-dev))|Go ).*</span>$<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> 404;
-      <span style="color:#f92672">}</span>
-
-      <span style="color:#75715e"># To add basic authentication to v2 use auth_basic setting.</span>
-      <span style="color:#75715e">#auth_basic &#34;Registry realm&#34;;</span>
-      <span style="color:#75715e">#auth_basic_user_file /www/wwwroot/auth/docker_registry.password;</span>
-
-      proxy_pass                          http://hc/pay/notify;
-      proxy_set_header  Host              $http_host;   <span style="color:#75715e"># required for docker client&#39;s sake</span>
-      proxy_set_header  X-Real-IP         $remote_addr; <span style="color:#75715e"># pass on real client&#39;s IP</span>
-      proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
-      proxy_set_header  X-Forwarded-Proto $scheme;
-      proxy_read_timeout                  900;
-<span style="color:#f92672">}</span>
-</code></pre></div><h3 id="62-平滑更新版本">6.2 平滑更新版本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>upstream hc <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>      server 127.0.0.1:9501; 
+</span></span><span style="display:flex;"><span>      server 127.0.0.1:9502; 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>server
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    location /pay_notify/ <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Do not allow connections from docker 1.5 and earlier</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># docker pre-1.6.0 did not properly set the user agent on ping, catch &#34;Go *&#34; user agents</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>$http_user_agent ~ <span style="color:#e6db74">&#34;^(docker\/1\.(3|4|5(?!\.[0-9]-dev))|Go ).*</span>$<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> 404;
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># To add basic authentication to v2 use auth_basic setting.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">#auth_basic &#34;Registry realm&#34;;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">#auth_basic_user_file /www/wwwroot/auth/docker_registry.password;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      proxy_pass                          http://hc/pay/notify;
+</span></span><span style="display:flex;"><span>      proxy_set_header  Host              $http_host;   <span style="color:#75715e"># required for docker client&#39;s sake</span>
+</span></span><span style="display:flex;"><span>      proxy_set_header  X-Real-IP         $remote_addr; <span style="color:#75715e"># pass on real client&#39;s IP</span>
+</span></span><span style="display:flex;"><span>      proxy_set_header  X-Forwarded-For   $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>      proxy_set_header  X-Forwarded-Proto $scheme;
+</span></span><span style="display:flex;"><span>      proxy_read_timeout                  900;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="62-平滑更新版本">6.2 平滑更新版本</h3>
 <p>过了一段时间我们要发布pay-notify:1.0.2版本。</p>
 <p>此时我们还是通过3、4、5来进行构建、打包、发布、运行。</p>
 <p>因为线上正在运行的容器占用了9501这个端口，此时我们就要用到nginx反代的另一个端口来进行映射。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">version: <span style="color:#e6db74">&#39;3.3&#39;</span>
-services:
-  hc2: <span style="color:#75715e"># 服务名</span>
-    image: xxx.com/pay-notify:1.0.2 <span style="color:#75715e"># 版本号发生变化</span>
-    ports:
-      - 9502:9501 <span style="color:#75715e"># export端口发生变化</span>
-    environment:
-      - <span style="color:#e6db74">&#34;APPENV=prod&#34;</span>
-      - <span style="color:#e6db74">&#34;REDIS_HOST=pay_notify_redis_1&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_HOST=xx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_DATABASE=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_USERNAME=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;DB_PASSWORD=xxx&#34;</span>
-      - <span style="color:#e6db74">&#34;SYS_DEBUG=false&#34;</span>
-    networks:
-      - pay-notify-net
-    depends_on:
-      - redis
-  redis:
-    image: redis:6.0.10
-    volumes:
-      - /www/wwwroot/test/redis/data:/data
-      - /www/wwwroot/test/redis/redis.conf:/usr/local/etc/redis/redis.conf
-      - /www/wwwroot/test/redis/logs:/logs
-    ports:
-      - 6378:6379
-    networks:
-      - pay-notify-net
-networks:
-  pay-notify-net:
-    external: true
-</code></pre></div><p>这是两个容器都可以在后台运行</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker ps
-CONTAINER ID   IMAGE                                  COMMAND                  CREATED          STATUS          PORTS                    NAMES
-51657b114757   xxx/pay-notify:1.0.1   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">21</span> minutes ago   Up <span style="color:#ae81ff">21</span> minutes   0.0.0.0:9501-&gt;9501/tcp   pay_notify_hc_1
-01ca94858e7d   xxx/pay-notify:1.0.2   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">1</span> minutes ago   Up <span style="color:#ae81ff">1</span> minutes   0.0.0.0:9502-&gt;9501/tcp   pay_notify_hc2_1
-bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago      Up <span style="color:#ae81ff">34</span> minutes   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
-</code></pre></div><p>此时我们可以停掉pay-notify:1.0.1让pay-notify:1.0.2在线上运行</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker stop pay_notify_hc_1
-pay_notify_hc_1
-$ docker ps
-CONTAINER ID   IMAGE                                  COMMAND                  CREATED          STATUS          PORTS                    NAMES
-01ca94858e7d   xxx/pay-notify:1.0.2   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">1</span> minutes ago   Up <span style="color:#ae81ff">1</span> minutes   0.0.0.0:9502-&gt;9501/tcp   pay_notify_hc2_1
-bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago      Up <span style="color:#ae81ff">34</span> minutes   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
-</code></pre></div><h2 id="至此docker部署全部完成">至此Docker部署全部完成。</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>version: <span style="color:#e6db74">&#39;3.3&#39;</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  hc2: <span style="color:#75715e"># 服务名</span>
+</span></span><span style="display:flex;"><span>    image: xxx.com/pay-notify:1.0.2 <span style="color:#75715e"># 版本号发生变化</span>
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 9502:9501 <span style="color:#75715e"># export端口发生变化</span>
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;APPENV=prod&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;REDIS_HOST=pay_notify_redis_1&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_HOST=xx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_DATABASE=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_USERNAME=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;DB_PASSWORD=xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;SYS_DEBUG=false&#34;</span>
+</span></span><span style="display:flex;"><span>    networks:
+</span></span><span style="display:flex;"><span>      - pay-notify-net
+</span></span><span style="display:flex;"><span>    depends_on:
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>  redis:
+</span></span><span style="display:flex;"><span>    image: redis:6.0.10
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - /www/wwwroot/test/redis/data:/data
+</span></span><span style="display:flex;"><span>      - /www/wwwroot/test/redis/redis.conf:/usr/local/etc/redis/redis.conf
+</span></span><span style="display:flex;"><span>      - /www/wwwroot/test/redis/logs:/logs
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 6378:6379
+</span></span><span style="display:flex;"><span>    networks:
+</span></span><span style="display:flex;"><span>      - pay-notify-net
+</span></span><span style="display:flex;"><span>networks:
+</span></span><span style="display:flex;"><span>  pay-notify-net:
+</span></span><span style="display:flex;"><span>    external: true
+</span></span></code></pre></div><p>这是两个容器都可以在后台运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker ps
+</span></span><span style="display:flex;"><span>CONTAINER ID   IMAGE                                  COMMAND                  CREATED          STATUS          PORTS                    NAMES
+</span></span><span style="display:flex;"><span>51657b114757   xxx/pay-notify:1.0.1   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">21</span> minutes ago   Up <span style="color:#ae81ff">21</span> minutes   0.0.0.0:9501-&gt;9501/tcp   pay_notify_hc_1
+</span></span><span style="display:flex;"><span>01ca94858e7d   xxx/pay-notify:1.0.2   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">1</span> minutes ago   Up <span style="color:#ae81ff">1</span> minutes   0.0.0.0:9502-&gt;9501/tcp   pay_notify_hc2_1
+</span></span><span style="display:flex;"><span>bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago      Up <span style="color:#ae81ff">34</span> minutes   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
+</span></span></code></pre></div><p>此时我们可以停掉pay-notify:1.0.1让pay-notify:1.0.2在线上运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker stop pay_notify_hc_1
+</span></span><span style="display:flex;"><span>pay_notify_hc_1
+</span></span><span style="display:flex;"><span>$ docker ps
+</span></span><span style="display:flex;"><span>CONTAINER ID   IMAGE                                  COMMAND                  CREATED          STATUS          PORTS                    NAMES
+</span></span><span style="display:flex;"><span>01ca94858e7d   xxx/pay-notify:1.0.2   <span style="color:#e6db74">&#34;php /opt/www/bin/hy…&#34;</span>   <span style="color:#ae81ff">1</span> minutes ago   Up <span style="color:#ae81ff">1</span> minutes   0.0.0.0:9502-&gt;9501/tcp   pay_notify_hc2_1
+</span></span><span style="display:flex;"><span>bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74">&#34;docker-entrypoint.s…&#34;</span>   <span style="color:#ae81ff">3</span> hours ago      Up <span style="color:#ae81ff">34</span> minutes   0.0.0.0:6378-&gt;6379/tcp   pay_notify_redis_1
+</span></span></code></pre></div><h2 id="至此docker部署全部完成">至此Docker部署全部完成。</h2>
 <p>一路上还是遇到了很多坑。还行最后都解决掉了。</p>
 </div>
     <div class="post-footer">
@@ -728,8 +728,8 @@ bbdd7e15c9df   redis:6.0.10                           <span style="color:#e6db74
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

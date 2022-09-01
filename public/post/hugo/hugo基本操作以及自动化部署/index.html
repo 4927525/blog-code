@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.97.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -70,8 +70,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.2a2cd9614b7d007dfbb75e8da19e3a0fa872ceab53c6d000c00b7a0c89b85bfc.js"
-    integrity="sha256-KizZYUt9AH37t16NoZ46D6hyzqtTxtAAwAt6DIm4W/w="
+    src="/js/anatole-header.min.d0408165d31a17f17bba83038bf54e86121f85021bdf936382e636f0f77a952f.js"
+    integrity="sha256-0ECBZdMaF/F7uoMDi/VOhhIfhQIb35NjguY28Pd6lS8="
     crossorigin="anonymous"
   ></script>
 
@@ -80,8 +80,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-      integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+      src="/js/anatole-theme-switcher.min.65e936b591bf81484a5ac438c8e4ae6454fb25516d58ce911e4888d7f230bdc5.js"
+      integrity="sha256-Zek2tZG/gUhKWsQ4yOSuZFT7JVFtWM6RHkiI1/IwvcU="
       crossorigin="anonymous"
     ></script>
 
@@ -346,8 +346,8 @@ https://github.com/gohugoio/hugo/releases
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -396,25 +396,25 @@ https://github.com/gohugoio/hugo/releases
 <p>然后把二进制文件放在环境变量中，由于之前配置过<strong>GOPATH</strong>的<strong>bin</strong>到环境变量中，所有这里我直接把二进制放在<strong>bin</strong>文件夹下面。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211213/image.5hbwcnkdbak0.png" alt="image"></p>
 <p>验证安装</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PS D:<span style="color:#ae81ff">\H</span>ugo&gt; hugo version
-hugo v0.89.4-AB01BA6E windows/amd64 BuildDate<span style="color:#f92672">=</span>2021-11-17T08:24:09Z VendorInfo<span style="color:#f92672">=</span>gohugoio
-</code></pre></div><h2 id="12-创建项目">1.2 创建项目</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>PS D:<span style="color:#ae81ff">\H</span>ugo&gt; hugo version
+</span></span><span style="display:flex;"><span>hugo v0.89.4-AB01BA6E windows/amd64 BuildDate<span style="color:#f92672">=</span>2021-11-17T08:24:09Z VendorInfo<span style="color:#f92672">=</span>gohugoio
+</span></span></code></pre></div><h2 id="12-创建项目">1.2 创建项目</h2>
 <p>创建一个blog为博客项目</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PS D:<span style="color:#ae81ff">\H</span>ugo<span style="color:#ae81ff">\S</span>ites&gt; hugo new site 4927525.github.io <span style="color:#f92672">&amp;&amp;</span> cd 4927525.github.io
-</code></pre></div><h2 id="13-配置主题">1.3 配置主题</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>PS D:<span style="color:#ae81ff">\H</span>ugo<span style="color:#ae81ff">\S</span>ites&gt; hugo new site 4927525.github.io <span style="color:#f92672">&amp;&amp;</span> cd 4927525.github.io
+</span></span></code></pre></div><h2 id="13-配置主题">1.3 配置主题</h2>
 <p>这里使用的是这个主题：<a href="https://github.com/lxndrblz/anatole/">https://github.com/lxndrblz/anatole/</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 切换到博客目录</span>
-cd 4927525.github.io
-git init
-git submodule add https://github.com/lxndrblz/anatole.git themes/
-echo <span style="color:#e6db74">&#39;theme = &#34;anatole&#34;&#39;</span> &gt;&gt; config.toml 
-</code></pre></div><h2 id="14-编写blog">1.4 编写Blog</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 切换到博客目录</span>
+</span></span><span style="display:flex;"><span>cd 4927525.github.io
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/lxndrblz/anatole.git themes/
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;theme = &#34;anatole&#34;&#39;</span> &gt;&gt; config.toml 
+</span></span></code></pre></div><h2 id="14-编写blog">1.4 编写Blog</h2>
 <p>生成一篇blog模板</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new post/first.md
-</code></pre></div><h2 id="15-启动server">1.5 启动server</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 启动 server 预览</span>
-hugo server
-</code></pre></div><p>这个时候在浏览器输入 <strong>http://localhost:1313</strong> 即可查看效果</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo new post/first.md
+</span></span></code></pre></div><h2 id="15-启动server">1.5 启动server</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 启动 server 预览</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>这个时候在浏览器输入 <strong>http://localhost:1313</strong> 即可查看效果</p>
 <h2 id="16-编译静态文件">1.6 编译静态文件</h2>
 <pre tabindex="0"><code>hugo -D
 </code></pre><p>执行过后就会在目录的public下生成对应的静态文件，只需要部署到自己的web服务器即可。</p>
@@ -424,51 +424,51 @@ hugo server
 <h2 id="21-编译">2.1 编译</h2>
 <h3 id="211-脚本">2.1.1 脚本</h3>
 <p>创建文件:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim .github/workflows/main.yml
-</code></pre></div><p>写入脚本内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo Site to Github Pages on Master Branch</span>
-
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">master</span>
-
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build-deploy</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-18.04</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v1 </span> <span style="color:#75715e"># v2 does not have submodules option now</span>
-       <span style="color:#75715e"># with:</span>
-       <span style="color:#75715e">#   submodules: true</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
-        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.81.0&#39;</span>
-          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
-        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span> <span style="color:#75715e"># 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名</span>
-          <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">4927525</span><span style="color:#ae81ff">/4927525.github.io</span> <span style="color:#75715e"># Pages 远程仓库 </span>
-          <span style="color:#f92672">publish_dir</span>: <span style="color:#e6db74">&#34;./public&#34;</span> <span style="color:#75715e">#传输文件目录</span>
-          <span style="color:#f92672">keep_files</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># remove existing files</span>
-          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">master </span> <span style="color:#75715e"># 分支</span>
-          <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span> <span style="color:#75715e">#commit message</span>
-          <span style="color:#f92672">exclude_assets</span>: <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">#反正排除.github文件夹</span>
-</code></pre></div><h3 id="212-配置密钥">2.1.2 配置密钥</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim .github/workflows/main.yml
+</span></span></code></pre></div><p>写入脚本内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo Site to Github Pages on Master Branch</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build-deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-18.04</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v1 </span> <span style="color:#75715e"># v2 does not have submodules option now</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e"># with:</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">#   submodules: true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.81.0&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span> <span style="color:#75715e"># 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">4927525</span><span style="color:#ae81ff">/4927525.github.io</span> <span style="color:#75715e"># Pages 远程仓库 </span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#e6db74">&#34;./public&#34;</span> <span style="color:#75715e">#传输文件目录</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">keep_files</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># remove existing files</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">master </span> <span style="color:#75715e"># 分支</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span> <span style="color:#75715e">#commit message</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">exclude_assets</span>: <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e">#反正排除.github文件夹</span>
+</span></span></code></pre></div><h3 id="212-配置密钥">2.1.2 配置密钥</h3>
 <ul>
 <li>
 <p>使用git生成<strong>ssh key</strong>(相当于生成对密钥)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>git config user.email<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -f gh-pages -N <span style="color:#e6db74">&#34;&#34;</span>
-<span style="color:#75715e"># You will get 2 files:</span>
-<span style="color:#75715e">#   gh-pages.pub (public key)</span>
-<span style="color:#75715e">#   gh-pages     (private key)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>git config user.email<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -f gh-pages -N <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># You will get 2 files:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   gh-pages.pub (public key)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   gh-pages     (private key)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>打开<strong>blog-code</strong>仓库的<strong>settings</strong>，再点击<strong>Secrets</strong>，然后添加刚刚生成的私钥，name为<strong>ACTIONS_DEPLOY_KEY</strong>
 <code>注意：这里要用private key，且要复制整个文件的内容</code><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211213/image.1sabb2i7wb4w.png" alt="image"></p>
@@ -482,33 +482,33 @@ hugo server
 <h2 id="22-部署">2.2 部署</h2>
 <h3 id="211-脚本-1">2.1.1 脚本</h3>
 <p>创建文件:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim static/.github/workflows/main.yml
-</code></pre></div><p>写入脚本内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI</span>
-
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master ]</span>
-  <span style="color:#f92672">pull_request</span>:
-    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master ]</span>
-
-  <span style="color:#f92672">workflow_dispatch</span>:
-
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run a multi-line script</span>
-        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">fifsky/ssh-action@master</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">command</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">            cd /www/wwwroot/4927525.github.io    #自己服务器的项目地址
-</span><span style="color:#e6db74">            git reset --hard
-</span><span style="color:#e6db74">            git pull    #同步</span>            
-          <span style="color:#f92672">host</span>: <span style="color:#ae81ff">${{ secrets.REMOTE_HOST }}</span> <span style="color:#75715e">#服务器ip</span>
-          <span style="color:#f92672">user</span>: <span style="color:#ae81ff">${{ secrets.REMOTE_USER }}</span> <span style="color:#75715e">#服务器user</span>
-          <span style="color:#f92672">pass</span>: <span style="color:#ae81ff">${{ secrets.PASSWORD }}</span> <span style="color:#75715e">#服务器密码</span>
-</code></pre></div><h3 id="212-配置密钥-1">2.1.2 配置密钥</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim static/.github/workflows/main.yml
+</span></span></code></pre></div><p>写入脚本内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master ]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master ]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run a multi-line script</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">fifsky/ssh-action@master</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">command</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            cd /www/wwwroot/4927525.github.io    #自己服务器的项目地址
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            git reset --hard
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            git pull    #同步</span>            
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">host</span>: <span style="color:#ae81ff">${{ secrets.REMOTE_HOST }}</span> <span style="color:#75715e">#服务器ip</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">user</span>: <span style="color:#ae81ff">${{ secrets.REMOTE_USER }}</span> <span style="color:#75715e">#服务器user</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">pass</span>: <span style="color:#ae81ff">${{ secrets.PASSWORD }}</span> <span style="color:#75715e">#服务器密码</span>
+</span></span></code></pre></div><h3 id="212-配置密钥-1">2.1.2 配置密钥</h3>
 <p>打开<strong>4927525.github.io</strong>仓库的<strong>settings</strong>，再点击<strong>Secrets</strong>，然后一共添加三个私钥，name分别为<strong>REMOTE_HOST</strong>,<strong>REMOTE_USER</strong>,<strong>PASSWORD</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/4927525/images@master/20211213/image.7j4k0ifhvok0.png" alt="image"></p>
 <h1 id="至此本次hexo转hugo完美完事">至此，本次hexo转hugo完美完事</h1>
@@ -572,8 +572,8 @@ hugo server
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
+    src="/js/medium-zoom.min.80b0768059c89e2a2180578a3e0e18ede16635e5fedabcccfba6479f60c40bbb.js"
+    integrity="sha256-gLB2gFnIniohgFeKPg4Y7eFmNeX&#43;2rzM&#43;6ZHn2DEC7s="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
