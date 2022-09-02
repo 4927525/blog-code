@@ -22,5 +22,6 @@ jobs:
             sudo git reset --hard
             sudo git pull    #同步            
           host: ${{ secrets.REMOTE_HOST }} #服务器ip
+          port: ${{ secrets.REMOTE_PORT }} #服务器port
           user: ${{ secrets.REMOTE_USER }} #服务器user
           pass: ${{ secrets.PASSWORD }} #服务器密码
