@@ -24,4 +24,4 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }} #服务器ip
           user: ${{ secrets.REMOTE_USER }} #服务器user
           pass: ${{ secrets.PASSWORD }} #服务器密码
-          args: ${{ secrets.REMOTE_PORT }}
+          args: "-p 30022"
