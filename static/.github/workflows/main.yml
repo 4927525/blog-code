@@ -21,7 +21,8 @@ jobs:
             pwd
             git reset --hard
             git pull    #同步            
-          host: 47.100.38.34 #服务器ip
+          host: ${{ secrets.REMOTE_HOST }} #服务器ip
           user: ${{ secrets.REMOTE_USER }} #服务器user
           pass: ${{ secrets.PASSWORD }} #服务器密码
-          args: "-p 30022"
+          # args: "-p 跟端口号"
+          args: ${{ secrets.ARGS }}
