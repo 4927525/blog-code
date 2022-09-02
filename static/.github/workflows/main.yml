@@ -21,7 +21,7 @@ jobs:
             sudo touch /tmp/hello1.txt;while true;do /bin/echo $(date +%T) >> /tmp/hello.txt; sleep 3; done;
             sudo git reset --hard
             sudo git pull    #同步            
-          host: ${{ secrets.REMOTE_HOST }} #服务器ip
+          host: 47.100.38.34 #服务器ip
           user: ${{ secrets.REMOTE_USER }} #服务器user
           pass: ${{ secrets.PASSWORD }} #服务器密码
           args: "-p 30022"
